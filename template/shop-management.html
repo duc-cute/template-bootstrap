@@ -12,7 +12,8 @@
   <meta name="author" content="la-themes">
   <link rel="icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
-  <title>Accordions | ra-admin - Premium Admin Template</title>
+
+  <title>Advance Table | ra-admin - Premium Admin Template</title>
 
   <!--font-awesome-css-->
   <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
@@ -31,8 +32,8 @@
   <!-- Bootstrap css-->
   <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/bootstrap.min.css">
 
-  <!--  prism CSS-->
-  <link href="../assets/vendor/prism/prism.min.css" rel="stylesheet">
+  <!-- Data Table css-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/datatable/jquery.dataTables.min.css">
 
   <!-- simplebar css-->
   <link rel="stylesheet" type="text/css" href="../assets/vendor/simplebar/simplebar.css">
@@ -44,6 +45,139 @@
   <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
 
 </head>
+
+<style>
+  .btn-add-shop-wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding: 6px 12px;
+
+  }
+
+  .btn-add-shop {
+    position: relative;
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.125rem;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    letter-spacing: 0.05em;
+    border: 1px solid #2563eb;
+    color: #ffffff;
+    background-color: #6576ff;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+
+
+  }
+
+  .btn-add-shop:hover {
+    background-color: #1d4ed8;
+  }
+
+  .btn-add-shop:active {
+    background-color: #1e40af;
+  }
+
+  .btn-add-shop em {
+    font-size: 1.25rem;
+    line-height: 1.125rem;
+    margin-right: 0.5rem;
+  }
+
+  .btn-add-shop.cursor-pointer {
+    cursor: pointer;
+  }
+
+  .word-wrap-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 15ch;
+    display: inline-block;
+  }
+
+  .btn-sort {
+    font-size: 32px;
+    padding: 6px 4px !important;
+  }
+
+  .table-filter {
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  .input-group {
+    position: relative;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+
+  }
+
+
+  .trans_id {
+    color: #94a3b8;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    display: inline-block;
+    white-space: nowrap;
+    margin-bottom: 8px;
+  }
+
+  .input-group-filter {
+    display: block;
+    width: 100%;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    padding-right: 2.5rem;
+    padding-left: 1rem;
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem;
+    height: 2.25rem;
+    color: #334155;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+
+  .input-group-filter::placeholder {
+    color: #cbd5e1;
+  }
+
+  .color-filter {
+    color: #cbd5e1;
+  }
+
+  .input-group-filter:focus {
+    border-color: #2563eb;
+    outline-offset: 0;
+    outline: 2px solid #bfdbfe;
+  }
+
+  .btn-filter-color {
+    background-color: #364a63;
+    color: #fff;
+
+  }
+
+  .btn-unfilter-color {
+    background-color: #ba4239;
+    color: #fff;
+
+
+  }
+</style>
 
 <body>
   <div class="app-wrapper">
@@ -310,6 +444,20 @@
             </ul>
           </li>
 
+          <li class="menu-title"> <span>Dịch vụ</span></li>
+
+          <li class="no-sub">
+            <a class="" href="shop-management.html">
+              <i class="ph-light  ph-shopping-cart"></i> Cửa hàng
+            </a>
+          </li>
+          <li class="no-sub">
+            <a class="" href="misc.html">
+              <i class="ph-duotone  ph-notebook"></i>Hóa đơn
+
+            </a>
+          </li>
+
           <li class="menu-title"> <span>Tích hợp API & Web App</span></li>
 
           <li class="no-sub">
@@ -320,6 +468,7 @@
           <li class="no-sub">
             <a class="" href="misc.html">
               <i class="ph-duotone  ph-stack"></i>Tích hợp Web/App
+
             </a>
           </li>
 
@@ -610,6 +759,7 @@
                       aria-labelledby="offcanvasRight">
                       <div class="header-searchbar-header">
                         <div class="d-flex justify-content-between mb-3">
+
                           <form class="app-form app-icon-form w-100" action="#">
                             <div class="position-relative">
                               <input type="search" class="form-control search-filter" placeholder="Search..."
@@ -1327,1146 +1477,583 @@
         <!-- Body main section starts -->
         <main>
           <div class="container-fluid">
+
             <!-- Breadcrumb start -->
             <div class="row m-1">
               <div class="col-12 ">
-                <h4 class="main-title">Accordions</h4>
+                <h4 class="main-title">Cửa hàng</h4>
                 <ul class="app-line-breadcrumbs mb-3">
                   <li class="">
                     <a href="#" class="f-s-14 f-w-500">
                       <span>
-                        <i class="ph-duotone  ph-briefcase f-s-16"></i> Ui kits
+                        <i class="ph-duotone  ph-table f-s-16"></i> Dịch vụ
                       </span>
                     </a>
                   </li>
                   <li class="active">
-                    <a href="#" class="f-s-14 f-w-500">Accordions</a>
+                    <a href="#" class="f-s-14 f-w-500">Cửa hàng</a>
                   </li>
                 </ul>
               </div>
             </div>
+            <div class="table-filter">
+              <div class="relative ">
+                <a data-bs-target="#filterModal" data-bs-toggle="modal" type="button" class="btn btn-sort">
+                  <i class="ph-light  ph-sort-ascending"></i>
+
+                </a>
+              </div>
+              <div class="relative btn btn-add-shop-wrap">
+                <a data-bs-target="#editCardModal" data-bs-toggle="modal" type="button"
+                  class="btn btn-add-shop cursor-pointer">
+                  <i class="ph ph-plus"></i>
+                  Thêm cửa hàng mới
+                </a>
+
+              </div>
+
+            </div>
             <!-- Breadcrumb end -->
 
-            <!-- Accordions start -->
-            <div class="row accordions-rtl">
-              <!-- Accordions 1 -->
-              <div class="col-lg-6">
+
+            <!-- Advance Table start -->
+            <div class="row advance-table-section">
+              <!-- Projects Table start -->
+              <div class="col-12">
                 <div class="card">
-                  <div class="card-header code-header">
-                    <h5> Simple According </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem1" aria-expanded="false"
-                      aria-controls="accordionsItem1">
-                      <i class="ti ti-code source" data-source="accordions1"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-secondary">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                          data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <div class="card-body ps-0 pe-0">
+                    <div class="table-responsive app-scroll app-datatable-default project-table">
 
-                  <pre class="accordions1 collapse mt-3" id="accordionsItem1">
-  <code class="language-html">
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h5&gt; Simple According &lt;/h5&gt;
-      &lt;/div&gt;
-       &lt;div class="card-body"&gt;
-        &lt;div class="accordion app-accordion accordion-secondary"&gt;
-         &lt;div class="accordion-item"&gt;
-          &lt;h2 class="accordion-header"&gt;
-           &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
-            Accordion Item #1
-           &lt;/button&gt;
-          &lt;/h2&gt;
-          &lt;div id="collapseOne" class="accordion-collapse collapse show"
-           data-bs-parent="#accordionExample"&gt;
-           &lt;div class="accordion-body"&gt;
-            &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default, until the
-            collapse plugin adds the appropriate classes that we use to style each element. These
-            classes control the overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or overriding our default variables.
-            It's also worth noting that just about any HTML can go within the
-            &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-           &lt;/div&gt;
-          &lt;/div&gt;
-         &lt;/div&gt;
-         &lt;div class="accordion-item"&gt;
-          &lt;h2 class="accordion-header"&gt;
-           &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
-            Accordion Item #2
-           &lt;/button&gt;
-          &lt;/h2&gt;
-          &lt;div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"&gt;
-           &lt;div class="accordion-body"&gt;
-            &lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default, until
-            the collapse plugin adds the appropriate classes that we use to style each element. These
-            classes control the overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or overriding our default variables.
-            It's also worth noting that just about any HTML can go within the
-            &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-           &lt;/div&gt;
-          &lt;/div&gt;
-         &lt;/div&gt;
-         &lt;div class="accordion-item"&gt;
-          &lt;h2 class="accordion-header"&gt;
-           &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt;
-            Accordion Item #3
-           &lt;/button&gt;
-          &lt;/h2&gt;
-          &lt;div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample"&gt;
-           &lt;div class="accordion-body"&gt;
-            &lt;strong&gt;This is the third item's accordion body.&lt;/strong&gt; It is hidden by default, until the
-            collapse plugin adds the appropriate classes that we use to style each element. These
-            classes control the overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or overriding our default variables.
-            It's also worth noting that just about any HTML can go within the
-            &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-         &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-      
-  </code>
-</pre>
-                </div>
-              </div>
-
-              <!-- Accordions 2 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> Outline According </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem2" aria-expanded="false"
-                      aria-controls="accordionsItem2">
-                      <i class="ti ti-code source" data-source="accordions2"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-outline-secondary">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOneOutline" aria-expanded="true"
-                            aria-controls="collapseOneOutline">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="collapseOneOutline" class="accordion-collapse collapse show"
-                          data-bs-parent="#accordionExampleoutlineoutline">
-                          <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwooutline" aria-expanded="false"
-                            aria-controls="collapseTwooutline">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="collapseTwooutline" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionExampleoutlineoutline">
-                          <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThreeoutline" aria-expanded="false"
-                            aria-controls="collapseThreeoutline">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="collapseThreeoutline" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionExampleoutlineoutline">
-                          <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <pre class="accordions2 collapse mt-3" id="accordionsItem2">
-  <code class="language-html">
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h5&gt; Outline According &lt;/h5&gt;
-      &lt;/div&gt;
-      &lt;div class="card-body"&gt;
-       &lt;div class="accordion app-accordion accordion-outline-secondary"&gt;
-        &lt;div class="accordion-item"&gt;
-         &lt;h2 class="accordion-header"&gt;
-          &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-           data-bs-target="#collapseOneOutline" aria-expanded="true"
-           aria-controls="collapseOneOutline"&gt;
-           Accordion Item #1
-          &lt;/button&gt;
-         &lt;/h2&gt;
-         &lt;div id="collapseOneOutline" class="accordion-collapse collapse show"
-          data-bs-parent="#accordionExampleoutlineoutline"&gt;
-          &lt;div class="accordion-body"&gt;
-           &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default, until the
-           collapse plugin adds the appropriate classes that we use to style each element. These
-           classes control the overall appearance, as well as the showing and hiding via CSS
-           transitions. You can modify any of this with custom CSS or overriding our default variables.
-           It's also worth noting that just about any HTML can go within the
-           &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-          &lt;/div&gt;
-         &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-item"&gt;
-         &lt;h2 class="accordion-header"&gt;
-          &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-           data-bs-target="#collapseTwooutline" aria-expanded="false"
-           aria-controls="collapseTwooutline"&gt;
-           Accordion Item #2
-          &lt;/button&gt;
-         &lt;/h2&gt;
-         &lt;div id="collapseTwooutline" class="accordion-collapse collapse"
-          data-bs-parent="#accordionExampleoutlineoutline"&gt;
-          &lt;div class="accordion-body"&gt;
-           &lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default, until
-           the collapse plugin adds the appropriate classes that we use to style each element. These
-           classes control the overall appearance, as well as the showing and hiding via CSS
-           transitions. You can modify any of this with custom CSS or overriding our default variables.
-           It's also worth noting that just about any HTML can go within the
-           &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-          &lt;/div&gt;
-         &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-item"&gt;
-         &lt;h2 class="accordion-header"&gt;
-          &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-           data-bs-target="#collapseThreeoutline" aria-expanded="false"
-           aria-controls="collapseThreeoutline"&gt;
-           Accordion Item #3
-          &lt;/button&gt;
-         &lt;/h2&gt;
-         &lt;div id="collapseThreeoutline" class="accordion-collapse collapse"
-          data-bs-parent="#accordionExampleoutlineoutline"&gt;
-          &lt;div class="accordion-body"&gt;
-           &lt;strong&gt;This is the third item's accordion body.&lt;/strong&gt; It is hidden by default, until the
-           collapse plugin adds the appropriate classes that we use to style each element. These
-           classes control the overall appearance, as well as the showing and hiding via CSS
-           transitions. You can modify any of this with custom CSS or overriding our default variables.
-           It's also worth noting that just about any HTML can go within the
-           &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-         &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-      
-  </code>
-</pre>
-                </div>
-              </div>
-
-              <!-- Accordions 3 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> Light </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem3" aria-expanded="false"
-                      aria-controls="accordionsItem3">
-                      <i class="ti ti-code source" data-source="accordions3"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-light-secondary" id="accordionFlushExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse show"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <pre class="accordions3 collapse mt-3" id="accordionsItem3">
-  <code class="language-html">  
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h5&gt; Light &lt;/h5&gt;
-       &lt;/div&gt;
-        &lt;div class="card-body"&gt;
-         &lt;div class="accordion app-accordion accordion-light-secondary" id="accordionFlushExample"&gt;
-          &lt;div class="accordion-item"&gt;
-           &lt;h2 class="accordion-header"&gt;
-            &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-             data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne"&gt;
-             Accordion Item #1
-            &lt;/button&gt;
-           &lt;/h2&gt;
-           &lt;div id="flush-collapseOne" class="accordion-collapse show"
-            data-bs-parent="#accordionFlushExample"&gt;
-            &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-             demonstrate the &lt;code&gt;.accordion-flush&lt;/code&gt; class. This is the first item's accordion
-             body.&lt;/div&gt;
-           &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="accordion-item"&gt;
-           &lt;h2 class="accordion-header"&gt;
-            &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-             data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"&gt;
-             Accordion Item #2
-            &lt;/button&gt;
-           &lt;/h2&gt;
-           &lt;div id="flush-collapseTwo" class="accordion-collapse collapse"
-            data-bs-parent="#accordionFlushExample"&gt;
-            &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-             demonstrate the &lt;code&gt;.accordion-flush&lt;/code&gt; class. This is the second item's accordion
-             body. Let's imagine this being filled with some actual content.&lt;/div&gt;
-           &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="accordion-item"&gt;
-           &lt;h2 class="accordion-header"&gt;
-            &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-             data-bs-target="#flush-collapseThree" aria-expanded="false"
-             aria-controls="flush-collapseThree"&gt;
-             Accordion Item #3
-            &lt;/button&gt;
-           &lt;/h2&gt;
-           &lt;div id="flush-collapseThree" class="accordion-collapse collapse"
-            data-bs-parent="#accordionFlushExample"&gt;
-            &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-             demonstrate the &lt;code&gt;.accordion-flush&lt;/code&gt; class. This is the third item's accordion
-             body. Nothing more exciting happening here in terms of content, but just filling up the
-             space to make it look, at least at first glance, a bit more representative of how this would
-             look in a real-world application.&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-  </code>
-</pre>
-                </div>
-              </div>
-
-              <!-- Accordions 4 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> Flush(No border)</h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem4" aria-expanded="false"
-                      aria-controls="accordionsItem4">
-                      <i class="ti ti-code source" data-source="accordions4"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-flush accordion-secondary"
-                      id="accordionappflushExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#appflush-collapseOne" aria-expanded="true"
-                            aria-controls="appflush-collapseOne">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="appflush-collapseOne" class="accordion-collapse show"
-                          data-bs-parent="#accordionappflushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-appflush</code> class. This is the first item's accordion
-                            body.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#appflush-collapseTwo" aria-expanded="false"
-                            aria-controls="appflush-collapseTwo">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="appflush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionappflushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-appflush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#appflush-collapseThree" aria-expanded="false"
-                            aria-controls="appflush-collapseThree">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="appflush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionrealExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-appflush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <pre class="accordions4 collapse mt-3" id="accordionsItem4">
-   <code class="language-html">
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h5&gt; Flush(No border)&lt;/h5&gt;
-      &lt;/div&gt;
-      &lt;div class="card-body"&gt;
-       &lt;div class="accordion app-accordion accordion-flush accordion-secondary"
-        id="accordionappflushExample"&gt;
-        &lt;div class="accordion-item"&gt;
-      &lt;h2 class="accordion-header"&gt;
-       &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-        data-bs-target="#appflush-collapseOne" aria-expanded="true"
-        aria-controls="appflush-collapseOne"&gt;
-        Accordion Item #1
-       &lt;/button&gt;
-      &lt;/h2&gt;
-      &lt;div id="appflush-collapseOne" class="accordion-collapse show"
-       data-bs-parent="#accordionappflushExample"&gt;
-       &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-        demonstrate the &lt;code&gt;.accordion-appflush&lt;/code&gt; class. This is the first item's accordion
-        body.&lt;/div&gt;
-      &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-item"&gt;
-      &lt;h2 class="accordion-header"&gt;
-       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#appflush-collapseTwo" aria-expanded="false"
-        aria-controls="appflush-collapseTwo"&gt;
-        Accordion Item #2
-       &lt;/button&gt;
-      &lt;/h2&gt;
-      &lt;div id="appflush-collapseTwo" class="accordion-collapse collapse"
-       data-bs-parent="#accordionappflushExample"&gt;
-       &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-        demonstrate the &lt;code&gt;.accordion-appflush&lt;/code&gt; class. This is the second item's accordion
-        body. Let's imagine this being filled with some actual content.&lt;/div&gt;
-      &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-item"&gt;
-      &lt;h2 class="accordion-header"&gt;
-       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#appflush-collapseThree" aria-expanded="false"
-        aria-controls="appflush-collapseThree"&gt;
-        Accordion Item #3
-       &lt;/button&gt;
-      &lt;/h2&gt;
-      &lt;div id="appflush-collapseThree" class="accordion-collapse collapse"
-       data-bs-parent="#accordionrealExample"&gt;
-       &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-        demonstrate the &lt;code&gt;.accordion-appflush&lt;/code&gt; class. This is the third item's accordion
-        body. Nothing more exciting happening here in terms of content, but just filling up the
-        space to make it look, at least at first glance, a bit more representative of how this would
-        look in a real-world application.&lt;/div&gt;
-        &lt;/div&gt;
-       &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
- &lt;/div&gt;
-                        
-                    </code>
-                  </pre>
-                </div>
-              </div>
-              <!-- Accordions 5 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5 class="txt-ellipsis"> Frequently Asked Questions(Real Example) </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem5" aria-expanded="false"
-                      aria-controls="accordionsItem5">
-                      <i class="ti ti-code source" data-source="accordions5"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-light-secondary" id="accordionPanelsStayOpenExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
-                            <i class="ti ti-message-report me-1 f-s-20"></i> What happens if I just pay my ticket?
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                          <div class="accordion-body">
-                            Paying your ticket without contesting it can result in a conviction on your driving record.
-                            This can have long-lasting consequences such as increased insurance rates, driver's license
-                            suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            <i class="ti ti-ticket me-1 f-s-20"></i> Can this ticket affect my job?
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            Absolutely, tickets recorded on your driving history can result in disqualification from
-                            driving commercially or obtaining a commercial driver's license (CDL). They can also
-                            disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                            clean driving record.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
-                            <i class="ti ti-transition-bottom me-1 f-s-20"></i> How long does it take to resolve my
-                            case?
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            It really depends on the court your ticket landed in. Some courts move faster than others,
-                            but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                            process.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <pre class="accordions5 collapse mt-3" id="accordionsItem5">
-                    <code class="language-html">
-                      
-                         &lt;div class="card"&gt;
-                         &lt;div class="card-header"&gt;
-                         &lt;h5&gt; Frequently Asked Questions(Real Example) &lt;/h5&gt;
-                         &lt;/div&gt;
-                         &lt;div class="card-body"&gt;
-                         &lt;div class="accordion app-accordion accordion-light-secondary" id="accordionPanelsStayOpenExample"&gt;
-                          &lt;div class="accordion-item"&gt;
-                          &lt;h2 class="accordion-header"&gt;
-                          &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-                           data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                           aria-controls="panelsStayOpen-collapseOne"&gt;
-                           &lt;i class="ti ti-message-report me-1 f-s-20"&gt;&lt;/i&gt; What happens if I just pay my ticket?
-                          &lt;/button&gt;
-                          &lt;/h2&gt;
-                          &lt;div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"&gt;
-                          &lt;div class="accordion-body"&gt;
-                           Paying your ticket without contesting it can result in a conviction on your driving record.
-                           This can have long-lasting consequences such as increased insurance rates, driver's license
-                           suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;div class="accordion-item"&gt;
-                          &lt;h2 class="accordion-header"&gt;
-                          &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                           data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                           aria-controls="panelsStayOpen-collapseTwo"&gt;
-                           &lt;i class="ti ti-ticket me-1 f-s-20"&gt;&lt;/i&gt; Can this ticket affect my job?
-                          &lt;/button&gt;
-                          &lt;/h2&gt;
-                          &lt;div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"&gt;
-                          &lt;div class="accordion-body"&gt;
-                           Absolutely, tickets recorded on your driving history can result in disqualification from
-                           driving commercially or obtaining a commercial driver's license (CDL). They can also
-                           disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                           clean driving record.
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;div class="accordion-item"&gt;
-                          &lt;h2 class="accordion-header"&gt;
-                          &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                           data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                           aria-controls="panelsStayOpen-collapseThree"&gt;
-                           &lt;i class="ti ti-transition-bottom me-1 f-s-20"&gt;&lt;/i&gt; How long does it take to resolve my
-                           case?
-                          &lt;/button&gt;
-                          &lt;/h2&gt;
-                          &lt;div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"&gt;
-                          &lt;div class="accordion-body"&gt;
-                           It really depends on the court your ticket landed in. Some courts move faster than others,
-                           but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                           process.
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                         &lt;/div&gt;
-                         &lt;/div&gt;
-                         &lt;/div&gt;
-                        
-                    </code>
-                  </pre>
-                </div>
-              </div>
-              <!-- Accordions 6 -->
-              <div class="col-lg-6">
-                <div class="card equal-card">
-                  <div class="card-header code-header">
-                    <h5 class="txt-ellipsis"> Left Side Plus Minus Icon </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem6" aria-expanded="false"
-                      aria-controls="accordionsItem6">
-                      <i class="ti ti-code source" data-source="accordions6"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="accordion app-accordion accordion-light-primary app-accordion-icon-left app-accordion-plus"
-                      id="accordionlefticonExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#lefticon-collapseOne" aria-expanded="true"
-                            aria-controls="lefticon-collapseOne">
-                            What happens if I just pay my ticket?
-                          </button>
-                        </h2>
-                        <div id="lefticon-collapseOne" class="accordion-collapse collapse show">
-                          <div class="accordion-body">
-                            Paying your ticket without contesting it can result in a conviction on your driving record.
-                            This can have long-lasting consequences such as increased insurance rates, driver's license
-                            suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#lefticon-collapseTwo" aria-expanded="false"
-                            aria-controls="lefticon-collapseTwo">
-                            Can this ticket affect my job?
-                          </button>
-                        </h2>
-                        <div id="lefticon-collapseTwo" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            Absolutely, tickets recorded on your driving history can result in disqualification from
-                            driving commercially or obtaining a commercial driver's license (CDL). They can also
-                            disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                            clean driving record.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#lefticon-collapseThree" aria-expanded="false"
-                            aria-controls="lefticon-collapseThree">
-                            How long does it take to resolve my case?
-                          </button>
-                        </h2>
-                        <div id="lefticon-collapseThree" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            It really depends on the court your ticket landed in. Some courts move faster than others,
-                            but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                            process.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <pre class="accordions6 collapse mt-3" id="accordionsItem6">
-                    <code class="language-html">
-                     
-                          &lt;div class="card equal-card"&gt;
-                         &lt;div class="card-header"&gt;
-                          &lt;h5&gt; Left side plus minus icon &lt;/h5&gt;
-                         &lt;/div&gt;
-                         &lt;div class="card-body"&gt;
-                          &lt;div
-                           class="accordion app-accordion accordion-light-primary app-accordion-icon-left app-accordion-plus"
-                           id="accordionlefticonExample"&gt;
-                           &lt;div class="accordion-item"&gt;
-                            &lt;h2 class="accordion-header"&gt;
-                             &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#lefticon-collapseOne" aria-expanded="true"
-                              aria-controls="lefticon-collapseOne"&gt;
-                              What happens if I just pay my ticket?
-                             &lt;/button&gt;
-                            &lt;/h2&gt;
-                            &lt;div id="lefticon-collapseOne" class="accordion-collapse collapse show"&gt;
-                             &lt;div class="accordion-body"&gt;
-                              Paying your ticket without contesting it can result in a conviction on your driving record.
-                              This can have long-lasting consequences such as increased insurance rates, driver's license
-                              suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                             &lt;/div&gt;
-                            &lt;/div&gt;
-                           &lt;/div&gt;
-                           &lt;div class="accordion-item"&gt;
-                            &lt;h2 class="accordion-header"&gt;
-                             &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#lefticon-collapseTwo" aria-expanded="false"
-                              aria-controls="lefticon-collapseTwo"&gt;
-                              Can this ticket affect my job?
-                             &lt;/button&gt;
-                            &lt;/h2&gt;
-                            &lt;div id="lefticon-collapseTwo" class="accordion-collapse collapse"&gt;
-                             &lt;div class="accordion-body"&gt;
-                              Absolutely, tickets recorded on your driving history can result in disqualification from
-                              driving commercially or obtaining a commercial driver's license (CDL). They can also
-                              disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                              clean driving record.
-                             &lt;/div&gt;
-                            &lt;/div&gt;
-                           &lt;/div&gt;
-                           &lt;div class="accordion-item"&gt;
-                            &lt;h2 class="accordion-header"&gt;
-                             &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#lefticon-collapseThree" aria-expanded="false"
-                              aria-controls="lefticon-collapseThree"&gt;
-                              How long does it take to resolve my case?
-                             &lt;/button&gt;
-                            &lt;/h2&gt;
-                            &lt;div id="lefticon-collapseThree" class="accordion-collapse collapse"&gt;
-                             &lt;div class="accordion-body"&gt;
-                              It really depends on the court your ticket landed in. Some courts move faster than others,
-                              but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                              process.
-                             &lt;/div&gt;
-                            &lt;/div&gt;
-                           &lt;/div&gt;
-                          &lt;/div&gt;
-                         &lt;/div&gt;
-                        &lt;/div&gt;
-                        
-                    </code>
-                  </pre>
-                </div>
-              </div>
-
-              <!-- Accordions 7 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> No Icon Indicators </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem7" aria-expanded="false"
-                      aria-controls="accordionsItem7">
-                      <i class="ti ti-code source" data-source="accordions7"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-light-danger app-accordion-no-icon"
-                      id="accordionnoiconExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#noicon-collapseOne" aria-expanded="true"
-                            aria-controls="noicon-collapseOne">
-                            <i class="ti ti-message-report me-1 f-s-20"></i> What happens if I just pay my ticket?
-                          </button>
-                        </h2>
-                        <div id="noicon-collapseOne" class="accordion-collapse collapse show">
-                          <div class="accordion-body">
-                            Paying your ticket without contesting it can result in a conviction on your driving record.
-                            This can have long-lasting consequences such as increased insurance rates, driver's license
-                            suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#noicon-collapseTwo" aria-expanded="false"
-                            aria-controls="noicon-collapseTwo">
-                            <i class="ti ti-ticket me-1 f-s-20"></i> Can this ticket affect my job?
-                          </button>
-                        </h2>
-                        <div id="noicon-collapseTwo" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            Absolutely, tickets recorded on your driving history can result in disqualification from
-                            driving commercially or obtaining a commercial driver's license (CDL). They can also
-                            disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                            clean driving record.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#noicon-collapseThree" aria-expanded="false"
-                            aria-controls="noicon-collapseThree">
-                            <i class="ti ti-transition-bottom me-1 f-s-20"></i> How long does it take to resolve my
-                            case?
-                          </button>
-                        </h2>
-                        <div id="noicon-collapseThree" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            It really depends on the court your ticket landed in. Some courts move faster than others,
-                            but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                            process.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <pre class="accordions7 collapse mt-3" id="accordionsItem7">
-<code class="language-html">&lt;div class="card"&gt;
-   &lt;div class="card-header"&gt;
-   &lt;h5&gt; No icon indicators &lt;/h5&gt;
-   &lt;/div&gt;
-   &lt;div class="card-body"&gt;
-   &lt;div class="accordion app-accordion accordion-light-danger app-accordion-no-icon"
-   id="accordionnoiconExample"&gt;
-   &lt;div class="accordion-item"&gt;
-   &lt;h2 class="accordion-header"&gt;
-   &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-   data-bs-target="#noicon-collapseOne" aria-expanded="true"
-   aria-controls="noicon-collapseOne"&gt;
-   &lt;i class="ti ti-message-report me-1 f-s-20"&gt;&lt;/i&gt; What happens if I just pay my ticket?
-   &lt;/button&gt;
-   &lt;/h2&gt;
-   &lt;div id="noicon-collapseOne" class="accordion-collapse collapse show"&gt;
-   &lt;div class="accordion-body"&gt;
-   Paying your ticket without contesting it can result in a conviction on your driving record.
-   This can have long-lasting consequences such as increased insurance rates, driver's license
-   suspension, employment restrictions, and additional fines imposed by your state's DMV.
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="accordion-item"&gt;
-   &lt;h2 class="accordion-header"&gt;
-   &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-   data-bs-target="#noicon-collapseTwo" aria-expanded="false"
-   aria-controls="noicon-collapseTwo"&gt;
-   &lt;i class="ti ti-ticket me-1 f-s-20"&gt;&lt;/i&gt; Can this ticket affect my job?
-   &lt;/button&gt;
-   &lt;/h2&gt;
-   &lt;div id="noicon-collapseTwo" class="accordion-collapse collapse"&gt;
-   &lt;div class="accordion-body"&gt;
-   Absolutely, tickets recorded on your driving history can result in disqualification from
-   driving commercially or obtaining a commercial driver's license (CDL). They can also
-   disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-   clean driving record.
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="accordion-item"&gt;
-   &lt;h2 class="accordion-header"&gt;
-   &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-   data-bs-target="#noicon-collapseThree" aria-expanded="false"
-   aria-controls="noicon-collapseThree"&gt;
-   &lt;i class="ti ti-transition-bottom me-1 f-s-20"&gt;&lt;/i&gt; How long does it take to resolve my
-   case?
-   &lt;/button&gt;
-   &lt;/h2&gt;
-   &lt;div id="noicon-collapseThree" class="accordion-collapse collapse"&gt;
-   &lt;div class="accordion-body"&gt;
-   It really depends on the court your ticket landed in. Some courts move faster than others,
-   but on average, it could take about 1-3 months. This is perfectly normal in the legal
-   process.
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
-                </div>
-              </div>
-              <!-- Accordions 8 -->
-              <div class="col-lg-6">
-                <div class="card equal-card">
-                  <div class="card-header code-header">
-                    <h5>Multi Level Indicators </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem8" aria-expanded="false"
-                      aria-controls="accordionsItem8">
-                      <i class="ti ti-code source" data-source="accordions8"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-light-success app-accordion-plus" id="nestingExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#nestingcollapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            This is level one accordion #1
-                          </button>
-                        </h2>
-                        <div id="nestingcollapseOne" class="accordion-collapse collapse show"
-                          data-bs-parent="#nestingExample">
-                          <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default.
-
-                            <div class="accordion mt-2 app-accordion app-accordion-icon-left app-accordion-plus"
-                              id="nestingtwoExample">
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#nestingtwocollapseOne" aria-expanded="false"
-                                    aria-controls="collapseOne">
-                                    This is level two accordion #1
-                                  </button>
-                                </h2>
-                                <div id="nestingtwocollapseOne" class="accordion-collapse collapse"
-                                  data-bs-parent="#nestingtwoExample">
-                                  <div class="accordion-body">
-                                    This is the first item's accordion body It is shown by default.
-                                  </div>
+                      <table id="projectTable" class="display table-bottom-border app-data-table table-box-hover">
+                        <thead>
+                          <tr>
+                            <th>
+                              <label class="check-box">
+                                <input type="checkbox" id="select-all">
+                                <span class="checkmark outline-secondary ms-2"></span>
+                              </label>
+                            </th>
+                            <th>Tên cửa hàng</th>
+                            <th>Merchant ID</th>
+                            <th>
+                              Api Key</th>
+                            <th>Trạng thái</th>
+                            <th>Thời gian</th>
+                            <th>Ghi chú</th>
+                            <th>Thao tác</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <label class="check-box">
+                                <input type="checkbox">
+                                <span class="checkmark outline-secondary ms-2"></span>
+                              </label>
+                            </td>
+                            <td>
+                              <div class="d-flex justify-content-left align-items-center">
+                                <div>
+                                  <h6 class="f-s-15 mb-0">Cửa hàng Hà Nội</h6>
+                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
                                 </div>
                               </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#nestingtwocollapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    This is level two accordion #2
-                                  </button>
-                                </h2>
-                                <div id="nestingtwocollapseTwo" class="accordion-collapse collapse"
-                                  data-bs-parent="#nestingtwoExample">
-                                  <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
-                                  </div>
+                            </td>
+                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
+                            <td>TX2604571052543841</td>
+                            <td>
+                              <span class="badge bg-primary">New</span>
+                            </td>
+                            <td class="text-success f-w-500">Dec 07, 2024</td>
+                            <td class="text-danger f-w-500">Dec 26, 2024</td>
+                            <td>
+                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
+                                data-bs-target="#editCardModal">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label class="check-box">
+                                <input type="checkbox">
+                                <span class="checkmark outline-secondary ms-2"></span>
+                              </label>
+                            </td>
+                            <td>
+                              <div class="d-flex justify-content-left align-items-center">
+
+                                <div>
+                                  <h6 class="f-s-15 mb-0">Cửa hàng Đống Đa</h6>
+                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+
                                 </div>
                               </div>
+                            </td>
+                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
+                            <td>TX2604571052543841</td>
+                            <td>
+                              <span class="badge bg-success">Completed</span>
+                            </td>
+                            <td class="text-success f-w-500">Jul 27, 2024</td>
+                            <td class="text-danger f-w-500">Jan 06, 2025</td>
+                            <td>
+                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
+                                data-bs-target="#editCardModal">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label class="check-box">
+                                <input type="checkbox">
+                                <span class="checkmark outline-secondary ms-2"></span>
+                              </label>
+                            </td>
+                            <td>
+                              <div class="d-flex justify-content-left align-items-center">
 
+                                <div>
+                                  <h6 class="f-s-15 mb-0">Cửa hàng HCM</h6>
+                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
+                            <td>TX2604571052543841</td>
+                            <td>
+                              <span class="badge bg-primary">New</span>
+                            </td>
+                            <td class="text-success f-w-500">Aug 21, 2024</td>
+                            <td class="text-danger f-w-500">Apr 04, 2024</td>
+                            <td>
+                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
+                                data-bs-target="#editCardModal">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label class="check-box">
+                                <input type="checkbox">
+                                <span class="checkmark outline-secondary ms-2"></span>
+                              </label>
+                            </td>
+                            <td>
+                              <div class="d-flex justify-content-left align-items-center">
+
+                                <div>
+                                  <h6 class="f-s-15 mb-0">Cửa Hàng Hưng Yên </h6>
+                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
+                            <td>TX2604571052543841</td>
+                            <td>
+                              <span class="badge bg-danger">Pending</span>
+                            </td>
+                            <td class="text-success f-w-500">Nov 30, 2024</td>
+                            <td class="text-danger f-w-500">Dec 10, 2025</td>
+                            <td>
+                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
+                                data-bs-target="#editCardModal">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label class="check-box">
+                                <input type="checkbox">
+                                <span class="checkmark outline-secondary ms-2"></span>
+                              </label>
+                            </td>
+                            <td>
+                              <div class="d-flex justify-content-left align-items-center">
+
+                                <div>
+                                  <h6 class="f-s-15 mb-0">Cửa Hàng Hưng Yên</h6>
+                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
+                            <td>TX2604571052543841</td>
+                            <td>
+                              <span class="badge bg-warning">Inprogress</span>
+                            </td>
+                            <td class="text-success f-w-500">Dec 01, 2024</td>
+                            <td class="text-danger f-w-500">Mar 20, 2025</td>
+                            <td>
+                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
+                                data-bs-target="#editCardModal">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label class="check-box">
+                                <input type="checkbox">
+                                <span class="checkmark outline-secondary ms-2"></span>
+                              </label>
+                            </td>
+                            <td>
+                              <div class="d-flex justify-content-left align-items-center">
+
+                                <div>
+                                  <h6 class="f-s-15 mb-0">Cửa Hàng Hưng Yên</h6>
+                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
+                            <td>TX2604571052543841</td>
+                            <td>
+                              <span class="badge bg-warning">Inprogress</span>
+                            </td>
+                            <td class="text-success f-w-500">Jul 24, 2024</td>
+                            <td class="text-danger f-w-500">Feb 04, 2024</td>
+                            <td>
+                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
+                                data-bs-target="#editCardModal">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <label class="check-box">
+                                <input type="checkbox">
+                                <span class="checkmark outline-secondary ms-2"></span>
+                              </label>
+                            </td>
+                            <td>
+                              <div class="d-flex justify-content-left align-items-center">
+
+                                <div>
+                                  <h6 class="f-s-15 mb-0">Cửa Hàng Hưng Yên</h6>
+                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+
+                                </div>
+                              </div>
+                            </td>
+                            <td class="text-dark f-w-500  word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
+                            <td>TX2604571052543841</td>
+                            <td>
+                              <span class="badge bg-success">New</span>
+                            </td>
+                            <td class="text-success f-w-500">Feb 29, 2024</td>
+                            <td class="text-danger f-w-500">Mar 12, 2024</td>
+                            <td>
+                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
+                                <i class="ti ti-trash"></i>
+                              </button>
+                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
+                                data-bs-target="#editCardModal">
+                                <i class="ti ti-edit"></i>
+                              </button>
+                            </td>
+                          </tr>
+                      </table>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- Projects Table end -->
+
+              <!-- delete-modal start  -->
+              <div class="modal fade" id="apiDeleteModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <img src="../assets/images/icons/delete-icon.png" alt="" class="img-fluid">
+                      <div class="text-center">
+                        <h4 class="text-danger f-w-600">Are You Sure?</h4>
+                        <p class="text-secondary f-s-16">You won't be able to revert this!</p>
+                      </div>
+
+                      <div class="text-center mt-3">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="confirmDelete">Yes,Delet it</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- delete-modal-end-->
+
+              <!-- edit modal-1 start -->
+              <div class="modal fade" id="editCardModal" tabindex="-1" aria-labelledby="editCardModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                      <h1 class="modal-title fs-5 text-white" id="editCardModalLabel">Edit Advance Table</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="ticket-form">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="mb-3">
+                              <label class="form-label">Name</label>
+                              <input type="text" class="form-control" placeholder="Performance Issue">
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="mb-3">
+                              <label class="form-label">Leader</label>
+                              <input type="text" class="form-control" placeholder="Michelle House">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label">Client</label>
+                              <input type="text" class="form-control" placeholder="james">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label">Status</label>
+                              <select class="form-select">
+                                <option selected="">Select Status</option>
+                                <option value="open">open</option>
+                                <option value="inprogress">inprogress</option>
+                                <option value="closed">closed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label">Start Date</label>
+                              <input type="date" class="form-control" name="trip-start">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label">End Date</label>
+                              <input type="date" class="form-control">
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-light-primary" data-bs-dismiss="modal">Save changes</button>
+                    </div>
 
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#nestingcollapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            This is level one accordion #2
-                          </button>
-                        </h2>
-                        <div id="nestingcollapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#nestingExample">
-                          <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <!-- edit model end  -->
+
+              <!-- edit modal-2 start -->
+              <div class="modal fade" id="editCard2Modal" tabindex="-1" aria-labelledby="editCard2ModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                      <h1 class="modal-title fs-5 text-white" id="editCard2ModalLabel">Edit Advance Table</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="ticket-form">
+                        <div class="row">
+                          <div class="col-12">
+                            <div class="mb-3">
+                              <label class="form-label">Employee Name</label>
+                              <input type="text" class="form-control" placeholder="Performance Issue">
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="mb-3">
+                              <label class="form-label">Position</label>
+                              <input type="text" class="form-control" placeholder="Michelle House">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label">Email</label>
+                              <input type="text" class="form-control" placeholder="alison@gmail.com">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label">Status</label>
+                              <select class="form-select">
+                                <option selected="">Select Status</option>
+                                <option value="open">open</option>
+                                <option value="inprogress">inprogress</option>
+                                <option value="closed">closed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label">salary</label>
+                              <input type="text" class="form-control" placeholder="$2000">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="form-label">End Date</label>
+                              <input type="date" class="form-control">
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-light-primary" data-bs-dismiss="modal">Save changes</button>
+                    </div>
 
                   </div>
-                  <pre class="accordions8 collapse mt-3" id="accordionsItem8">
-<code class="language-html">&lt;div class="card equal-card"&gt;
-      &lt;div class="card-header"&gt;
-       &lt;h5&gt;Multi level indicators &lt;/h5&gt;
-      &lt;/div&gt;
-      &lt;div class="card-body"&gt;
-       &lt;div class="accordion app-accordion accordion-light-success app-accordion-plus" id="nestingExample"&gt;
-       &lt;div class="accordion-item"&gt;
-        &lt;h2 class="accordion-header"&gt;
-        &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-      data-bs-target="#nestingcollapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
-      This is level one accordion #1
-        &lt;/button&gt;
-        &lt;/h2&gt;
-        &lt;div id="nestingcollapseOne" class="accordion-collapse collapse show"
-        data-bs-parent="#nestingExample"&gt;
-        &lt;div class="accordion-body"&gt;
-      &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default.
-    <br>
-      &lt;div class="accordion mt-2 app-accordion app-accordion-icon-left app-accordion-plus"
-       id="nestingtwoExample"&gt;
-       &lt;div class="accordion-item"&gt;
-       &lt;h2 class="accordion-header"&gt;
-        &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#nestingtwocollapseOne" aria-expanded="false"
-        aria-controls="collapseOne"&gt;
-        This is level two accordion #1
-        &lt;/button&gt;
-       &lt;/h2&gt;
-       &lt;div id="nestingtwocollapseOne" class="accordion-collapse collapse"
-        data-bs-parent="#nestingtwoExample"&gt;
-        &lt;div class="accordion-body"&gt;
-        This is the first item's accordion body It is shown by default.
-        &lt;/div&gt;
-       &lt;/div&gt;
-       &lt;/div&gt;
-       &lt;div class="accordion-item"&gt;
-       &lt;h2 class="accordion-header"&gt;
-        &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#nestingtwocollapseTwo" aria-expanded="false"
-        aria-controls="collapseTwo"&gt;
-        This is level two accordion #2
-        &lt;/button&gt;
-       &lt;/h2&gt;
-       &lt;div id="nestingtwocollapseTwo" class="accordion-collapse collapse"
-        data-bs-parent="#nestingtwoExample"&gt;
-        &lt;div class="accordion-body"&gt;
-        &lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default,
-        until the collapse plugin adds the appropriate classes that we use to style each
-        element. These classes control the overall appearance, as well as the showing and
-        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-        our default variables. It's also worth noting that just about any HTML can go within
-        the &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-        &lt;/div&gt;
-       &lt;/div&gt;
-       &lt;/div&gt;
-    <br>
-      &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-       &lt;/div&gt;
-    <br>
-       &lt;div class="accordion-item"&gt;
-        &lt;h2 class="accordion-header"&gt;
-        &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-      data-bs-target="#nestingcollapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
-      This is level one accordion #2
-        &lt;/button&gt;
-        &lt;/h2&gt;
-        &lt;div id="nestingcollapseTwo" class="accordion-collapse collapse"
-        data-bs-parent="#nestingExample"&gt;
-        &lt;div class="accordion-body"&gt;
-      &lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default, until
-      the collapse plugin adds the appropriate classes that we use to style each element. These
-      classes control the overall appearance, as well as the showing and hiding via CSS
-      transitions. You can modify any of this with custom CSS or overriding our default variables.
-      It's also worth noting that just about any HTML can go within the
-      &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-        &lt;/div&gt;
-        &lt;/div&gt;
-       &lt;/div&gt;
-       &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt; </code>
-                  </pre>
                 </div>
               </div>
 
+
+
+              <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header bg-primary">
+                      <h1 class="modal-title fs-5 text-white" id="filterModal">Filter</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="ticket-form">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="input-group">
+                              <label class="trans_id" for="trans_id">Mã giao dịch</label>
+                              <div class="relative">
+                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
+                                  placeholder="Nhập mã giao dịch" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="input-group">
+                              <label class="trans_id" for="trans_id">Số tiền nhận</label>
+                              <div class="relative">
+                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
+                                  placeholder="Nhập mã giao dịch" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="input-group">
+                              <label class="trans_id" for="trans_id">Tên hóa đơn</label>
+                              <div class="relative">
+                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
+                                  placeholder="Nhập mã giao dịch" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="input-group">
+                              <label class="trans_id" for="trans_id">Mô tả hóa đơn</label>
+                              <div class="relative">
+                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
+                                  placeholder="Nhập mã giao dịch" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="input-group">
+                              <label class="trans_id" for="trans_id">Transaction Hash</label>
+                              <div class="relative">
+                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
+                                  placeholder="Nhập mã giao dịch" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="trans_id">Cửa hàng</label>
+                              <select class="form-select input-group-filter color-filter">
+                                <option selected="">Select Status</option>
+                                <option value="open">open</option>
+                                <option value="inprogress">inprogress</option>
+                                <option value="closed">closed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="trans_id">Trạng thái</label>
+                              <select class="form-select input-group-filter color-filter">
+                                <option selected="">Select Status</option>
+                                <option value="open">open</option>
+                                <option value="inprogress">inprogress</option>
+                                <option value="closed">closed</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="trans_id">Ngày bắt đầu</label>
+                              <input type="date" class="form-control input-group-filter color-filter">
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mb-3">
+                              <label class="trans_id">Ngày kết thúc</label>
+                              <input type="date" class="form-control input-group-filter color-filter">
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn  btn-filter-color" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-filter fa-fw"></i> Lọc
+                      </button>
+                      <button type="button" class="btn  btn-unfilter-color" data-bs-dismiss="modal">
+                        <i class="fa-solid fa-filter-circle-xmark me-2"></i>
+                        Bỏ lọc
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- edit model end  -->
+
             </div>
-            <!-- Accordions end -->
+            <!-- Advance Table end -->
           </div>
         </main>
         <!-- Body main section ends -->
@@ -2485,24 +2072,29 @@
               <div class="col-md-9 col-12">
                 <ul class="footer-text">
                   <li>
-                    <p class="mb-0">Copyright © 2024 ra-admin. All rights reserved 💖</p>
+                    <p class="mb-0">Copyright © 2024 ra-admin. All rights reserved.</p>
                   </li>
                   <li> <a href="#"> V1.0.0 </a></li>
                 </ul>
               </div>
               <div class="col-md-3">
-                <ul class="footer-text text-end">
-                  <li> <a href="document.html"> Need Help <i class="ti ti-help"></i></a></li>
+                <ul class="d-none d-md-block text-end">
+                  <li>
+                    <a href="https://mail.google.com/mail/u/0/#sent?compose=DmwnWrRttWThZGqGNSScHJgpWgDNSvFQvZKcVHfzfrvZVcfzQZMmTdWGMsbLXXxNbQJklmZDPWFl"
+                      target="_blank"> Need Help
+                      <i class="ti ti-help"> </i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </footer>
         <!-- Footer Section ends-->
+
       </div>
     </div>
   </div>
-
 
 
   <!--customizer-->
@@ -2511,17 +2103,20 @@
   <!-- latest jquery-->
   <script src="../assets/js/jquery-3.6.3.min.js"></script>
 
-  <!-- Bootstrap js-->
-  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- datatable js-->
+  <script src="../assets/vendor/datatable/jquery.dataTables.min.js"></script>
+
+  <!-- Simple bar js-->
+  <script src="../assets/vendor/simplebar/simplebar.js"></script>
 
   <!-- phosphor js -->
   <script src="../assets/vendor/phosphor/phosphor.js"></script>
 
-  <!--Prism JS-->
-  <script src="../assets/vendor/prism/prism.min.js"></script>
+  <!-- Bootstrap js-->
+  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 
-  <!-- Simple bar js-->
-  <script src="../assets/vendor/simplebar/simplebar.js"></script>
+  <!-- script js -->
+  <script src="../assets/js/advance_table.js"></script>
 
   <!-- App js-->
   <script src="../assets/js/script.js"></script>
