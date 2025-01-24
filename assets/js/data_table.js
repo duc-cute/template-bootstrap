@@ -21,6 +21,24 @@ $(function() {
     });
 });
 
+$(function() {
+    $('#example6').DataTable({
+        createdRow: function (row, data, index) {
+            if (data[3].replace(/[\$,]/g, '') * 1 > 150000) {
+                $('td', row).eq(3).addClass('highlight');
+            }
+        },
+    });
+});
+$(function() {
+    $('#example7').DataTable({
+        createdRow: function (row, data, index) {
+            if (data[3].replace(/[\$,]/g, '') * 1 > 150000) {
+                $('td', row).eq(3).addClass('highlight');
+            }
+        },
+    });
+});
     /* Formatting function for row details - modify as you need */
 function format ( d ) {
     // `d` is the original data object for the row

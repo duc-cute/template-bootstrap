@@ -117,14 +117,14 @@
 
 		}
 		.dataTables_length {
-			padding: 1rem 1.25rem;
+			padding: 1rem 1rem;
 			label {
 				color: rgba(var(--dark), 0.8);
 				font-weight: 500;
 			}
 			select {
 				color: rgba(var(--secondary), 1);
-				font-size: 14px;
+				font-size: 12px;
 				padding: 0.4rem 0.75rem;
 				border: 1px dotted rgba(var(--secondary), 0.4) !important;
 				&:focus-visible {
@@ -133,7 +133,7 @@
 			}
 		}
 		.dataTables_filter {
-			padding: 1rem 1.25rem;
+			padding: 1rem 1rem;
 			label {
 				color: rgba(var(--dark), 0.8);
 				font-weight: 500;
