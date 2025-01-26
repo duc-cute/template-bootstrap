@@ -13,7 +13,7 @@
   <link rel="icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
 
-  <title>Advance Table | ra-admin - Premium Admin Template</title>
+  <title>Faq | ra-admin - Premium Admin Template</title>
 
   <!--font-awesome-css-->
   <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
@@ -32,9 +32,6 @@
   <!-- Bootstrap css-->
   <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/bootstrap.min.css">
 
-  <!-- Data Table css-->
-  <link rel="stylesheet" type="text/css" href="../assets/vendor/datatable/jquery.dataTables.min.css">
-
   <!-- simplebar css-->
   <link rel="stylesheet" type="text/css" href="../assets/vendor/simplebar/simplebar.css">
 
@@ -47,124 +44,6 @@
 </head>
 
 <style>
-  .btn-add-shop-wrap {
-    display: flex;
-    justify-content: flex-end;
-    padding: 6px 12px;
-
-  }
-
-  .btn-add-shop {
-    position: relative;
-    display: inline-flex;
-    gap: 3px;
-    align-items: center;
-    justify-content: end;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 0.875rem;
-    font-weight: bold;
-    line-height: 1.125rem;
-    border-radius: 0.375rem;
-    padding: 0.5rem 1rem;
-    letter-spacing: 0.05em;
-    border: 1px solid #2563eb;
-    color: #ffffff;
-    background-color: #6576ff;
-    transition: all 0.3s ease;
-    margin-bottom: 8px;
-
-
-  }
-
-  .btn-add-shop:hover {
-    background-color: #1d4ed8;
-  }
-
-  .btn-add-shop:active {
-    background-color: #1e40af;
-  }
-
-  .btn-add-shop em {
-    font-size: 1.25rem;
-    line-height: 1.125rem;
-    margin-right: 0.5rem;
-  }
-
-  .btn-add-shop.cursor-pointer {
-    cursor: pointer;
-  }
-
-  .word-wrap-text {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-    max-width: 15ch;
-    display: inline-block;
-  }
-
-  .btn-sort {
-    font-size: 32px;
-    padding: 6px 4px !important;
-  }
-
-  .table-filter {
-    display: flex;
-    justify-content: flex-end;
-
-  }
-
-  .input-group {
-    position: relative;
-    flex-direction: column;
-    margin-bottom: 1.25rem;
-
-  }
-
-
-  .trans_id {
-    color: #94a3b8;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    display: inline-block;
-    white-space: nowrap;
-    margin-bottom: 8px;
-  }
-
-  .input-group-filter {
-    display: block;
-    width: 100%;
-    font-size: 0.875rem;
-    line-height: 1.125rem;
-    padding-right: 2.5rem;
-    padding-left: 1rem;
-    padding-top: 0.375rem;
-    padding-bottom: 0.375rem;
-    height: 2.25rem;
-    color: #334155;
-    background-color: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.375rem;
-    outline: none;
-    transition: all 0.3s ease;
-  }
-
-  .input-group-filter::placeholder {
-    color: #cbd5e1;
-  }
-
-  .color-filter {
-    color: #cbd5e1;
-  }
-
-  .input-group-filter:focus {
-    border-color: #2563eb;
-    outline-offset: 0;
-    outline: 2px solid #bfdbfe;
-  }
-
   .btn-filter-color {
     background-color: #364a63;
     color: #fff;
@@ -176,6 +55,32 @@
     color: #fff;
 
 
+  }
+
+  .color-text {
+    color: rgba(var(--dark), 0.75);
+  }
+
+  .fw-500 {
+    font-weight: 500;
+  }
+
+  .font-sys {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  .text-medium {
+    font-size: 20px;
+  }
+
+  .border-custom {
+    border: 1px solid #dbdfea;
+    border-radius: 8px;
+  }
+
+  .privacy-wrap {
+    line-height: 2.4;
+    font-size: 14px;
   }
 </style>
 
@@ -191,6 +96,7 @@
         <span></span>
       </div>
     </div>
+
 
     <!-- Menu Navigation starts -->
     <nav>
@@ -444,49 +350,7 @@
             </ul>
           </li>
 
-
-          <li class="menu-title"> <span>Quản lý</span></li>
-
-          <li class="no-sub">
-            <a class="" href="documentAPI.html">
-              <i class="ph-duotone  ph-globe-hemisphere-east"></i> Nạp tiền
-            </a>
-          </li>
-          <li class="no-sub">
-            <a class="" href="affiliates.html">
-              <i class="ph-duotone  ph-stack"></i>Tiếp thị liên kết
-            </a>
-          </li>
-
-          <li class="menu-title"> <span>Dịch vụ</span></li>
-
-          <li class="no-sub">
-            <a class="" href="shop-management.html">
-              <i class="ph-light  ph-shopping-cart"></i> Cửa hàng
-            </a>
-          </li>
-          <li class="no-sub">
-            <a class="" href="invoices.html">
-              <i class="ph-duotone  ph-notebook"></i>Hóa đơn
-
-            </a>
-          </li>
-
-          <li class="menu-title"> <span>Tích hợp API & Web App</span></li>
-
-          <li class="no-sub">
-            <a class="" href="documentAPI.html">
-              <i class="ph-duotone  ph-globe-hemisphere-east"></i> Tài liệu tích hợp API
-            </a>
-          </li>
-          <li class="no-sub">
-            <a class="" href="misc.html">
-              <i class="ph-duotone  ph-stack"></i>Tích hợp Web/App
-
-            </a>
-          </li>
-
-          <li class="menu-title"> <span>Table & forms</span></li>
+          <li class="menu-title"> <span>Table & forms </span></li>
 
           <li>
             <a class="" data-bs-toggle="collapse" href="#table" aria-expanded="false">
@@ -631,9 +495,9 @@
 
     </nav>
     <!-- Menu Navigation ends -->
-
     <div class="app-content">
       <div class="">
+
         <!-- Header Section starts -->
         <header class="header-main">
           <div class="container-fluid">
@@ -773,7 +637,6 @@
                       aria-labelledby="offcanvasRight">
                       <div class="header-searchbar-header">
                         <div class="d-flex justify-content-between mb-3">
-
                           <form class="app-form app-icon-form w-100" action="#">
                             <div class="position-relative">
                               <input type="search" class="form-control search-filter" placeholder="Search..."
@@ -1491,583 +1354,107 @@
         <!-- Body main section starts -->
         <main>
           <div class="container-fluid">
-
             <!-- Breadcrumb start -->
             <div class="row m-1">
               <div class="col-12 ">
-                <h4 class="main-title">Cửa hàng</h4>
+                <h4 class="main-title">Điều khoản và chính sách</h4>
                 <ul class="app-line-breadcrumbs mb-3">
                   <li class="">
                     <a href="#" class="f-s-14 f-w-500">
                       <span>
-                        <i class="ph-duotone  ph-table f-s-16"></i> Dịch vụ
+                        <i class="ph-duotone  ph-stack f-s-16"></i> Khác
                       </span>
                     </a>
                   </li>
                   <li class="active">
-                    <a href="#" class="f-s-14 f-w-500">Cửa hàng</a>
+                    <a href="#" class="f-s-14 f-w-500">Điều khoản và chính sách</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div class="table-filter">
-              <div class="relative ">
-                <a data-bs-target="#filterModal" data-bs-toggle="modal" type="button" class="btn btn-sort">
-                  <i class="ph-light  ph-sort-ascending"></i>
-
-                </a>
-              </div>
-              <div class="relative btn btn-add-shop-wrap">
-                <a data-bs-target="#editCardModal" data-bs-toggle="modal" type="button"
-                  class="btn btn-add-shop cursor-pointer">
-                  <i class="ph ph-plus"></i>
-                  Thêm cửa hàng mới
-                </a>
-
-              </div>
-
-            </div>
             <!-- Breadcrumb end -->
 
-
-            <!-- Advance Table start -->
-            <div class="row advance-table-section">
-              <!-- Projects Table start -->
-              <div class="col-12">
+            <!-- Help start -->
+            <div class="faq-header">
+              <img src="../assets/images/logo/3.png" alt="">
+              <h2 class="text-dark f-w-700">How Can We Help ?</h2>
+              <div class="app-form search-div">
+                <div class="input-group b-r-search">
+                  <span class="input-group-text bg-primary border-0 "><i class="ti ti-search f-s-18"></i></span>
+                  <input class="form-control" type="text" placeholder="Search...">
+                </div>
+              </div>
+            </div>
+            <!-- Help end -->
+            <!-- Frequently Asked Questions start -->
+            <div class="row faq-accordion font-sys">
+              <div class="faq-heading mb-3">
+                <h3><i class="ti ti-question-circle"></i> Điều khoản & Chính sách</h3>
+                <span class="text-center text-medium">Áp dụng cho tất cả người dùng.</span>
+                <p class="color-text"><i>Last Update: Tháng 1, 2025</i></p>
+              </div>
+              <div class="col-lg-10 offset-lg-1 mb-3  ">
                 <div class="card">
-                  <div class="card-body ps-0 pe-0">
-                    <div class="table-responsive app-scroll app-datatable-default project-table">
+                  <div class="card-body border-custom">
+                    <div class="color-text privacy-wrap">
 
-                      <table id="projectTable" class="display table-bottom-border app-data-table table-box-hover">
-                        <thead>
-                          <tr>
-                            <th>
-                              <label class="check-box">
-                                <input type="checkbox" id="select-all">
-                                <span class="checkmark outline-secondary ms-2"></span>
-                              </label>
-                            </th>
-                            <th>Tên cửa hàng</th>
-                            <th>Merchant ID</th>
-                            <th>
-                              Api Key</th>
-                            <th>Trạng thái</th>
-                            <th>Thời gian</th>
-                            <th>Ghi chú</th>
-                            <th>Thao tác</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <label class="check-box">
-                                <input type="checkbox">
-                                <span class="checkmark outline-secondary ms-2"></span>
-                              </label>
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-left align-items-center">
-                                <div>
-                                  <h6 class="f-s-15 mb-0">Cửa hàng Hà Nội</h6>
-                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
-                                </div>
-                              </div>
-                            </td>
-                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
-                            <td>TX2604571052543841</td>
-                            <td>
-                              <span class="badge bg-primary">New</span>
-                            </td>
-                            <td class="text-success f-w-500">Dec 07, 2024</td>
-                            <td class="text-danger f-w-500">Dec 26, 2024</td>
-                            <td>
-                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
-                                data-bs-target="#editCardModal">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="check-box">
-                                <input type="checkbox">
-                                <span class="checkmark outline-secondary ms-2"></span>
-                              </label>
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-left align-items-center">
+                      <strong>Chính sách hoàn tiền:</strong>
+                      <br>
 
-                                <div>
-                                  <h6 class="f-s-15 mb-0">Cửa hàng Đống Đa</h6>
-                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+                      <strong>
+                        Điều kiện hoàn tiền:
+                      </strong>
+                      <br>
 
-                                </div>
-                              </div>
-                            </td>
-                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
-                            <td>TX2604571052543841</td>
-                            <td>
-                              <span class="badge bg-success">Completed</span>
-                            </td>
-                            <td class="text-success f-w-500">Jul 27, 2024</td>
-                            <td class="text-danger f-w-500">Jan 06, 2025</td>
-                            <td>
-                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
-                                data-bs-target="#editCardModal">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="check-box">
-                                <input type="checkbox">
-                                <span class="checkmark outline-secondary ms-2"></span>
-                              </label>
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-left align-items-center">
+                      Chỉ áp dụng hoàn tiền khi <strong>FPAYMENT.NET</strong> dừng hoạt động <strong>liên tục trên 3
+                        ngày</strong> do lỗi từ phía
+                      <strong>FPAYMENT.NET</strong>.
+                      <br>
 
-                                <div>
-                                  <h6 class="f-s-15 mb-0">Cửa hàng HCM</h6>
-                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+                      Không hỗ trợ hoàn tiền trong trường hợp người dùng vi phạm pháp luật hoặc sử dụng hệ thống vào mục
+                      đích bất hợp pháp.
+                      <br>
+                      <strong>
 
-                                </div>
-                              </div>
-                            </td>
-                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
-                            <td>TX2604571052543841</td>
-                            <td>
-                              <span class="badge bg-primary">New</span>
-                            </td>
-                            <td class="text-success f-w-500">Aug 21, 2024</td>
-                            <td class="text-danger f-w-500">Apr 04, 2024</td>
-                            <td>
-                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
-                                data-bs-target="#editCardModal">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="check-box">
-                                <input type="checkbox">
-                                <span class="checkmark outline-secondary ms-2"></span>
-                              </label>
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-left align-items-center">
+                        Cách tính tiền hoàn:
+                      </strong>
+                      <br>
 
-                                <div>
-                                  <h6 class="f-s-15 mb-0">Cửa Hàng Hưng Yên </h6>
-                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+                      Số tiền hoàn sẽ được tính dựa trên thời gian hệ thống ngừng hoạt động và trừ đi <strong>
+                        toàn bộ số tiền
+                        khuyến
+                        mãi
+                      </strong>(nếu có) mà người dùng đã nhận trước đó.
+                      <br>
 
-                                </div>
-                              </div>
-                            </td>
-                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
-                            <td>TX2604571052543841</td>
-                            <td>
-                              <span class="badge bg-danger">Pending</span>
-                            </td>
-                            <td class="text-success f-w-500">Nov 30, 2024</td>
-                            <td class="text-danger f-w-500">Dec 10, 2025</td>
-                            <td>
-                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
-                                data-bs-target="#editCardModal">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="check-box">
-                                <input type="checkbox">
-                                <span class="checkmark outline-secondary ms-2"></span>
-                              </label>
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-left align-items-center">
+                      Nếu tài khoản có người giới thiệu, <strong>20% phí hoa hồng</strong> của người giới thiệu sẽ được
+                      trừ vào số tiền
+                      hoàn.
+                      <br>
 
-                                <div>
-                                  <h6 class="f-s-15 mb-0">Cửa Hàng Hưng Yên</h6>
-                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+                      <strong> Quy định khác:</strong>
+                      <br>
 
-                                </div>
-                              </div>
-                            </td>
-                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
-                            <td>TX2604571052543841</td>
-                            <td>
-                              <span class="badge bg-warning">Inprogress</span>
-                            </td>
-                            <td class="text-success f-w-500">Dec 01, 2024</td>
-                            <td class="text-danger f-w-500">Mar 20, 2025</td>
-                            <td>
-                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
-                                data-bs-target="#editCardModal">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="check-box">
-                                <input type="checkbox">
-                                <span class="checkmark outline-secondary ms-2"></span>
-                              </label>
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-left align-items-center">
+                      Người dùng có trách nhiệm đảm bảo việc sử dụng hệ thống tuân thủ đúng quy định pháp luật.
+                      <strong> FPAYMENT.NET
+                        không chịu trách nhiệm</strong> và <strong>không hỗ trợ hoàn tiền</strong> trong trường hợp
+                      người dùng vi phạm pháp luật.
+                      <br>
 
-                                <div>
-                                  <h6 class="f-s-15 mb-0">Cửa Hàng Hưng Yên</h6>
-                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
+                      Mọi tranh chấp liên quan đến chính sách hoàn tiền sẽ được giải quyết dựa trên quy định hiện hành
+                      và
+                      <br>
 
-                                </div>
-                              </div>
-                            </td>
-                            <td class="text-dark f-w-500 word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
-                            <td>TX2604571052543841</td>
-                            <td>
-                              <span class="badge bg-warning">Inprogress</span>
-                            </td>
-                            <td class="text-success f-w-500">Jul 24, 2024</td>
-                            <td class="text-danger f-w-500">Feb 04, 2024</td>
-                            <td>
-                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
-                                data-bs-target="#editCardModal">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <label class="check-box">
-                                <input type="checkbox">
-                                <span class="checkmark outline-secondary ms-2"></span>
-                              </label>
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-left align-items-center">
+                      thỏa thuận giữa hai bên.
 
-                                <div>
-                                  <h6 class="f-s-15 mb-0">Cửa Hàng Hưng Yên</h6>
-                                  <p class="text-secondary f-s-13 mb-0">Ngõ 117 Thái Hà ,Đống Đa</p>
-
-                                </div>
-                              </div>
-                            </td>
-                            <td class="text-dark f-w-500  word-wrap-text">7xeXzWKqxemh0nu5QdwSwAyUco2qwJ</td>
-                            <td>TX2604571052543841</td>
-                            <td>
-                              <span class="badge bg-success">New</span>
-                            </td>
-                            <td class="text-success f-w-500">Feb 29, 2024</td>
-                            <td class="text-danger f-w-500">Mar 12, 2024</td>
-                            <td>
-                              <button type="button" class="btn btn-danger icon-btn b-r-4 delete-btn">
-                                <i class="ti ti-trash"></i>
-                              </button>
-                              <button type="button" class="btn btn-success icon-btn b-r-4" data-bs-toggle="modal"
-                                data-bs-target="#editCardModal">
-                                <i class="ti ti-edit"></i>
-                              </button>
-                            </td>
-                          </tr>
-                      </table>
                     </div>
 
                   </div>
                 </div>
               </div>
-              <!-- Projects Table end -->
-
-              <!-- delete-modal start  -->
-              <div class="modal fade" id="apiDeleteModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-body">
-                      <img src="../assets/images/icons/delete-icon.png" alt="" class="img-fluid">
-                      <div class="text-center">
-                        <h4 class="text-danger f-w-600">Are You Sure?</h4>
-                        <p class="text-secondary f-s-16">You won't be able to revert this!</p>
-                      </div>
-
-                      <div class="text-center mt-3">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="confirmDelete">Yes,Delet it</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- delete-modal-end-->
-
-              <!-- edit modal-1 start -->
-              <div class="modal fade" id="editCardModal" tabindex="-1" aria-labelledby="editCardModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header bg-primary">
-                      <h1 class="modal-title fs-5 text-white" id="editCardModalLabel">Edit Advance Table</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="ticket-form">
-                        <div class="row">
-                          <div class="col-12">
-                            <div class="mb-3">
-                              <label class="form-label">Name</label>
-                              <input type="text" class="form-control" placeholder="Performance Issue">
-                            </div>
-                          </div>
-                          <div class="col-12">
-                            <div class="mb-3">
-                              <label class="form-label">Leader</label>
-                              <input type="text" class="form-control" placeholder="Michelle House">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="form-label">Client</label>
-                              <input type="text" class="form-control" placeholder="james">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="form-label">Status</label>
-                              <select class="form-select">
-                                <option selected="">Select Status</option>
-                                <option value="open">open</option>
-                                <option value="inprogress">inprogress</option>
-                                <option value="closed">closed</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="form-label">Start Date</label>
-                              <input type="date" class="form-control" name="trip-start">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="form-label">End Date</label>
-                              <input type="date" class="form-control">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-light-primary" data-bs-dismiss="modal">Save changes</button>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <!-- edit model end  -->
-
-              <!-- edit modal-2 start -->
-              <div class="modal fade" id="editCard2Modal" tabindex="-1" aria-labelledby="editCard2ModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header bg-primary">
-                      <h1 class="modal-title fs-5 text-white" id="editCard2ModalLabel">Edit Advance Table</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="ticket-form">
-                        <div class="row">
-                          <div class="col-12">
-                            <div class="mb-3">
-                              <label class="form-label">Employee Name</label>
-                              <input type="text" class="form-control" placeholder="Performance Issue">
-                            </div>
-                          </div>
-                          <div class="col-12">
-                            <div class="mb-3">
-                              <label class="form-label">Position</label>
-                              <input type="text" class="form-control" placeholder="Michelle House">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="form-label">Email</label>
-                              <input type="text" class="form-control" placeholder="alison@gmail.com">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="form-label">Status</label>
-                              <select class="form-select">
-                                <option selected="">Select Status</option>
-                                <option value="open">open</option>
-                                <option value="inprogress">inprogress</option>
-                                <option value="closed">closed</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="form-label">salary</label>
-                              <input type="text" class="form-control" placeholder="$2000">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="form-label">End Date</label>
-                              <input type="date" class="form-control">
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-light-primary" data-bs-dismiss="modal">Save changes</button>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-
-
-
-              <div class="modal fade" id="filterModal" tabindex="-1" aria-labelledby="filterModal" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                    <div class="modal-header bg-primary">
-                      <h1 class="modal-title fs-5 text-white" id="filterModal">Filter</h1>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="ticket-form">
-                        <div class="row">
-                          <div class="col-6">
-                            <div class="input-group">
-                              <label class="trans_id" for="trans_id">Mã giao dịch</label>
-                              <div class="relative">
-                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
-                                  placeholder="Nhập mã giao dịch" />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="input-group">
-                              <label class="trans_id" for="trans_id">Số tiền nhận</label>
-                              <div class="relative">
-                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
-                                  placeholder="Nhập mã giao dịch" />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="input-group">
-                              <label class="trans_id" for="trans_id">Tên hóa đơn</label>
-                              <div class="relative">
-                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
-                                  placeholder="Nhập mã giao dịch" />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-6">
-                            <div class="input-group">
-                              <label class="trans_id" for="trans_id">Mô tả hóa đơn</label>
-                              <div class="relative">
-                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
-                                  placeholder="Nhập mã giao dịch" />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-12">
-                            <div class="input-group">
-                              <label class="trans_id" for="trans_id">Transaction Hash</label>
-                              <div class="relative">
-                                <input type="text" id="trans_id" name="trans_id" value="" class="input-group-filter"
-                                  placeholder="Nhập mã giao dịch" />
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="trans_id">Cửa hàng</label>
-                              <select class="form-select input-group-filter color-filter">
-                                <option selected="">Select Status</option>
-                                <option value="open">open</option>
-                                <option value="inprogress">inprogress</option>
-                                <option value="closed">closed</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="trans_id">Trạng thái</label>
-                              <select class="form-select input-group-filter color-filter">
-                                <option selected="">Select Status</option>
-                                <option value="open">open</option>
-                                <option value="inprogress">inprogress</option>
-                                <option value="closed">closed</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="trans_id">Ngày bắt đầu</label>
-                              <input type="date" class="form-control input-group-filter color-filter">
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="mb-3">
-                              <label class="trans_id">Ngày kết thúc</label>
-                              <input type="date" class="form-control input-group-filter color-filter">
-                            </div>
-                          </div>
-
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn  btn-filter-color" data-bs-dismiss="modal">
-                        <i class="fa-solid fa-filter fa-fw"></i> Lọc
-                      </button>
-                      <button type="button" class="btn  btn-unfilter-color" data-bs-dismiss="modal">
-                        <i class="fa-solid fa-filter-circle-xmark me-2"></i>
-                        Bỏ lọc
-                      </button>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <!-- edit model end  -->
 
             </div>
-            <!-- Advance Table end -->
+            <!-- Frequently Asked Questions end -->
           </div>
         </main>
         <!-- Body main section ends -->
@@ -2086,19 +1473,14 @@
               <div class="col-md-9 col-12">
                 <ul class="footer-text">
                   <li>
-                    <p class="mb-0">Copyright © 2024 ra-admin. All rights reserved.</p>
+                    <p class="mb-0">Copyright © 2024 ra-admin. All rights reserved 💖</p>
                   </li>
                   <li> <a href="#"> V1.0.0 </a></li>
                 </ul>
               </div>
               <div class="col-md-3">
-                <ul class="d-none d-md-block text-end">
-                  <li>
-                    <a href="https://mail.google.com/mail/u/0/#sent?compose=DmwnWrRttWThZGqGNSScHJgpWgDNSvFQvZKcVHfzfrvZVcfzQZMmTdWGMsbLXXxNbQJklmZDPWFl"
-                      target="_blank"> Need Help
-                      <i class="ti ti-help"> </i>
-                    </a>
-                  </li>
+                <ul class="footer-text text-end">
+                  <li> <a href="document.html"> Need Help <i class="ti ti-help"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -2108,7 +1490,16 @@
 
       </div>
     </div>
+
   </div>
+
+  <!-- tap on top -->
+  <div class="go-top">
+    <span class="progress-value">
+      <i class="ti ti-arrow-up"></i>
+    </span>
+  </div>
+
 
 
   <!--customizer-->
@@ -2117,8 +1508,8 @@
   <!-- latest jquery-->
   <script src="../assets/js/jquery-3.6.3.min.js"></script>
 
-  <!-- datatable js-->
-  <script src="../assets/vendor/datatable/jquery.dataTables.min.js"></script>
+  <!-- Bootstrap js-->
+  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 
   <!-- Simple bar js-->
   <script src="../assets/vendor/simplebar/simplebar.js"></script>
@@ -2126,17 +1517,13 @@
   <!-- phosphor js -->
   <script src="../assets/vendor/phosphor/phosphor.js"></script>
 
-  <!-- Bootstrap js-->
-  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
-
-  <!-- script js -->
-  <script src="../assets/js/advance_table.js"></script>
-
   <!-- App js-->
   <script src="../assets/js/script.js"></script>
 
   <!-- Customizer js-->
   <script src="../assets/js/customizer.js"></script>
+
+
 
 </body>
 

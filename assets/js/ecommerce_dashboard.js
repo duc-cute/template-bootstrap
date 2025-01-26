@@ -689,6 +689,155 @@ var options = {
 var chart = new ApexCharts(document.querySelector("#overviewChart"), options);
 chart.render();
 
+
+var options_dashboard = {
+  series: [{
+    name: 'profit',
+    data: [20, 34, 15, 35, 10, 26,20,10,5,5,11,12]
+  }, {
+    name: 'expense',
+    data: [24, 15, 25, 8, 28, 45, 34,20, 34, 15, 10, 26,]
+  }],
+  chart: {
+    height: 295,
+    type: 'line',
+    dropShadow: {
+      enabled: true,
+      top: 0,
+      left: 0,
+      blur: 1,
+      color: ['rgba(var(--primary),1)', 'rgba(var(--success),1)'],
+      opacity: .6
+    }
+  },
+
+  colors: ['rgba(var(--primary),1)', 'rgba(var(--success),1)'],
+  dataLabels: {
+    enabled: false
+  },
+
+  stroke: {
+    width: 2,
+    curve: 'smooth'
+  },
+  annotations: {
+    points: [{
+      x: 'Dec',
+      y: 34,
+      marker: {
+        size: 5,
+        colors: '#fff',
+        strokeColor: 'rgba(var(--success),1)',
+        strokeWidth: 4,
+        cssClass: 'marker-success',
+      }
+    },
+    {
+      x: 'Nov',
+      y: 26,
+      marker: {
+        size: 5,
+        colors: '#fff',
+        strokeColor: 'rgba(var(--primary),1)',
+        strokeWidth: 4,
+        cssClass: 'marker-primary',
+      }
+    }],
+  },
+  xaxis: {
+    categories: [
+      "1/01/2025",
+      "1/02/2025",
+      "1/03/2025",
+      "1/04/2025",
+      "1/05/2025",
+      "1/06/2025",
+      "1/07/2025",
+      "1/08/2025",
+      "1/09/2025",
+      "1/10/2025",
+      "1/11/2025",
+      "1/12/2025",
+      // "Feb",
+      // "Mar",
+      // "Apr",
+      // "May",
+      // "Jun",
+      // "July",
+      // "Aug",
+      // "Sep",
+      // "Oct",
+      // "Nov",
+      // "Dec",
+    ],
+    labels: {
+      show: true,
+      style: {
+        colors: [],
+        fontSize: '14px',
+        fontFamily: '"Golos Text", sans-serif',
+        fontWeight: 400,
+        // cssClass: 'apexcharts-xaxis-label',
+      },
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+    tooltip: {
+      enabled: false
+    },
+
+  },
+  grid: {
+    show: true,
+    borderColor: 'rgba(var(--dark),.2)',
+    strokeDashArray: 2,
+    xaxis: {
+      lines: {
+        show: false
+      }
+    },
+    yaxis: {
+      lines: {
+        show: true
+      }
+    },
+  },
+  yaxis: {
+    show: true,
+    labels: {
+      formatter: function (value) {
+        return value + "$";
+      },
+      style: {
+        colors: [],
+        fontSize: '14px',
+        fontFamily: '"Golos Text", sans-serif',
+        fontWeight: 400,
+        // cssClass: 'apexcharts-xaxis-label',
+      },
+    },
+  },
+  legend: {
+    show: false
+  },
+  tooltip: {
+    x: {
+      show: false,
+    },
+    style: {
+      fontSize: '16px',
+      fontFamily: '"Outfit", sans-serif',
+    },
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#overviewChart-dashboard"), options_dashboard);
+chart.render();
+
 // countdown js
 
 window.addEventListener('load', () => {

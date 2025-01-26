@@ -39,6 +39,26 @@ $(function() {
         },
     });
 });
+
+$(function() {
+    $('#example8').DataTable({
+        createdRow: function (row, data, index) {
+            if (data[5].replace(/[\$,]/g, '') * 1 > 150000) {
+                $('td', row).eq(5).addClass('highlight');
+            }
+        },
+    });
+});
+
+$(function() {
+    $('#example9').DataTable({
+        createdRow: function (row, data, index) {
+            if (data[5].replace(/[\$,]/g, '') * 1 > 150000) {
+                $('td', row).eq(5).addClass('highlight');
+            }
+        },
+    });
+});
     /* Formatting function for row details - modify as you need */
 function format ( d ) {
     // `d` is the original data object for the row
