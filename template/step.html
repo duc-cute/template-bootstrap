@@ -12,15 +12,18 @@
   <meta name="author" content="la-themes">
   <link rel="icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
   <link rel="shortcut icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
-  <title>Accordions | ra-admin - Premium Admin Template</title>
-
+  <title>Document | ra-admin - Premium Admin Template</title>
   <!--font-awesome-css-->
   <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
-
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/vendor/animation/animate.min.css">
+
+  <!-- prism css-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/prism/prism.min.css">
 
   <!-- tabler icons-->
   <link rel="stylesheet" type="text/css" href="../assets/vendor/tabler-icons/tabler-icons.css">
@@ -28,11 +31,11 @@
   <!--flag Icon css-->
   <link rel="stylesheet" type="text/css" href="../assets/vendor/flag-icons-master/flag-icon.css">
 
+  <!-- devicon css -->
+  <link rel="stylesheet" href="../assets/vendor/devicon/devicon.min.css">
+
   <!-- Bootstrap css-->
   <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/bootstrap.min.css">
-
-  <!--  prism CSS-->
-  <link href="../assets/vendor/prism/prism.min.css" rel="stylesheet">
 
   <!-- simplebar css-->
   <link rel="stylesheet" type="text/css" href="../assets/vendor/simplebar/simplebar.css">
@@ -45,9 +48,99 @@
 
 </head>
 
+
+<style>
+  .img-document img {
+    width: 100%;
+    height: 100%;
+
+  }
+
+  .img-document {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+
+  }
+
+  .color-text {
+    color: rgba(var(--dark), 0.75);
+  }
+
+  .fw-500 {
+    font-weight: 500;
+  }
+
+  .text-desc {
+    font-size: 14px;
+    min-height: 45px;
+
+  }
+
+  .fw-600 {
+    font-weight: 600;
+  }
+
+  .border-custom {
+    border: 1px solid #dbdfea;
+    border-radius: 8px;
+  }
+
+  .step-header {
+    /* display: flex;
+    align-items: center; */
+  }
+
+  .step-header h3 {
+    font-size: 20px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0;
+
+  }
+
+  .step-header .step-label {
+    padding: 4px 8px;
+    background-color: #bdeafe;
+    border-radius: 4px;
+    /* color: rgba(var(--dark), 0.75); */
+    font-weight: 600;
+    font-size: 14px;
+
+  }
+
+  .step-header .text-content {
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
+  .pl-4 {
+    padding-left: 16px;
+  }
+
+  .step-text-highlight {
+    padding: 2px 4px;
+    background-color: #dbdfea;
+    border-radius: 2px;
+    font-weight: 500;
+
+  }
+
+  .step-wrap-img {
+    object-fit: contain;
+    margin-top: 12px;
+
+  }
+
+  .step-wrap-img img {
+    width: 80%;
+    padding: 12px;
+
+  }
+</style>
+
 <body>
   <div class="app-wrapper">
-
     <div class="loader-wrapper">
       <div class="app-loader">
         <span></span>
@@ -71,6 +164,7 @@
       </div>
       <div class="app-nav" id="app-simple-bar">
         <ul class="main-nav p-0 mt-2">
+
           <li class="menu-title">
             <span>Dashboard</span>
           </li>
@@ -171,6 +265,11 @@
                 </ul>
               </li>
             </ul>
+          </li>
+          <li class="no-sub">
+            <a class="" href="dashboard.html">
+              <i class="ph-duotone  ph-squares-four"></i> Bảng điều khiển
+            </a>
           </li>
           <li class="no-sub">
             <a class="" href="widget.html">
@@ -310,6 +409,34 @@
             </ul>
           </li>
 
+
+          <li class="menu-title"> <span>Quản lý</span></li>
+
+          <li class="no-sub">
+            <a class="" href="recharge.html">
+              <i class="ph-duotone  ph-globe-hemisphere-east"></i> Nạp tiền
+            </a>
+          </li>
+          <li class="no-sub">
+            <a class="" href="affiliates.html">
+              <i class="ph-duotone  ph-stack"></i>Tiếp thị liên kết
+            </a>
+          </li>
+
+          <li class="menu-title"> <span>Dịch vụ</span></li>
+
+          <li class="no-sub">
+            <a class="" href="shop-management.html">
+              <i class="ph-light  ph-shopping-cart"></i> Cửa hàng
+            </a>
+          </li>
+          <li class="no-sub">
+            <a class="" href="invoices.html">
+              <i class="ph-duotone  ph-notebook"></i>Hóa đơn
+
+            </a>
+          </li>
+
           <li class="menu-title"> <span>Tích hợp API & Web App</span></li>
 
           <li class="no-sub">
@@ -318,8 +445,24 @@
             </a>
           </li>
           <li class="no-sub">
-            <a class="" href="misc.html">
+            <a class="" href="document.html">
               <i class="ph-duotone  ph-stack"></i>Tích hợp Web/App
+
+            </a>
+          </li>
+          <li class="menu-title"> <span>Khác</span></li>
+
+          <li class="no-sub">
+            <a class="" href="faq-page.html">
+              <i class="ph-duotone  ph-notebook"></i>FAQ
+
+            </a>
+          </li>
+
+          <li class="no-sub">
+            <a class="" href="privacy.html">
+              <i class="ph-duotone  ph-notebook"></i>Điều khoản và chính sách
+
             </a>
           </li>
 
@@ -471,6 +614,7 @@
 
     <div class="app-content">
       <div class="">
+
         <!-- Header Section starts -->
         <header class="header-main">
           <div class="container-fluid">
@@ -1327,1182 +1471,125 @@
         <!-- Body main section starts -->
         <main>
           <div class="container-fluid">
-            <!-- Breadcrumb start -->
             <div class="row m-1">
               <div class="col-12 ">
-                <h4 class="main-title">Accordions</h4>
+                <h4 class="main-title">Tích hợp Web/App</h4>
                 <ul class="app-line-breadcrumbs mb-3">
                   <li class="">
                     <a href="#" class="f-s-14 f-w-500">
                       <span>
-                        <i class="ph-duotone  ph-briefcase f-s-16"></i> Ui kits
+                        <i class="ph-duotone  ph-table f-s-16"></i> Tích hợp API & Web App
                       </span>
                     </a>
                   </li>
                   <li class="active">
-                    <a href="#" class="f-s-14 f-w-500">Accordions</a>
+                    <a href="#" class="f-s-14 f-w-500">Tích hợp Web/App</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <!-- Breadcrumb end -->
+            <div class="card">
+              <div class="card-body border-custom">
+                <div class="row ">
+                  <div class="col-sm-12 ">
+                    <div class="pl-4 mt-2 step-wrap">
+                      <div class="step-item">
+                        <div class="step-header">
+                          <span class="step-label">Step 1</span>
+                          <h3 class="step-name">Download Plugin</h3>
+                          <div class="text-content color-text">
+                            Truy cập vào đây để tải về file Plugin.
+                          </div>
 
-            <!-- Accordions start -->
-            <div class="row accordions-rtl">
-              <!-- Accordions 1 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> Simple According </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem1" aria-expanded="false"
-                      aria-controls="accordionsItem1">
-                      <i class="ti ti-code source" data-source="accordions1"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-secondary">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show"
-                          data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
                         </div>
+
                       </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                          <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
+                      <div class="app-divider-v dotted"></div>
                     </div>
-                  </div>
+                    <div class="pl-4 mt-2  step-wrap">
+                      <div class="step-item">
+                        <div class="step-header">
+                          <span class="step-label">Step 2</span>
+                          <h3 class="step-name">Upload</h3>
+                          <div class="text-content color-text">
+                            Upload file <span class="step-text-highlight">PluginWHMCS.zip</span> vào thư mục
 
-                  <pre class="accordions1 collapse mt-3" id="accordionsItem1">
-  <code class="language-html">
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h5&gt; Simple According &lt;/h5&gt;
-      &lt;/div&gt;
-       &lt;div class="card-body"&gt;
-        &lt;div class="accordion app-accordion accordion-secondary"&gt;
-         &lt;div class="accordion-item"&gt;
-          &lt;h2 class="accordion-header"&gt;
-           &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
-            Accordion Item #1
-           &lt;/button&gt;
-          &lt;/h2&gt;
-          &lt;div id="collapseOne" class="accordion-collapse collapse show"
-           data-bs-parent="#accordionExample"&gt;
-           &lt;div class="accordion-body"&gt;
-            &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default, until the
-            collapse plugin adds the appropriate classes that we use to style each element. These
-            classes control the overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or overriding our default variables.
-            It's also worth noting that just about any HTML can go within the
-            &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-           &lt;/div&gt;
-          &lt;/div&gt;
-         &lt;/div&gt;
-         &lt;div class="accordion-item"&gt;
-          &lt;h2 class="accordion-header"&gt;
-           &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
-            Accordion Item #2
-           &lt;/button&gt;
-          &lt;/h2&gt;
-          &lt;div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample"&gt;
-           &lt;div class="accordion-body"&gt;
-            &lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default, until
-            the collapse plugin adds the appropriate classes that we use to style each element. These
-            classes control the overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or overriding our default variables.
-            It's also worth noting that just about any HTML can go within the
-            &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-           &lt;/div&gt;
-          &lt;/div&gt;
-         &lt;/div&gt;
-         &lt;div class="accordion-item"&gt;
-          &lt;h2 class="accordion-header"&gt;
-           &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"&gt;
-            Accordion Item #3
-           &lt;/button&gt;
-          &lt;/h2&gt;
-          &lt;div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample"&gt;
-           &lt;div class="accordion-body"&gt;
-            &lt;strong&gt;This is the third item's accordion body.&lt;/strong&gt; It is hidden by default, until the
-            collapse plugin adds the appropriate classes that we use to style each element. These
-            classes control the overall appearance, as well as the showing and hiding via CSS
-            transitions. You can modify any of this with custom CSS or overriding our default variables.
-            It's also worth noting that just about any HTML can go within the
-            &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-         &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-      
-  </code>
-</pre>
-                </div>
-              </div>
+                            <span class="step-text-highlight">modules/gateways</span>
+                            sau đó
+                            giải nén.
+                          </div>
 
-              <!-- Accordions 2 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> Outline According </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem2" aria-expanded="false"
-                      aria-controls="accordionsItem2">
-                      <i class="ti ti-code source" data-source="accordions2"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-outline-secondary">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseOneOutline" aria-expanded="true"
-                            aria-controls="collapseOneOutline">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="collapseOneOutline" class="accordion-collapse collapse show"
-                          data-bs-parent="#accordionExampleoutlineoutline">
-                          <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
                         </div>
+
                       </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwooutline" aria-expanded="false"
-                            aria-controls="collapseTwooutline">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="collapseTwooutline" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionExampleoutlineoutline">
-                          <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseThreeoutline" aria-expanded="false"
-                            aria-controls="collapseThreeoutline">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="collapseThreeoutline" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionExampleoutlineoutline">
-                          <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the
-                            collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
+                      <div class="app-divider-v dotted"></div>
                     </div>
-                  </div>
+                    <div class="pl-4 mt-2  step-wrap">
+                      <div class="step-item">
+                        <div class="step-header">
+                          <span class="step-label">Step 3</span>
+                          <h3 class="step-name">Configuration</h3>
+                          <div class="text-content color-text">
+                            Truy cập vào
+                            <span class="step-text-highlight">Payment Gateways</span>
+                            ->
+                            <span class="step-text-highlight">All Payment Gateways</span>
+                            chọn cổng thanh toán <strong>FPAYMENT.NET</strong>.
+                          </div>
+                          <div class="d-flex justify-content-center step-wrap-img border-custom">
+                            <img src="https://www.genome.gov/sites/default/files/media/images/tg/Genetic-code.jpg"
+                              alt="">
 
-                  <pre class="accordions2 collapse mt-3" id="accordionsItem2">
-  <code class="language-html">
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h5&gt; Outline According &lt;/h5&gt;
-      &lt;/div&gt;
-      &lt;div class="card-body"&gt;
-       &lt;div class="accordion app-accordion accordion-outline-secondary"&gt;
-        &lt;div class="accordion-item"&gt;
-         &lt;h2 class="accordion-header"&gt;
-          &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-           data-bs-target="#collapseOneOutline" aria-expanded="true"
-           aria-controls="collapseOneOutline"&gt;
-           Accordion Item #1
-          &lt;/button&gt;
-         &lt;/h2&gt;
-         &lt;div id="collapseOneOutline" class="accordion-collapse collapse show"
-          data-bs-parent="#accordionExampleoutlineoutline"&gt;
-          &lt;div class="accordion-body"&gt;
-           &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default, until the
-           collapse plugin adds the appropriate classes that we use to style each element. These
-           classes control the overall appearance, as well as the showing and hiding via CSS
-           transitions. You can modify any of this with custom CSS or overriding our default variables.
-           It's also worth noting that just about any HTML can go within the
-           &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-          &lt;/div&gt;
-         &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-item"&gt;
-         &lt;h2 class="accordion-header"&gt;
-          &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-           data-bs-target="#collapseTwooutline" aria-expanded="false"
-           aria-controls="collapseTwooutline"&gt;
-           Accordion Item #2
-          &lt;/button&gt;
-         &lt;/h2&gt;
-         &lt;div id="collapseTwooutline" class="accordion-collapse collapse"
-          data-bs-parent="#accordionExampleoutlineoutline"&gt;
-          &lt;div class="accordion-body"&gt;
-           &lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default, until
-           the collapse plugin adds the appropriate classes that we use to style each element. These
-           classes control the overall appearance, as well as the showing and hiding via CSS
-           transitions. You can modify any of this with custom CSS or overriding our default variables.
-           It's also worth noting that just about any HTML can go within the
-           &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-          &lt;/div&gt;
-         &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-item"&gt;
-         &lt;h2 class="accordion-header"&gt;
-          &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-           data-bs-target="#collapseThreeoutline" aria-expanded="false"
-           aria-controls="collapseThreeoutline"&gt;
-           Accordion Item #3
-          &lt;/button&gt;
-         &lt;/h2&gt;
-         &lt;div id="collapseThreeoutline" class="accordion-collapse collapse"
-          data-bs-parent="#accordionExampleoutlineoutline"&gt;
-          &lt;div class="accordion-body"&gt;
-           &lt;strong&gt;This is the third item's accordion body.&lt;/strong&gt; It is hidden by default, until the
-           collapse plugin adds the appropriate classes that we use to style each element. These
-           classes control the overall appearance, as well as the showing and hiding via CSS
-           transitions. You can modify any of this with custom CSS or overriding our default variables.
-           It's also worth noting that just about any HTML can go within the
-           &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-         &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-      
-  </code>
-</pre>
-                </div>
-              </div>
+                          </div>
 
-              <!-- Accordions 3 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> Light </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem3" aria-expanded="false"
-                      aria-controls="accordionsItem3">
-                      <i class="ti ti-code source" data-source="accordions3"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-light-secondary" id="accordionFlushExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse show"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
                         </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  <pre class="accordions3 collapse mt-3" id="accordionsItem3">
-  <code class="language-html">  
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h5&gt; Light &lt;/h5&gt;
-       &lt;/div&gt;
-        &lt;div class="card-body"&gt;
-         &lt;div class="accordion app-accordion accordion-light-secondary" id="accordionFlushExample"&gt;
-          &lt;div class="accordion-item"&gt;
-           &lt;h2 class="accordion-header"&gt;
-            &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-             data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne"&gt;
-             Accordion Item #1
-            &lt;/button&gt;
-           &lt;/h2&gt;
-           &lt;div id="flush-collapseOne" class="accordion-collapse show"
-            data-bs-parent="#accordionFlushExample"&gt;
-            &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-             demonstrate the &lt;code&gt;.accordion-flush&lt;/code&gt; class. This is the first item's accordion
-             body.&lt;/div&gt;
-           &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="accordion-item"&gt;
-           &lt;h2 class="accordion-header"&gt;
-            &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-             data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"&gt;
-             Accordion Item #2
-            &lt;/button&gt;
-           &lt;/h2&gt;
-           &lt;div id="flush-collapseTwo" class="accordion-collapse collapse"
-            data-bs-parent="#accordionFlushExample"&gt;
-            &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-             demonstrate the &lt;code&gt;.accordion-flush&lt;/code&gt; class. This is the second item's accordion
-             body. Let's imagine this being filled with some actual content.&lt;/div&gt;
-           &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="accordion-item"&gt;
-           &lt;h2 class="accordion-header"&gt;
-            &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-             data-bs-target="#flush-collapseThree" aria-expanded="false"
-             aria-controls="flush-collapseThree"&gt;
-             Accordion Item #3
-            &lt;/button&gt;
-           &lt;/h2&gt;
-           &lt;div id="flush-collapseThree" class="accordion-collapse collapse"
-            data-bs-parent="#accordionFlushExample"&gt;
-            &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-             demonstrate the &lt;code&gt;.accordion-flush&lt;/code&gt; class. This is the third item's accordion
-             body. Nothing more exciting happening here in terms of content, but just filling up the
-             space to make it look, at least at first glance, a bit more representative of how this would
-             look in a real-world application.&lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-  </code>
-</pre>
-                </div>
-              </div>
-
-              <!-- Accordions 4 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> Flush(No border)</h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem4" aria-expanded="false"
-                      aria-controls="accordionsItem4">
-                      <i class="ti ti-code source" data-source="accordions4"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-flush accordion-secondary"
-                      id="accordionappflushExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#appflush-collapseOne" aria-expanded="true"
-                            aria-controls="appflush-collapseOne">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="appflush-collapseOne" class="accordion-collapse show"
-                          data-bs-parent="#accordionappflushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-appflush</code> class. This is the first item's accordion
-                            body.</div>
-                        </div>
                       </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#appflush-collapseTwo" aria-expanded="false"
-                            aria-controls="appflush-collapseTwo">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="appflush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionappflushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-appflush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#appflush-collapseThree" aria-expanded="false"
-                            aria-controls="appflush-collapseThree">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="appflush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionrealExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-appflush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
-                        </div>
-                      </div>
+                      <div class="app-divider-v dotted"></div>
                     </div>
                   </div>
 
 
-                  <pre class="accordions4 collapse mt-3" id="accordionsItem4">
-   <code class="language-html">
-&lt;div class="card"&gt;
-  &lt;div class="card-header"&gt;
-    &lt;h5&gt; Flush(No border)&lt;/h5&gt;
-      &lt;/div&gt;
-      &lt;div class="card-body"&gt;
-       &lt;div class="accordion app-accordion accordion-flush accordion-secondary"
-        id="accordionappflushExample"&gt;
-        &lt;div class="accordion-item"&gt;
-      &lt;h2 class="accordion-header"&gt;
-       &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-        data-bs-target="#appflush-collapseOne" aria-expanded="true"
-        aria-controls="appflush-collapseOne"&gt;
-        Accordion Item #1
-       &lt;/button&gt;
-      &lt;/h2&gt;
-      &lt;div id="appflush-collapseOne" class="accordion-collapse show"
-       data-bs-parent="#accordionappflushExample"&gt;
-       &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-        demonstrate the &lt;code&gt;.accordion-appflush&lt;/code&gt; class. This is the first item's accordion
-        body.&lt;/div&gt;
-      &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-item"&gt;
-      &lt;h2 class="accordion-header"&gt;
-       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#appflush-collapseTwo" aria-expanded="false"
-        aria-controls="appflush-collapseTwo"&gt;
-        Accordion Item #2
-       &lt;/button&gt;
-      &lt;/h2&gt;
-      &lt;div id="appflush-collapseTwo" class="accordion-collapse collapse"
-       data-bs-parent="#accordionappflushExample"&gt;
-       &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-        demonstrate the &lt;code&gt;.accordion-appflush&lt;/code&gt; class. This is the second item's accordion
-        body. Let's imagine this being filled with some actual content.&lt;/div&gt;
-      &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="accordion-item"&gt;
-      &lt;h2 class="accordion-header"&gt;
-       &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#appflush-collapseThree" aria-expanded="false"
-        aria-controls="appflush-collapseThree"&gt;
-        Accordion Item #3
-       &lt;/button&gt;
-      &lt;/h2&gt;
-      &lt;div id="appflush-collapseThree" class="accordion-collapse collapse"
-       data-bs-parent="#accordionrealExample"&gt;
-       &lt;div class="accordion-body"&gt;Placeholder content for this accordion, which is intended to
-        demonstrate the &lt;code&gt;.accordion-appflush&lt;/code&gt; class. This is the third item's accordion
-        body. Nothing more exciting happening here in terms of content, but just filling up the
-        space to make it look, at least at first glance, a bit more representative of how this would
-        look in a real-world application.&lt;/div&gt;
-        &lt;/div&gt;
-       &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
- &lt;/div&gt;
-                        
-                    </code>
-                  </pre>
                 </div>
               </div>
-              <!-- Accordions 5 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5 class="txt-ellipsis"> Frequently Asked Questions(Real Example) </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem5" aria-expanded="false"
-                      aria-controls="accordionsItem5">
-                      <i class="ti ti-code source" data-source="accordions5"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-light-secondary" id="accordionPanelsStayOpenExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne">
-                            <i class="ti ti-message-report me-1 f-s-20"></i> What happens if I just pay my ticket?
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                          <div class="accordion-body">
-                            Paying your ticket without contesting it can result in a conviction on your driving record.
-                            This can have long-lasting consequences such as increased insurance rates, driver's license
-                            suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo">
-                            <i class="ti ti-ticket me-1 f-s-20"></i> Can this ticket affect my job?
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            Absolutely, tickets recorded on your driving history can result in disqualification from
-                            driving commercially or obtaining a commercial driver's license (CDL). They can also
-                            disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                            clean driving record.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree">
-                            <i class="ti ti-transition-bottom me-1 f-s-20"></i> How long does it take to resolve my
-                            case?
-                          </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            It really depends on the court your ticket landed in. Some courts move faster than others,
-                            but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                            process.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <pre class="accordions5 collapse mt-3" id="accordionsItem5">
-                    <code class="language-html">
-                      
-                         &lt;div class="card"&gt;
-                         &lt;div class="card-header"&gt;
-                         &lt;h5&gt; Frequently Asked Questions(Real Example) &lt;/h5&gt;
-                         &lt;/div&gt;
-                         &lt;div class="card-body"&gt;
-                         &lt;div class="accordion app-accordion accordion-light-secondary" id="accordionPanelsStayOpenExample"&gt;
-                          &lt;div class="accordion-item"&gt;
-                          &lt;h2 class="accordion-header"&gt;
-                          &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-                           data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                           aria-controls="panelsStayOpen-collapseOne"&gt;
-                           &lt;i class="ti ti-message-report me-1 f-s-20"&gt;&lt;/i&gt; What happens if I just pay my ticket?
-                          &lt;/button&gt;
-                          &lt;/h2&gt;
-                          &lt;div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"&gt;
-                          &lt;div class="accordion-body"&gt;
-                           Paying your ticket without contesting it can result in a conviction on your driving record.
-                           This can have long-lasting consequences such as increased insurance rates, driver's license
-                           suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;div class="accordion-item"&gt;
-                          &lt;h2 class="accordion-header"&gt;
-                          &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                           data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                           aria-controls="panelsStayOpen-collapseTwo"&gt;
-                           &lt;i class="ti ti-ticket me-1 f-s-20"&gt;&lt;/i&gt; Can this ticket affect my job?
-                          &lt;/button&gt;
-                          &lt;/h2&gt;
-                          &lt;div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"&gt;
-                          &lt;div class="accordion-body"&gt;
-                           Absolutely, tickets recorded on your driving history can result in disqualification from
-                           driving commercially or obtaining a commercial driver's license (CDL). They can also
-                           disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                           clean driving record.
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;div class="accordion-item"&gt;
-                          &lt;h2 class="accordion-header"&gt;
-                          &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                           data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                           aria-controls="panelsStayOpen-collapseThree"&gt;
-                           &lt;i class="ti ti-transition-bottom me-1 f-s-20"&gt;&lt;/i&gt; How long does it take to resolve my
-                           case?
-                          &lt;/button&gt;
-                          &lt;/h2&gt;
-                          &lt;div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"&gt;
-                          &lt;div class="accordion-body"&gt;
-                           It really depends on the court your ticket landed in. Some courts move faster than others,
-                           but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                           process.
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                          &lt;/div&gt;
-                         &lt;/div&gt;
-                         &lt;/div&gt;
-                         &lt;/div&gt;
-                        
-                    </code>
-                  </pre>
-                </div>
-              </div>
-              <!-- Accordions 6 -->
-              <div class="col-lg-6">
-                <div class="card equal-card">
-                  <div class="card-header code-header">
-                    <h5 class="txt-ellipsis"> Left Side Plus Minus Icon </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem6" aria-expanded="false"
-                      aria-controls="accordionsItem6">
-                      <i class="ti ti-code source" data-source="accordions6"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div
-                      class="accordion app-accordion accordion-light-primary app-accordion-icon-left app-accordion-plus"
-                      id="accordionlefticonExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#lefticon-collapseOne" aria-expanded="true"
-                            aria-controls="lefticon-collapseOne">
-                            What happens if I just pay my ticket?
-                          </button>
-                        </h2>
-                        <div id="lefticon-collapseOne" class="accordion-collapse collapse show">
-                          <div class="accordion-body">
-                            Paying your ticket without contesting it can result in a conviction on your driving record.
-                            This can have long-lasting consequences such as increased insurance rates, driver's license
-                            suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#lefticon-collapseTwo" aria-expanded="false"
-                            aria-controls="lefticon-collapseTwo">
-                            Can this ticket affect my job?
-                          </button>
-                        </h2>
-                        <div id="lefticon-collapseTwo" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            Absolutely, tickets recorded on your driving history can result in disqualification from
-                            driving commercially or obtaining a commercial driver's license (CDL). They can also
-                            disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                            clean driving record.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#lefticon-collapseThree" aria-expanded="false"
-                            aria-controls="lefticon-collapseThree">
-                            How long does it take to resolve my case?
-                          </button>
-                        </h2>
-                        <div id="lefticon-collapseThree" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            It really depends on the court your ticket landed in. Some courts move faster than others,
-                            but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                            process.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <pre class="accordions6 collapse mt-3" id="accordionsItem6">
-                    <code class="language-html">
-                     
-                          &lt;div class="card equal-card"&gt;
-                         &lt;div class="card-header"&gt;
-                          &lt;h5&gt; Left side plus minus icon &lt;/h5&gt;
-                         &lt;/div&gt;
-                         &lt;div class="card-body"&gt;
-                          &lt;div
-                           class="accordion app-accordion accordion-light-primary app-accordion-icon-left app-accordion-plus"
-                           id="accordionlefticonExample"&gt;
-                           &lt;div class="accordion-item"&gt;
-                            &lt;h2 class="accordion-header"&gt;
-                             &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#lefticon-collapseOne" aria-expanded="true"
-                              aria-controls="lefticon-collapseOne"&gt;
-                              What happens if I just pay my ticket?
-                             &lt;/button&gt;
-                            &lt;/h2&gt;
-                            &lt;div id="lefticon-collapseOne" class="accordion-collapse collapse show"&gt;
-                             &lt;div class="accordion-body"&gt;
-                              Paying your ticket without contesting it can result in a conviction on your driving record.
-                              This can have long-lasting consequences such as increased insurance rates, driver's license
-                              suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                             &lt;/div&gt;
-                            &lt;/div&gt;
-                           &lt;/div&gt;
-                           &lt;div class="accordion-item"&gt;
-                            &lt;h2 class="accordion-header"&gt;
-                             &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#lefticon-collapseTwo" aria-expanded="false"
-                              aria-controls="lefticon-collapseTwo"&gt;
-                              Can this ticket affect my job?
-                             &lt;/button&gt;
-                            &lt;/h2&gt;
-                            &lt;div id="lefticon-collapseTwo" class="accordion-collapse collapse"&gt;
-                             &lt;div class="accordion-body"&gt;
-                              Absolutely, tickets recorded on your driving history can result in disqualification from
-                              driving commercially or obtaining a commercial driver's license (CDL). They can also
-                              disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                              clean driving record.
-                             &lt;/div&gt;
-                            &lt;/div&gt;
-                           &lt;/div&gt;
-                           &lt;div class="accordion-item"&gt;
-                            &lt;h2 class="accordion-header"&gt;
-                             &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                              data-bs-target="#lefticon-collapseThree" aria-expanded="false"
-                              aria-controls="lefticon-collapseThree"&gt;
-                              How long does it take to resolve my case?
-                             &lt;/button&gt;
-                            &lt;/h2&gt;
-                            &lt;div id="lefticon-collapseThree" class="accordion-collapse collapse"&gt;
-                             &lt;div class="accordion-body"&gt;
-                              It really depends on the court your ticket landed in. Some courts move faster than others,
-                              but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                              process.
-                             &lt;/div&gt;
-                            &lt;/div&gt;
-                           &lt;/div&gt;
-                          &lt;/div&gt;
-                         &lt;/div&gt;
-                        &lt;/div&gt;
-                        
-                    </code>
-                  </pre>
-                </div>
-              </div>
-
-              <!-- Accordions 7 -->
-              <div class="col-lg-6">
-                <div class="card">
-                  <div class="card-header code-header">
-                    <h5> No Icon Indicators </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem7" aria-expanded="false"
-                      aria-controls="accordionsItem7">
-                      <i class="ti ti-code source" data-source="accordions7"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-light-danger app-accordion-no-icon"
-                      id="accordionnoiconExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#noicon-collapseOne" aria-expanded="true"
-                            aria-controls="noicon-collapseOne">
-                            <i class="ti ti-message-report me-1 f-s-20"></i> What happens if I just pay my ticket?
-                          </button>
-                        </h2>
-                        <div id="noicon-collapseOne" class="accordion-collapse collapse show">
-                          <div class="accordion-body">
-                            Paying your ticket without contesting it can result in a conviction on your driving record.
-                            This can have long-lasting consequences such as increased insurance rates, driver's license
-                            suspension, employment restrictions, and additional fines imposed by your state's DMV.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#noicon-collapseTwo" aria-expanded="false"
-                            aria-controls="noicon-collapseTwo">
-                            <i class="ti ti-ticket me-1 f-s-20"></i> Can this ticket affect my job?
-                          </button>
-                        </h2>
-                        <div id="noicon-collapseTwo" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            Absolutely, tickets recorded on your driving history can result in disqualification from
-                            driving commercially or obtaining a commercial driver's license (CDL). They can also
-                            disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-                            clean driving record.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#noicon-collapseThree" aria-expanded="false"
-                            aria-controls="noicon-collapseThree">
-                            <i class="ti ti-transition-bottom me-1 f-s-20"></i> How long does it take to resolve my
-                            case?
-                          </button>
-                        </h2>
-                        <div id="noicon-collapseThree" class="accordion-collapse collapse">
-                          <div class="accordion-body">
-                            It really depends on the court your ticket landed in. Some courts move faster than others,
-                            but on average, it could take about 1-3 months. This is perfectly normal in the legal
-                            process.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <pre class="accordions7 collapse mt-3" id="accordionsItem7">
-<code class="language-html">&lt;div class="card"&gt;
-   &lt;div class="card-header"&gt;
-   &lt;h5&gt; No icon indicators &lt;/h5&gt;
-   &lt;/div&gt;
-   &lt;div class="card-body"&gt;
-   &lt;div class="accordion app-accordion accordion-light-danger app-accordion-no-icon"
-   id="accordionnoiconExample"&gt;
-   &lt;div class="accordion-item"&gt;
-   &lt;h2 class="accordion-header"&gt;
-   &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-   data-bs-target="#noicon-collapseOne" aria-expanded="true"
-   aria-controls="noicon-collapseOne"&gt;
-   &lt;i class="ti ti-message-report me-1 f-s-20"&gt;&lt;/i&gt; What happens if I just pay my ticket?
-   &lt;/button&gt;
-   &lt;/h2&gt;
-   &lt;div id="noicon-collapseOne" class="accordion-collapse collapse show"&gt;
-   &lt;div class="accordion-body"&gt;
-   Paying your ticket without contesting it can result in a conviction on your driving record.
-   This can have long-lasting consequences such as increased insurance rates, driver's license
-   suspension, employment restrictions, and additional fines imposed by your state's DMV.
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="accordion-item"&gt;
-   &lt;h2 class="accordion-header"&gt;
-   &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-   data-bs-target="#noicon-collapseTwo" aria-expanded="false"
-   aria-controls="noicon-collapseTwo"&gt;
-   &lt;i class="ti ti-ticket me-1 f-s-20"&gt;&lt;/i&gt; Can this ticket affect my job?
-   &lt;/button&gt;
-   &lt;/h2&gt;
-   &lt;div id="noicon-collapseTwo" class="accordion-collapse collapse"&gt;
-   &lt;div class="accordion-body"&gt;
-   Absolutely, tickets recorded on your driving history can result in disqualification from
-   driving commercially or obtaining a commercial driver's license (CDL). They can also
-   disqualify you from driving for ride-sharing services such as Uber or Lyft, which require a
-   clean driving record.
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;div class="accordion-item"&gt;
-   &lt;h2 class="accordion-header"&gt;
-   &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-   data-bs-target="#noicon-collapseThree" aria-expanded="false"
-   aria-controls="noicon-collapseThree"&gt;
-   &lt;i class="ti ti-transition-bottom me-1 f-s-20"&gt;&lt;/i&gt; How long does it take to resolve my
-   case?
-   &lt;/button&gt;
-   &lt;/h2&gt;
-   &lt;div id="noicon-collapseThree" class="accordion-collapse collapse"&gt;
-   &lt;div class="accordion-body"&gt;
-   It really depends on the court your ticket landed in. Some courts move faster than others,
-   but on average, it could take about 1-3 months. This is perfectly normal in the legal
-   process.
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-   &lt;/div&gt;
-  &lt;/div&gt;</code></pre>
-                </div>
-              </div>
-              <!-- Accordions 8 -->
-              <div class="col-lg-6">
-                <div class="card equal-card">
-                  <div class="card-header code-header">
-                    <h5>Multi Level Indicators </h5>
-                    <a data-bs-toggle="collapse" href="#accordionsItem8" aria-expanded="false"
-                      aria-controls="accordionsItem8">
-                      <i class="ti ti-code source" data-source="accordions8"></i>
-                    </a>
-                  </div>
-                  <div class="card-body">
-                    <div class="accordion app-accordion accordion-light-success app-accordion-plus" id="nestingExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#nestingcollapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            This is level one accordion #1
-                          </button>
-                        </h2>
-                        <div id="nestingcollapseOne" class="accordion-collapse collapse show"
-                          data-bs-parent="#nestingExample">
-                          <div class="accordion-body">
-                            <strong>This is the first item's accordion body.</strong> It is shown by default.
-
-                            <div class="accordion mt-2 app-accordion app-accordion-icon-left app-accordion-plus"
-                              id="nestingtwoExample">
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#nestingtwocollapseOne" aria-expanded="false"
-                                    aria-controls="collapseOne">
-                                    This is level two accordion #1
-                                  </button>
-                                </h2>
-                                <div id="nestingtwocollapseOne" class="accordion-collapse collapse"
-                                  data-bs-parent="#nestingtwoExample">
-                                  <div class="accordion-body">
-                                    This is the first item's accordion body It is shown by default.
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#nestingtwocollapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    This is level two accordion #2
-                                  </button>
-                                </h2>
-                                <div id="nestingtwocollapseTwo" class="accordion-collapse collapse"
-                                  data-bs-parent="#nestingtwoExample">
-                                  <div class="accordion-body">
-                                    <strong>This is the second item's accordion body.</strong> It is hidden by default,
-                                    until the collapse plugin adds the appropriate classes that we use to style each
-                                    element. These classes control the overall appearance, as well as the showing and
-                                    hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                                    our default variables. It's also worth noting that just about any HTML can go within
-                                    the <code>.accordion-body</code>, though the transition does limit overflow.
-                                  </div>
-                                </div>
-                              </div>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="accordion-item">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#nestingcollapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            This is level one accordion #2
-                          </button>
-                        </h2>
-                        <div id="nestingcollapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#nestingExample">
-                          <div class="accordion-body">
-                            <strong>This is the second item's accordion body.</strong> It is hidden by default, until
-                            the collapse plugin adds the appropriate classes that we use to style each element. These
-                            classes control the overall appearance, as well as the showing and hiding via CSS
-                            transitions. You can modify any of this with custom CSS or overriding our default variables.
-                            It's also worth noting that just about any HTML can go within the
-                            <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                  <pre class="accordions8 collapse mt-3" id="accordionsItem8">
-<code class="language-html">&lt;div class="card equal-card"&gt;
-      &lt;div class="card-header"&gt;
-       &lt;h5&gt;Multi level indicators &lt;/h5&gt;
-      &lt;/div&gt;
-      &lt;div class="card-body"&gt;
-       &lt;div class="accordion app-accordion accordion-light-success app-accordion-plus" id="nestingExample"&gt;
-       &lt;div class="accordion-item"&gt;
-        &lt;h2 class="accordion-header"&gt;
-        &lt;button class="accordion-button" type="button" data-bs-toggle="collapse"
-      data-bs-target="#nestingcollapseOne" aria-expanded="true" aria-controls="collapseOne"&gt;
-      This is level one accordion #1
-        &lt;/button&gt;
-        &lt;/h2&gt;
-        &lt;div id="nestingcollapseOne" class="accordion-collapse collapse show"
-        data-bs-parent="#nestingExample"&gt;
-        &lt;div class="accordion-body"&gt;
-      &lt;strong&gt;This is the first item's accordion body.&lt;/strong&gt; It is shown by default.
-    <br>
-      &lt;div class="accordion mt-2 app-accordion app-accordion-icon-left app-accordion-plus"
-       id="nestingtwoExample"&gt;
-       &lt;div class="accordion-item"&gt;
-       &lt;h2 class="accordion-header"&gt;
-        &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#nestingtwocollapseOne" aria-expanded="false"
-        aria-controls="collapseOne"&gt;
-        This is level two accordion #1
-        &lt;/button&gt;
-       &lt;/h2&gt;
-       &lt;div id="nestingtwocollapseOne" class="accordion-collapse collapse"
-        data-bs-parent="#nestingtwoExample"&gt;
-        &lt;div class="accordion-body"&gt;
-        This is the first item's accordion body It is shown by default.
-        &lt;/div&gt;
-       &lt;/div&gt;
-       &lt;/div&gt;
-       &lt;div class="accordion-item"&gt;
-       &lt;h2 class="accordion-header"&gt;
-        &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-        data-bs-target="#nestingtwocollapseTwo" aria-expanded="false"
-        aria-controls="collapseTwo"&gt;
-        This is level two accordion #2
-        &lt;/button&gt;
-       &lt;/h2&gt;
-       &lt;div id="nestingtwocollapseTwo" class="accordion-collapse collapse"
-        data-bs-parent="#nestingtwoExample"&gt;
-        &lt;div class="accordion-body"&gt;
-        &lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default,
-        until the collapse plugin adds the appropriate classes that we use to style each
-        element. These classes control the overall appearance, as well as the showing and
-        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-        our default variables. It's also worth noting that just about any HTML can go within
-        the &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-        &lt;/div&gt;
-       &lt;/div&gt;
-       &lt;/div&gt;
-    <br>
-      &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;/div&gt;
-       &lt;/div&gt;
-    <br>
-       &lt;div class="accordion-item"&gt;
-        &lt;h2 class="accordion-header"&gt;
-        &lt;button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-      data-bs-target="#nestingcollapseTwo" aria-expanded="false" aria-controls="collapseTwo"&gt;
-      This is level one accordion #2
-        &lt;/button&gt;
-        &lt;/h2&gt;
-        &lt;div id="nestingcollapseTwo" class="accordion-collapse collapse"
-        data-bs-parent="#nestingExample"&gt;
-        &lt;div class="accordion-body"&gt;
-      &lt;strong&gt;This is the second item's accordion body.&lt;/strong&gt; It is hidden by default, until
-      the collapse plugin adds the appropriate classes that we use to style each element. These
-      classes control the overall appearance, as well as the showing and hiding via CSS
-      transitions. You can modify any of this with custom CSS or overriding our default variables.
-      It's also worth noting that just about any HTML can go within the
-      &lt;code&gt;.accordion-body&lt;/code&gt;, though the transition does limit overflow.
-        &lt;/div&gt;
-        &lt;/div&gt;
-       &lt;/div&gt;
-       &lt;/div&gt;
-      &lt;/div&gt;
-      &lt;/div&gt; </code>
-                  </pre>
-                </div>
-              </div>
-
             </div>
-            <!-- Accordions end -->
+
           </div>
         </main>
-        <!-- Body main section ends -->
-
-        <!-- tap on top -->
-        <div class="go-top">
-          <span class="progress-value">
-            <i class="ti ti-arrow-up"></i>
-          </span>
-        </div>
-
-        <!-- Footer Section starts-->
-        <footer>
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-9 col-12">
-                <ul class="footer-text">
-                  <li>
-                    <p class="mb-0">Copyright © 2024 ra-admin. All rights reserved 💖</p>
-                  </li>
-                  <li> <a href="#"> V1.0.0 </a></li>
-                </ul>
-              </div>
-              <div class="col-md-3">
-                <ul class="footer-text text-end">
-                  <li> <a href="document.html"> Need Help <i class="ti ti-help"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
-        <!-- Footer Section ends-->
       </div>
     </div>
-  </div>
+    <!-- Body main section ends -->
 
+
+    <!-- tap on top -->
+    <div class="go-top">
+      <span class="progress-value">
+        <i class="ti ti-arrow-up"></i>
+      </span>
+    </div>
+
+    <!-- Footer Section starts-->
+    <footer>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-9 col-12">
+            <ul class="footer-text">
+              <li>
+                <p class="mb-0">Copyright © 2024 ra-admin. All rights reserved 💖</p>
+              </li>
+              <li> <a href="#"> V1.0.0 </a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <ul class="footer-text text-end">
+              <li> <a href="document.html"> Need Help <i class="ti ti-help"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Section ends-->
+  </div>
 
 
   <!--customizer-->
@@ -2514,20 +1601,20 @@
   <!-- Bootstrap js-->
   <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 
-  <!-- phosphor js -->
-  <script src="../assets/vendor/phosphor/phosphor.js"></script>
-
-  <!--Prism JS-->
-  <script src="../assets/vendor/prism/prism.min.js"></script>
-
   <!-- Simple bar js-->
   <script src="../assets/vendor/simplebar/simplebar.js"></script>
 
-  <!-- App js-->
-  <script src="../assets/js/script.js"></script>
+  <!-- phosphor js -->
+  <script src="../assets/vendor/phosphor/phosphor.js"></script>
 
   <!-- Customizer js-->
   <script src="../assets/js/customizer.js"></script>
+
+  <!-- prism js-->
+  <script src="../assets/vendor/prism/prism.min.js"></script>
+
+  <!-- App js-->
+  <script src="../assets/js/script.js"></script>
 
 </body>
 
