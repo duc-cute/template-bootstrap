@@ -10937,11 +10937,14 @@ header.header-main {
   height: 80px;
   top: 0;
   z-index: 1001;
-  padding-left: calc(17rem + 20px);
-  width: 100%;
-  right: 0px;
+  padding-left: 20px;
+  /* width: 100%; */
+  /* right: 0px; */
   transition: var(--app-transition);
   background-color: var(--bodybg-color);
+    margin: 0 auto;
+    max-width: 1328px;
+    width: -webkit-fill-available;
 }
 header.header-main:before {
   content: "";
@@ -42288,4 +42291,9 @@ select#model {
   .rtl .footer-text {
     text-align: right;
   }
+}
+
+.app-wrapper {
+  max-width: 1600px !important;
+  margin: 0 auto;
 }
