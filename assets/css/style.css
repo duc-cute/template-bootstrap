@@ -224,7 +224,7 @@
   --secondary: 29, 43, 83;
 }
 
-nav.dark-sidebar, body[class="ltr dark"] {
+nav.dark-sidebar, html.dark {
   --white: #333644;
   --black: #DCE2F0;
   --bodybg-color: #282a36;
@@ -249,7 +249,7 @@ nav.dark-sidebar, body[class="ltr dark"] {
   --bs-card-color:#eaeaec;
   --bs-tertiary-bg: #242425;
 }
-nav.dark-sidebar .default, body[class="ltr dark"] .default {
+nav.dark-sidebar .default, html.dark .default {
   --secondary: 185 ,179, 166;
 }
 nav.dark-sidebar .disabled > .page-link, nav.dark-sidebar .page-link.disabled, body[class="ltr dark"] .disabled > .page-link, body[class="ltr dark"] .page-link.disabled {
@@ -11762,11 +11762,11 @@ nav .app-nav .menu-item .btn .ti:before {
 }
 .app-wrapper nav.horizontal-sidebar ~ .app-content {
   padding-top: 130px;
-  padding-left: 0;
-  width: 1366px;
+  padding-left: 53px;
+  padding-right: 53px;
+  /* width: 1366px; */
   margin: 0 auto;
   box-shadow: none;
-  padding-right: 0;
 }
 .app-wrapper nav.horizontal-sidebar ~ .app-content footer {
   padding: 12px 16px;
@@ -26148,7 +26148,7 @@ input[type=range]::-webkit-slider-thumb {
   padding: 30px 30px;
 }
 .login-form-container .form_container {
-  width: 450px;
+  width: 480px;
   background-color: var(--white);
   box-shadow: var(--box-shadow);
   border-radius: var(--bs-border-radius);

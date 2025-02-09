@@ -86,8 +86,13 @@ function hexToRGB(hex, alpha) {
 
 function loadConfiguration(){
   $(".offcanvas-body > ul > li").removeClass("selected")
-  let selectedSidebarOption = getLocalStorageItem("sidebar-option","vertical-sidebar");
-  $("nav").addClass(selectedSidebarOption);
+  let selectedSidebarOption = window.innerWidth <= 768 
+  ? "vertical-sidebar" 
+  : getLocalStorageItem("sidebar-option", "horizontal-sidebar");
+
+  $("nav").removeClass("horizontal-sidebar vertical-sidebar").addClass(selectedSidebarOption);
+  // let selectedSidebarOption = getLocalStorageItem("sidebar-option","horizontal-sidebar");
+  // $("nav").addClass(selectedSidebarOption);
   $(".offcanvas-body > ul").find(`.${selectedSidebarOption}`).addClass("selected")
   let textOption = getLocalStorageItem("text-option","medium-text");
   $("body").attr("text", textOption);

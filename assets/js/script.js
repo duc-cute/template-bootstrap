@@ -242,19 +242,89 @@ function myFunction() {
 
 // >>-- 11 Dark mode js --<<
 
+// document.querySelector(".header-dark").addEventListener("click", () => {
+//   document.querySelector(".sun-logo").classList.toggle("sun");
+//   document.querySelector(".moon-logo").classList.toggle("moon");
+
+//   if (document.documentElement.classList.contains("dark")) {
+//     document.documentElement.classList.remove("dark");
+//     document.documentElement.classList.add("light");
+//     localStorage.setItem('theme-mode', 'light');
+//   } else {
+//     document.documentElement.classList.remove("light");
+//     document.documentElement.classList.add("dark");
+//     localStorage.setItem('theme-mode', 'dark');
+//   }
+// });
+
 document.querySelector(".header-dark").addEventListener("click", () => {
   document.querySelector(".sun-logo").classList.toggle("sun");
   document.querySelector(".moon-logo").classList.toggle("moon");
-  if ($('body').hasClass("dark")) {
-    document.body.classList.remove("dark")
-    document.body.classList.add("light")
-    setLocalStorageItem('theme-mode', 'light')
-  } else {
-    document.body.classList.remove("light")
-    document.body.classList.add("dark")
-    setLocalStorageItem('theme-mode', 'dark')
+
+  function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+      let date = new Date();
+      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+      expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + value + "; path=/" + expires;
   }
-})
+
+  if (document.documentElement.classList.contains("dark")) {
+    document.documentElement.classList.remove("dark");
+    document.documentElement.classList.add("light");
+    setCookie('theme-mode', 'light', 7); // Lưu trong 7 ngày
+  } else {
+    document.documentElement.classList.remove("light");
+    document.documentElement.classList.add("dark");
+    setCookie('theme-mode', 'dark', 7);
+  }
+});
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   function setCookie(name, value, days) {
+//     let expires = "";
+//     if (days) {
+//       let date = new Date();
+//       date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+//       expires = "; expires=" + date.toUTCString();
+//     }
+//     document.cookie = name + "=" + value + "; path=/" + expires;
+//   }
+
+//   function getCookie(name) {
+//     let matches = document.cookie.match(new RegExp(
+//       "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+//     ));
+//     return matches ? decodeURIComponent(matches[1]) : undefined;
+//   }
+
+//   const themeToggle = document.querySelector(".header-dark");
+
+//   if (getCookie('theme-mode') === 'dark') {
+//     document.documentElement.classList.add("dark");
+//     document.body.classList.add("ltr", "dark");
+//   } else {
+//     document.documentElement.classList.remove("dark");
+//     document.body.classList.remove("dark");
+//   }
+
+//   themeToggle.addEventListener("click", () => {
+//     document.documentElement.classList.toggle("dark");
+//     document.body.classList.toggle("dark");
+
+//     if (document.documentElement.classList.contains("dark")) {
+//       setCookie('theme-mode', 'dark', 7); // Lưu trong 7 ngày
+//     } else {
+//       setCookie('theme-mode', 'light', 7);
+//     }
+//   });
+// });
 function appendHtml() {
   var div = document.getElementsByClassName('app-wrapper');
   div.innerHTML += '<p>This is some HTML code</p>';

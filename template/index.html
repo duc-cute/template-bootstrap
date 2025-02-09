@@ -66,7 +66,174 @@
   <!-- Responsive css-->
   <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
 
+  <script>
+    (function () {
+      function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+          "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+      }
+
+      if (getCookie('theme-mode') === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('ltr', 'dark');
+        console.log("lot2")
+      }
+    })();
+  </script>
+
+
+
+
+
 </head>
+
+<style>
+  .header-main {
+    /* z-index: 99999999 !important; */
+  }
+
+  #gt_float_wrapper {
+    position: relative !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    background: none !important;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center !important;
+  }
+
+  #gt_float_wrapper .gt_float_switcher {
+    overflow: visible !important;
+
+  }
+
+
+  .gt_float_switcher {
+    background: none !important;
+    position: relative !important;
+    width: 24px !important;
+    height: 24px !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  .gt_float_switcher.notranslate {
+    overflow: visible !important;
+  }
+
+  .gt_options {
+    position: absolute !important;
+    top: 100% !important;
+    background: rgb(255, 255, 255);
+    border-radius: var(--app-border-radius) !important;
+    padding: 0.5rem !important;
+    box-shadow: 0 0.2rem 1.2rem rgba(var(--dark), 0.2) !important;
+    transform: translate(0px, 40%) !important;
+
+  }
+
+
+
+  #gt_float_wrapper .gt_float_switcher .gt_options a {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    color: rgb(var(--secondary), 1) !important;
+    font-size: 14px;
+    margin-right: 0;
+    border-radius: 0.625rem;
+    padding: .5rem !important;
+    padding-right: 32px !important;
+    font-weight: 500;
+
+  }
+
+  #gt_float_wrapper .gt_float_switcher .gt_options a:hover {
+    background-color: rgba(var(--primary), 0.1);
+    color: rgba(var(--primary), 1) !important;
+    transition: var(--app-transition);
+
+  }
+
+  .gt_float_switcher .gt-selected .gt-current-lang {
+    padding: 0 !important;
+  }
+
+  .gt-lang-code {
+    display: none !important;
+  }
+
+  .gt_float_switcher-arrow {
+    display: none !important;
+  }
+
+  .gt_float_switcher img {
+
+    width: 24px !important;
+    height: auto;
+    margin: 0 !important;
+    border-radius: 50% !important;
+  }
+
+  .gt_float_switcher .gt-selected {
+    background: none !important;
+  }
+
+  .footer-wrapper .footer {
+    padding: 64px 0;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-wrapper {
+    background-color: #0a1133;
+    transition: background-color .3sease;
+  }
+
+  :where(.css-uhnxn6).ant-flex-justify-space-between {
+    justify-content: space-between;
+  }
+
+  :where(.css-uhnxn6).ant-flex {
+    display: flex;
+  }
+
+
+  :where(.css-uhnxn6).ant-flex-align-stretch {
+    align-items: stretch;
+  }
+
+  :where(.css-uhnxn6).ant-flex-vertical {
+    flex-direction: column;
+  }
+
+  :where(.css-uhnxn6).ant-flex {
+    display: flex;
+  }
+
+
+
+  .footer-wrapper .footer__right-link {
+    font-weight: 400;
+    transition: color .2sease-in-out;
+  }
+
+  .footer-wrapper .footer__right-top-link {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .link,
+  .link:hover {
+    color: #fff;
+  }
+</style>
 
 <body>
   <div class="app-wrapper">
@@ -76,7 +243,7 @@
     </div>
 
     <!-- Menu Navigation starts -->
-    <nav>
+    <nav class="horizontal-sidebar">
       <div class="app-logo">
         <a class="logo d-inline-block" href="index.html">
           <img src="../assets/images/logo/1.png" alt="#">
@@ -394,42 +561,8 @@
                   </li>
 
                   <li class="header-language">
-                    <div id="lang_selector" class="flex-shrink-0 dropdown">
-                      <a href="#" class="d-block head-icon ps-0" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="lang-flag lang-en ">
-                          <span class="flag rounded-circle overflow-hidden">
-                            <i class=""></i>
-                          </span>
-                        </div>
-                      </a>
-                      <ul class="dropdown-menu language-dropdown header-card border-0">
-                        <li class="lang lang-en selected dropdown-item p-2" data-bs-toggle="tooltip"
-                          data-bs-placement="top" title="US">
-                          <span class="d-flex align-items-center">
-                            <i class="flag-icon flag-icon-usa flag-icon-squared b-r-10 f-s-22"></i>
-                            <span class="ps-2">US</span>
-                          </span>
-                        </li>
-                        <li class="lang lang-pt dropdown-item p-2" title="FR">
-                          <span class="d-flex align-items-center">
-                            <i class="flag-icon flag-icon-fra flag-icon-squared b-r-10 f-s-22"></i>
-                            <span class="ps-2">France</span>
-                          </span>
-                        </li>
-                        <li class="lang lang-es dropdown-item p-2" title="UK">
-                          <span class="d-flex align-items-center">
-                            <i class="flag-icon flag-icon-gbr flag-icon-squared b-r-10 f-s-22"></i>
-                            <span class="ps-2">UK</span>
-                          </span>
-                        </li>
-                        <li class="lang lang-es dropdown-item p-2" title="IT">
-                          <span class="d-flex align-items-center">
-                            <i class="flag-icon flag-icon-ita flag-icon-squared b-r-10 f-s-22"></i>
-                            <span class="ps-2">Italy</span>
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
+
+                    <div class="gtranslate_wrapper"></div>
 
                   </li>
 
@@ -2396,18 +2529,19 @@
               <li>
                 <p class="mb-0">Copyright © 2024 ra-admin. All rights reserved 💖</p>
               </li>
-              <li> <a href="#"> V1.0.0 </a></li>
+              <li><a href="#"> V1.0.0 </a></li>
             </ul>
           </div>
           <div class="col-md-3">
             <ul class="footer-text text-end">
-              <li> <a href="document.html"> Need Help <i class="ti ti-help"></i></a></li>
+              <li><a href="document.html"> Need Help <i class="ti ti-help"></i></a></li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
     <!-- Footer Section ends-->
+
   </div>
 
   <!-- modal -->
@@ -2438,6 +2572,7 @@
       </div>
     </div>
   </div>
+
 
   <!--customizer-->
   <div id="customizer"></div>
@@ -2484,6 +2619,9 @@
 
   <!-- App js-->
   <script src="../assets/js/script.js"></script>
+  <script>window.gtranslateSettings = { "default_language": "en", "languages": ["en", "fr", "it", "es"], "wrapper_selector": ".gtranslate_wrapper" }</script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
 
 </body>
 
