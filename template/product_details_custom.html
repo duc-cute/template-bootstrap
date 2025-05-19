@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Multipurpose, super flexible, powerful, clean modern responsive bootstrap 5 admin template">
+  <meta name="keywords"
+    content="admin template, ra-admin admin template, dashboard template, flat admin template, responsive admin template, web app">
+  <meta name="author" content="la-themes">
+  <link rel="icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
+
+  <title>Product Details | ra-admin - Premium Admin Template</title>
+
+  <!--font-awesome-css-->
+  <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/bootstrap.min.css">
+
+  <!-- slick css -->
+  <link rel="stylesheet" href="../assets/vendor/slick/slick.css">
+  <link rel="stylesheet" href="../assets/vendor/slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css"
+    integrity="sha512-/k658G6UsCvbkGRB3vPXpsPHgWeduJwiWGPCGS14IQw3xpr63AEMdA8nMYG2gmYkXitQxDTn6iiK/2fD4T87qA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main {
+    width: 80%;
+    height: 100%;
+  }
+
+  .product-slider-nav .slick-list {
+    padding: 0 !important;
+  }
+
+  .product-slider-nav .slick-list .slick-slide {
+    padding: 0.5rem;
+  }
+
+  .card {
+    box-shadow: 0px 0px 21px 3px rgba(var(--secondary), 0.05);
+    border: none;
+    transition: all 0.3sease;
+    border-radius: 0.8rem;
+  }
+
+  .product-details-contentbox h4 {
+    color: rgba(72, 68, 61, 0.75);
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 1.625rem;
+    margin-bottom: 0;
+  }
+
+  .slick-next,
+  .slick-arrow,
+  .slick-prev {
+
+    height: 32px;
+    width: 32px;
+    background-color: rgba(64, 81, 137, .2);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    border-radius: 8px;
+  }
+
+  .slick-next::before {
+    content: "\ea6e" !important;
+  }
+
+  .slick-next::before,
+  .slick-prev::before {
+    font-family: remixicon;
+    font-size: 28px;
+    color: rgba(64, 81, 137, 1);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+  }
+
+
+  .slick-prev::before {
+    content: "\ea64" !important;
+  }
+
+  .product-slider-for {
+    padding: 8px;
+    background-color: #f3f6f9;
+    border-radius: 4px;
+  }
+
+  .slider-item-custom {
+    border: 1px solid #e9ebec;
+    border-radius: .25rem;
+    padding: .5rem;
+    cursor: pointer;
+
+  }
+
+  .text-primary {
+    color: #405189 !important;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #405189;
+  }
+
+  .btn-success {
+    background-color: #0ab39c;
+
+  }
+
+  .avatar-sm {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .badge {
+    line-height: .95;
+  }
+
+  .bg-success {
+    background-color: #0ab39c !important;
+  }
+
+  .simplebar-wrapper {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit;
+  }
+
+  [data-simplebar] {
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .simplebar-height-auto-observer-wrapper {
+    -webkit-box-sizing: inherit !important;
+    box-sizing: inherit !important;
+    height: 100%;
+    width: 100%;
+    max-width: 1px;
+    position: relative;
+    float: left;
+    max-height: 1px;
+    overflow: hidden;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    -webkit-box-flex: inherit;
+    -ms-flex-positive: inherit;
+    flex-grow: inherit;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+  }
+
+  .simplebar-mask {
+    direction: inherit;
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: auto !important;
+    height: auto !important;
+    z-index: 0;
+  }
+
+  .simplebar-offset {
+    direction: inherit !important;
+    -webkit-box-sizing: inherit !important;
+    box-sizing: inherit !important;
+    resize: none !important;
+    position: absolute;
+    top: 0;
+    left: 0 !important;
+    bottom: 0;
+    right: 0 !important;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .simplebar-content-wrapper {
+    direction: inherit;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: auto;
+    visibility: visible;
+    overflow: auto;
+    max-width: 100%;
+    max-height: 100%;
+    scrollbar-width: none;
+    padding: 0 !important;
+  }
+
+  .border-dashed {
+    border-style: dashed !important;
+  }
+
+  .text-muted {
+    color: #878a99 !important;
+  }
+
+  .avatar-title {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #405189;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 500;
+    height: 100%;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+  }
+</style>
+
+<body>
+  <main style="background-color: blanchedalmond;">
+    <div class="info-product-dm">
+      <div class="row">
+        <div class="col-md-6 col-xxl-4 order-md-2 order-xxl-1">
+          <div class="card" style="background-color: #fff;">
+            <div class="card-body">
+              <div class="slider product-slider-for mb-3">
+                <div class="slider-1">
+                  <img
+                    src="https://thethaominhphu.com/wp-content/uploads/2021/09/b%E1%BB%99-ta-tay-%C4%91a-n%C4%83ng-%C4%91c-1-360x360.jpg"
+                    class="img-fluid rounded" alt="image">
+                </div>
+                <div class="slider-2">
+                  <img
+                    src="https://png.pngtree.com/png-clipart/20190618/original/pngtree-fitness-fitness-equipment-sport-equipment-motion-png-image_3906320.jpg"
+                    class="img-fluid" alt="image">
+                </div>
+                <div class="slider-3">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4GYBQXPy-C2iPJBrLPYMqAGGxweFyf-ipaA&s"
+                    class="img-fluid" alt="image">
+                </div>
+                <div class="slider-4">
+                  <img
+                    src="https://thethaominhphu.com/wp-content/uploads/2021/09/b%E1%BB%99-ta-tay-%C4%91a-n%C4%83ng-%C4%91c-1-360x360.jpg"
+                    class="img-fluid rounded" alt="image">
+                </div>
+              </div>
+
+
+              <div class="slider product-slider-nav app-arrow"
+                style="border: 1px dashed rgb(139, 132, 118, 0.4);border-radius: 5px">
+                <div class="slider-1 ">
+                  <div class="slider-item-custom">
+                    <img
+                      src="https://thethaominhphu.com/wp-content/uploads/2021/09/b%E1%BB%99-ta-tay-%C4%91a-n%C4%83ng-%C4%91c-1-360x360.jpg"
+                      class="img-fluid" alt="image">
+                  </div>
+                </div>
+
+                <div class="slider-2 ">
+                  <div class="slider-item-custom">
+                    <img
+                      src="https://png.pngtree.com/png-clipart/20190618/original/pngtree-fitness-fitness-equipment-sport-equipment-motion-png-image_3906320.jpg"
+                      class="img-fluid" alt="image">
+                  </div>
+                </div>
+                <div class="slider-3 ">
+                  <div class="slider-item-custom">
+                    <img
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4GYBQXPy-C2iPJBrLPYMqAGGxweFyf-ipaA&s"
+                      class="img-fluid" alt="image">
+                  </div>
+                </div>
+                <div class="slider-4 ">
+                  <div class="slider-item-custom">
+                    <img
+                      src="https://thethaominhphu.com/wp-content/uploads/2021/09/b%E1%BB%99-ta-tay-%C4%91a-n%C4%83ng-%C4%91c-1-360x360.jpg"
+                      class="img-fluid" alt="image">
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-8 order-xxl-2">
+          <div class="card" style="background-color: #fff;height: 100%;margin-bottom: 0 !important;">
+            <div class="card-body">
+              <div class="flex-grow-1">
+                <h4>Giàn tạ đa năng HQ-368</h4>
+                <div class="hstack gap-3 flex-wrap">
+                  <div><a href="#" class="text-primary d-block">ADMIN</a></div>
+                  <input type="hidden" id="id_web" value="6718a1da11c9ecdd1387b688">
+                  <div class="text-muted">view : <span class="text-body fw-medium">40</span></div>
+                  <div class="text-muted">Published : <span class="text-body fw-medium">23-10-2024</span></div>
+                </div>
+              </div>
+              <div class="mt-4 text-muted">
+                <h5 class="fs-14">Chi Tiết :</h5>
+                <div class="row mt-4">
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="p-2 border border-dashed rounded">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar-sm me-2">
+                          <div class="avatar-title rounded bg-transparent text-success fs-24">
+                            <i class="ri-money-dollar-circle-fill"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <p class="text-muted mb-1">Giá :</p>
+                          <h5 class="mb-0">1,000,000</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="p-2 border border-dashed rounded">
+                      <div class="d-flex align-items-center">
+                        <div class="avatar-sm me-2">
+                          <div class="avatar-title rounded bg-transparent text-success fs-24">
+                            <i class="ri-file-copy-2-fill"></i>
+                          </div>
+                        </div>
+                        <div class="flex-grow-1">
+                          <p class="text-muted mb-1">Đã Bán:</p>
+                          <h5 class="mb-0">1</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <p>Giàn tạ đa năng HQ-368<br>
+                  Xuất xứ: Trung Quốc<br>
+                  Khung chính làm từ thép hộp 100 x 50mm, dày 2.0mm, có khả năng chịu lực tốt,<br>
+                  Sơn tĩnh điện chống xước và rỉ sét cực tốt<br>
+                  Màu sắc: đen.<br>
+                  Trọng lượng cả bộ: 360 kg.<br>
+                  Trọng tải tối đa: 700kg<br>
+                  Diện tích lắp đặt: 220 x 180 x 220cm (rộng x sâu x cao)
+                  Đã bao gồm 2 khối tạ 2 bên, mỗi bên mỗi bên 11 bánh tạ tương đương với 66kg mỗi bên
+                  Đã bao gồm phụ kiện và ghế nằm đẩy tạ
+                  Đã bao gồm đòn tạ gánh và đẩy
+                  Chưa bao gồm bánh tạ ngoài
+                  Phần tạ cố định kéo xô có thể tăng thêm trọng lượng bằng tạ ngoài
+                  Tổng cộng có tới 35+ bài tập biến thể khác nhau
+                  Bảo hành 12 tháng
+                </p>
+
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <a type="button" href="https://win32.vn/" class="btn btn-success w-100">XEM DEMO</a>
+                </div>
+                <div class="col-sm-6">
+
+                  <button type="button" id="btnThanhToanCode" class="btn btn-primary w-100">THANH TOÁN</button>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row gx-lg-5">
+
+
+              <div class="col-xl-12">
+                <div class="mt-xl-0 mt-5">
+
+                  <div class="product-content mt-5">
+                    <h5 class="fs-14 mb-3">Product Description :</h5>
+                    <nav>
+                      <ul class="nav nav-tabs nav-tabs-custom nav-success" id="nav-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active" id="nav-speci-tab" data-bs-toggle="tab" href="#nav-speci"
+                            role="tab" aria-controls="nav-speci" aria-selected="true">Thông Tin</a>
+                        </li>
+
+
+
+
+
+
+                      </ul>
+                    </nav>
+                    <div class="tab-content border border-top-0 p-4" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="nav-speci" role="tabpanel"
+                        aria-labelledby="nav-speci-tab">
+                        <div class="table-responsive">
+                          <table class="table mb-0">
+                            <tbody>
+                              <tr>
+                                <th scope="row" style="width: 200px;">Category</th>
+                                <td>Giàn tạ đa năng HQ-368</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">Trung Quốc</th>
+                                <td>WIN32</td>
+                              </tr>
+
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+
+
+
+
+                    </div>
+                  </div>
+
+
+                  <div class="mt-5">
+                    <div>
+                      <h5 class="fs-14 mb-3">Ratings &amp; Reviews</h5>
+                    </div>
+                    <div class="row gy-4 gx-0">
+                      <div class="col-lg-4">
+                        <div>
+                          <div class="pb-3">
+                            <div class="bg-light px-3 py-2 rounded-2 mb-2">
+                              <div class="d-flex align-items-center">
+                                <div class="flex-grow-1">
+                                  <div class="fs-16 align-middle text-warning">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-half-fill"></i>
+                                  </div>
+                                </div>
+                                <div class="flex-shrink-0">
+                                  <h6 class="mb-0">4.5 out of 5</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="text-center">
+                              <div class="text-muted">Total <span class="fw-medium">5.50k</span> reviews
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="mt-3">
+                            <div class="row align-items-center g-2">
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0">5 star</h6>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="p-2">
+                                  <div class="progress animated-progress progress-sm">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 50.16%"
+                                      aria-valuenow="50.16" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0 text-muted">2758</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row align-items-center g-2">
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0">4 star</h6>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="p-2">
+                                  <div class="progress animated-progress progress-sm">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 19.32%"
+                                      aria-valuenow="19.32" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0 text-muted">1063</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row align-items-center g-2">
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0">3 star</h6>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="p-2">
+                                  <div class="progress animated-progress progress-sm">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 18.12%"
+                                      aria-valuenow="18.12" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0 text-muted">997</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row align-items-center g-2">
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0">2 star</h6>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="p-2">
+                                  <div class="progress animated-progress progress-sm">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 7.42%"
+                                      aria-valuenow="7.42" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0 text-muted">408</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row align-items-center g-2">
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0">1 star</h6>
+                                </div>
+                              </div>
+                              <div class="col">
+                                <div class="p-2">
+                                  <div class="progress animated-progress progress-sm">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 4.98%"
+                                      aria-valuenow="4.98" aria-valuemin="0" aria-valuemax="100"></div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-auto">
+                                <div class="p-2">
+                                  <h6 class="mb-0 text-muted">274</h6>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end row -->
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end col -->
+
+                      <div class="col-lg-8">
+                        <div class="ps-lg-4">
+                          <div class="d-flex flex-wrap align-items-start gap-3">
+                            <h5 class="fs-14">Reviews: </h5>
+                          </div>
+
+                          <div class="me-lg-n3 pe-lg-4 simplebar-scrollable-y" data-simplebar="init"
+                            style="max-height: 225px;">
+                            <div class="simplebar-wrapper" style="margin: 0px;">
+                              <div class="simplebar-height-auto-observer-wrapper">
+                                <div class="simplebar-height-auto-observer"></div>
+                              </div>
+                              <div class="simplebar-mask">
+                                <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                                  <div class="simplebar-content-wrapper" tabindex="0" role="region"
+                                    aria-label="scrollable content" style="height: auto; overflow: hidden scroll;">
+                                    <div class="simplebar-content" style="padding: 0px;">
+                                      <ul class="list-unstyled mb-0">
+                                        <li class="py-2">
+                                          <div class="border border-dashed rounded p-3">
+                                            <div class="d-flex align-items-start mb-3">
+                                              <div class="hstack gap-3">
+                                                <div class="badge rounded-pill bg-success mb-0">
+                                                  <i class="mdi mdi-star"></i> 4.2
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                  <p class="text-muted mb-0"> Superb sweatshirt. I loved it. It is for
+                                                    winter.</p>
+                                                </div>
+                                              </div>
+                                            </div>
+
+                                            <div class="d-flex flex-grow-1 gap-2 mb-3">
+                                              <a href="#" class="d-block">
+                                                <img
+                                                  src="https://thethaominhphu.com/wp-content/uploads/2021/09/b%E1%BB%99-ta-tay-%C4%91a-n%C4%83ng-%C4%91c-1-360x360.jpg"
+                                                  alt="" class="avatar-sm rounded object-fit-cover material-shadow">
+                                              </a>
+                                              <a href="#" class="d-block">
+                                                <img
+                                                  src="https://thethaominhphu.com/wp-content/uploads/2021/09/b%E1%BB%99-ta-tay-%C4%91a-n%C4%83ng-%C4%91c-1-360x360.jpg"
+                                                  alt="" class="avatar-sm rounded object-fit-cover material-shadow">
+                                              </a>
+                                              <a href="#" class="d-block">
+                                                <img
+                                                  src="https://thethaominhphu.com/wp-content/uploads/2021/09/b%E1%BB%99-ta-tay-%C4%91a-n%C4%83ng-%C4%91c-1-360x360.jpg"
+                                                  alt="" class="avatar-sm rounded object-fit-cover material-shadow">
+                                              </a>
+                                            </div>
+
+                                            <div class="d-flex align-items-end">
+                                              <div class="flex-grow-1">
+                                                <h5 class="fs-14 mb-0">Henry</h5>
+                                              </div>
+
+                                              <div class="flex-shrink-0">
+                                                <p class="text-muted fs-13 mb-0">12 Jul, 21</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+                                        <li class="py-2">
+                                          <div class="border border-dashed rounded p-3">
+                                            <div class="d-flex align-items-start mb-3">
+                                              <div class="hstack gap-3">
+                                                <div class="badge rounded-pill bg-success mb-0">
+                                                  <i class="mdi mdi-star"></i> 4.0
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                  <p class="text-muted mb-0"> Great at this price, Product quality and
+                                                    look is awesome.</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="d-flex align-items-end">
+                                              <div class="flex-grow-1">
+                                                <h5 class="fs-14 mb-0">Nancy</h5>
+                                              </div>
+
+                                              <div class="flex-shrink-0">
+                                                <p class="text-muted fs-13 mb-0">06 Jul, 21</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+
+                                        <li class="py-2">
+                                          <div class="border border-dashed rounded p-3">
+                                            <div class="d-flex align-items-start mb-3">
+                                              <div class="hstack gap-3">
+                                                <div class="badge rounded-pill bg-success mb-0">
+                                                  <i class="mdi mdi-star"></i> 4.2
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                  <p class="text-muted mb-0">Good product. I am so happy.</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="d-flex align-items-end">
+                                              <div class="flex-grow-1">
+                                                <h5 class="fs-14 mb-0">Joseph</h5>
+                                              </div>
+
+                                              <div class="flex-shrink-0">
+                                                <p class="text-muted fs-13 mb-0">06 Jul, 21</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+
+                                        <li class="py-2">
+                                          <div class="border border-dashed rounded p-3">
+                                            <div class="d-flex align-items-start mb-3">
+                                              <div class="hstack gap-3">
+                                                <div class="badge rounded-pill bg-success mb-0">
+                                                  <i class="mdi mdi-star"></i> 4.1
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                  <p class="text-muted mb-0">Nice Product, Good Quality.</p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <div class="d-flex align-items-end">
+                                              <div class="flex-grow-1">
+                                                <h5 class="fs-14 mb-0">Jimmy</h5>
+                                              </div>
+
+                                              <div class="flex-shrink-0">
+                                                <p class="text-muted fs-13 mb-0">24 Jun, 21</p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </li>
+
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="simplebar-placeholder" style="width: 783px; height: 484px;"></div>
+                            </div>
+                            <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+                              <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                            </div>
+                            <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+                              <div class="simplebar-scrollbar"
+                                style="height: 104px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end col -->
+                    </div>
+                    <!-- end Ratings & Reviews -->
+                  </div>
+                  <!-- end card body -->
+                </div>
+              </div>
+              <!-- end col -->
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- end card body -->
+        </div>
+        <!-- end card -->
+      </div>
+
+      <div class="col-xl-12">
+        <div class="card">
+          <div class="card-header">
+            <h5> Simple Table</h5>
+            <p>Using the most basic table need to add <code> .table </code> class to table tag
+            </p>
+          </div>
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Office</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">Contact</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div class="d-flex align-items-center ">
+                        <div
+                          class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-primary me-2 simple-table-avtar">
+                          <img src="../assets/images/avtar//1.png" alt="" class="img-fluid">
+                        </div>
+                        <p class="mb-0 f-w-500 ">Tiger Nixon</p>
+                      </div>
+                    </td>
+                    <td class="f-w-500">Architect</td>
+                    <td class="text-secondary f-w-600">Edinburgh</td>
+                    <td><span class="badge text-light-primary">active</span></td>
+                    <td class="text-success f-w-500">$320,800</td>
+                    <td>+1 (025) 466-7506</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-secondary me-2 simple-table-avtar">
+                          <img src="../assets/images/avtar//2.png" alt="" class="img-fluid">
+                        </div>
+                        <p class="mb-0 f-w-500 ">Garrett</p>
+                      </div>
+                    </td>
+                    <td class="f-w-500">Accountant</td>
+                    <td class="text-secondary f-w-600">Tokyo</td>
+                    <td><span class="badge text-light-secondary">pending</span></td>
+                    <td class="text-success f-w-500">$170,750</td>
+                    <td>+1 (790) 476-9505</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-success me-2 simple-table-avtar">
+                          <img src="../assets/images/avtar//3.png" alt="" class="img-fluid">
+                        </div>
+                        <p class="mb-0 f-w-500 ">Ashton Cox</p>
+                      </div>
+                    </td>
+                    <td class="f-w-500">Technical</td>
+                    <td class="text-secondary f-w-600">Francisco</td>
+                    <td><span class="badge text-light-success">pending</span></td>
+                    <td class="text-success f-w-500">$86,000</td>
+                    <td>+1 (227) 375-6641</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-info me-2 simple-table-avtar">
+                          <img src="../assets/images/avtar//4.png" alt="" class="img-fluid">
+                        </div>
+                        <p class="mb-0 f-w-500 ">Cedric Kelly</p>
+                      </div>
+                    </td>
+                    <td class="f-w-500">Developer</td>
+                    <td class="text-secondary f-w-600">Edinburgh</td>
+                    <td><span class="badge text-light-info">active</span></td>
+                    <td class="text-success f-w-500">$433,060</td>
+                    <td>+1 (213) 619-7749</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-warning me-2 simple-table-avtar">
+                          <img src="../assets/images/avtar//5.png" alt="" class="img-fluid">
+                        </div>
+                        <p class="mb-0 f-w-500 ">Airi Satou</p>
+                      </div>
+                    </td>
+                    <td class="f-w-500">Accountant</td>
+                    <td class="text-secondary f-w-600">Tokyo</td>
+                    <td><span class="badge text-light-warning">pending</span></td>
+                    <td class="text-success f-w-500">$162,700</td>
+                    <td>+1 (152) 465-2290</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="h-30 w-30 d-flex-center b-r-50 overflow-hidden text-bg-danger me-2 simple-table-avtar">
+                          <img src="../assets/images/avtar//6.png" alt="" class="img-fluid">
+                        </div>
+                        <p class="mb-0 f-w-500 ">Williamson</p>x
+                      </div>
+                    </td>
+                    <td class="f-w-500">Integration</td>
+                    <td class="text-secondary f-w-600">New York</td>
+                    <td><span class="badge text-light-danger">active</span></td>
+                    <td class="text-success f-w-500">$372,000</td>
+                    <td>+1 (185) 793-6446</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </main>
+
+
+  <!--customizer-->
+  <div id="customizer"></div>
+
+  <!-- latest jquery-->
+  <script src="../assets/js/jquery-3.6.3.min.js"></script>
+
+  <!-- Bootstrap js-->
+  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <!-- Simple bar js-->
+  <script src="../assets/vendor/simplebar/simplebar.js"></script>
+
+  <!-- phosphor js -->
+  <script src="../assets/vendor/phosphor/phosphor.js"></script>
+
+  <!-- slick-file -->
+  <script src="../assets/vendor/slick/slick.min.js"></script>
+
+  <!--js-->
+  <!-- <script src="../assets/js/product_details.js"></script> -->
+
+  <!-- App js-->
+  <script src="../assets/js/script.js"></script>
+
+  <!-- Customizer js-->
+  <script src="../assets/js/customizer.js"></script>
+
+  <script>
+    $('.product-slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      asNavFor: '.product-slider-nav'
+    });
+    $('.product-slider-nav').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      asNavFor: '.product-slider-for',
+      dots: false,
+      // arrows: true,
+      centerMode: true,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+      ]
+    });
+  </script>
+
+
+
+</body>
+
+</html>

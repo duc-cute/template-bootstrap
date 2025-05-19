@@ -66,6 +66,15 @@
   <!-- Responsive css-->
   <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
 
+
+  <!-- Fancybox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+
+  <!-- Fancybox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+
+
+
   <script>
     (function () {
       function getCookie(name) {
@@ -90,150 +99,301 @@
 </head>
 
 <style>
-  .header-main {
-    /* z-index: 99999999 !important; */
+  #accDetail .modal-header-order-ct {
+    border-bottom: 1px solid #E4E5F0 !important;
+    padding: 16px 16px 16px 0;
   }
 
-  #gt_float_wrapper {
-    position: relative !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    background: none !important;
-    display: flex;
+  .marginauto {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .modal-header .close {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-image: url(../image/svg/close-modal.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 50%;
+    right: 0;
     width: 24px;
     height: 24px;
-    align-items: center !important;
+    transform: translateY(-50%);
+    opacity: 1;
+    outline: none;
+    z-index: 1;
+    cursor: pointer;
   }
 
-  #gt_float_wrapper .gt_float_switcher {
-    overflow: visible !important;
-
+  @media (min-width: 1200px) {
+    #accDetail .modal-dialog {
+      max-width: 1240px;
+    }
   }
 
-
-  .gt_float_switcher {
-    background: none !important;
-    position: relative !important;
-    width: 24px !important;
-    height: 24px !important;
-    box-shadow: none !important;
-    overflow: visible !important;
+  .left-right {
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .gt_float_switcher.notranslate {
-    overflow: visible !important;
-  }
-
-  .gt_options {
-    position: absolute !important;
-    top: 100% !important;
-    background: rgb(255, 255, 255);
-    border-radius: var(--app-border-radius) !important;
-    padding: 0.5rem !important;
-    box-shadow: 0 0.2rem 1.2rem rgba(var(--dark), 0.2) !important;
-    transform: translate(0px, 40%) !important;
-
-  }
-
-
-
-  #gt_float_wrapper .gt_float_switcher .gt_options a {
-    display: flex !important;
-    align-items: center !important;
-    gap: 8px !important;
-    color: rgb(var(--secondary), 1) !important;
-    font-size: 14px;
-    margin-right: 0;
-    border-radius: 0.625rem;
-    padding: .5rem !important;
-    padding-right: 32px !important;
-    font-weight: 500;
-
-  }
-
-  #gt_float_wrapper .gt_float_switcher .gt_options a:hover {
-    background-color: rgba(var(--primary), 0.1);
-    color: rgba(var(--primary), 1) !important;
-    transition: var(--app-transition);
-
-  }
-
-  .gt_float_switcher .gt-selected .gt-current-lang {
-    padding: 0 !important;
-  }
-
-  .gt-lang-code {
-    display: none !important;
-  }
-
-  .gt_float_switcher-arrow {
-    display: none !important;
-  }
-
-  .gt_float_switcher img {
-
-    width: 24px !important;
-    height: auto;
-    margin: 0 !important;
-    border-radius: 50% !important;
-  }
-
-  .gt_float_switcher .gt-selected {
-    background: none !important;
-  }
-
-  .footer-wrapper .footer {
-    padding: 64px 0;
-    max-width: 1120px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .footer-wrapper {
-    background-color: #0a1133;
-    transition: background-color .3sease;
-  }
-
-  :where(.css-uhnxn6).ant-flex-justify-space-between {
-    justify-content: space-between;
-  }
-
-  :where(.css-uhnxn6).ant-flex {
-    display: flex;
-  }
-
-
-  :where(.css-uhnxn6).ant-flex-align-stretch {
-    align-items: stretch;
-  }
-
-  :where(.css-uhnxn6).ant-flex-vertical {
-    flex-direction: column;
-  }
-
-  :where(.css-uhnxn6).ant-flex {
-    display: flex;
-  }
-
-
-
-  .footer-wrapper .footer__right-link {
-    font-weight: 400;
-    transition: color .2sease-in-out;
-  }
-
-  .footer-wrapper .footer__right-top-link {
+  #accDetail .modal-header-order-ct span {
     font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
   }
 
-  .link,
-  .link:hover {
-    color: #fff;
+  .fw-600 {
+    font-weight: 600 !important;
+  }
+
+  .acc-holder {
+    position: relative;
+  }
+
+  .acc-thumbnail {
+    max-height: 400px;
+    overflow-y: scroll;
+  }
+
+  .acc-thumbnail_column,
+  .acc-holder_slides {
+    position: relative;
+  }
+
+  .acc-thumbnail_column {
+    float: left;
+    width: 16.66%;
+  }
+
+  .c-pl-6,
+  .c-px-6 {
+    padding-left: 6px !important;
+  }
+
+  .c-pr-6,
+  .c-px-6 {
+    padding-right: 6px !important;
+  }
+
+  .c-mb-12,
+  .c-my-12 {
+    margin-bottom: 12px !important;
+  }
+
+  .acc-thumbnail .active .acc-thumbnail_badge {
+    background: #ef4757;
+  }
+
+  .gallery-slider .swiper-slide,
+  .gallery-thumbs-detail .swiper-slide,
+  .acc-thumbnail_badge {
+    cursor: pointer;
+  }
+
+  .acc-thumbnail_badge {
+    background: #434657;
+    width: 32px;
+    height: 28px;
+    right: 7px;
+    bottom: 2px;
+    border-radius: 4px 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .acc-holder_badge,
+  .acc-thumbnail_badge {
+    position: absolute;
+  }
+
+  .acc-thumbnail .active .acc-thumbnail-image,
+  .acc-thumbnail .acc-thumbnail-image:hover {
+    border: 2px solid #ef4757;
+    transition: .2s;
+  }
+
+  .acc-thumbnail-image {
+    width: 100%;
+    border: 2px solid #434657;
+    cursor: pointer;
+  }
+
+  .acc-thumbnail-image {
+    border-radius: 4px;
+  }
+
+  img {
+    border-style: none;
+  }
+
+  img {
+    vertical-align: middle;
+    border-style: none;
+  }
+
+  .acc-thumbnail_column,
+  .acc-holder_slides {
+    position: relative;
+  }
+
+  .acc-holder_slides {
+    display: none;
+    /* max-width: 1000px; */
+  }
+
+  .acc-holder_expand {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    cursor: pointer;
+    transition: .2s;
+    transform: scale(0.85);
+    background: #FBFBFE;
+    padding: 6px;
+    border-radius: 4px;
+    border: none;
+  }
+
+  .acc-holder_slides a .__icon__profile.--link--acc {
+    transition: .2s;
+    display: block;
+    background-image: var(--path);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .acc-holder_expand .__icon__profile.--sm__profile {
+    width: 20px;
+    height: 20px;
+  }
+
+  .acc-holder_badge {
+    width: 64px;
+    height: 28px;
+    right: 4px;
+    bottom: 4px;
+    background: #ef4757;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 28px;
+  }
+
+  .acc-holder_badge,
+  .acc-thumbnail_badge {
+    position: absolute;
+  }
+
+  .acc-holder_slides img {
+    border-radius: 4px;
+  }
+
+  .acc-holder_slides img {
+    width: 660px;
+  }
+
+  .acc-thumbnail_column,
+  .acc-holder_slides {
+    position: relative;
+  }
+
+  .acc-thumbnail_column {
+    float: left;
+    width: 16.66%;
+  }
+
+  .c-pl-6,
+  .c-px-6 {
+    padding-left: 6px !important;
+  }
+
+  .c-pr-6,
+  .c-px-6 {
+    padding-right: 6px !important;
+  }
+
+  .c-mb-12,
+  .c-my-12 {
+    margin-bottom: 12px !important;
+  }
+
+  @media (min-width: 768px) {
+    .col-md-3 {
+      -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+
+  .prevAccount {
+    left: 12px;
+  }
+
+  .prevAccount,
+  .nextAccount {
+    position: absolute;
+    background-color: #FBFBFD;
+    width: 32px;
+    height: 32px;
+    background-image: none;
+    opacity: 1;
+    border-radius: 4px;
+    display: flex;
+    padding: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* background-image: url(./assets/frontend/theme_3/image/swiper-prev.svg) !important; */
+    cursor: pointer;
+    transition: .2s;
+  }
+
+  .nextAccount {
+    right: 12px;
+  }
+
+  p,
+  span,
+  a {
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .acc-holder_badge {
+    width: 64px;
+    height: 28px;
+    right: 4px;
+    bottom: 4px;
+    background: #ef4757;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 28px;
+  }
+
+  .modal {
+
+    z-index: 1050;
+
+  }
+
+  .modal-backdrop {
+
+    z-index: 1040;
+
   }
 </style>
+
+
 
 <body>
   <div class="app-wrapper">
@@ -1424,6 +1584,180 @@
                   </div>
                 </div>
               </div>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#accDetail">
+                Mở Modal
+              </button>
+
+              <div class="modal fade" id="accDetail" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="accDetailLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content p-0">
+
+                    <div class="modal-header p-0" style="border-bottom: 0;">
+                      <div class="row marginauto modal-header-order-ct pt-fix-16 pb-fix-16">
+                        <div class="col-12 span__donhang" style="position: relative">
+                          <div class="row marginauto ">
+                            <div class="col-md-12 left-right">
+                              <span class="fw-600">Mã số: RY1673539</span>
+                            </div>
+                            <div class="col-md-12 left-right">
+                              <small>MỤC:
+                                Acc Đột Kích VIP</small>
+                            </div>
+                          </div>
+                          <div class="close" data-dismiss="modal" aria-label="Close">
+                            <img class="img-close-ct close-modal-default"
+                              src="https://shoptienzombie.net/assets/frontend/theme_rito/image/cay-thue/close.png"
+                              alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="modal-body modal-body-order-ct">
+                      <div class="row marginauto">
+                        <div class="d-flex">
+                          <!-- main images -->
+                          <div class="acc-holder ">
+                            <div class="acc-holder_slides " style="display: block;">
+                              <a class="acc-holder_expand" data-fancybox="galleryAccount"
+                                href="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f69fa5fa6.webp">
+                                <i class="__icon__profile --sm__profile --link__profile --link--acc"
+                                  style="--path : url(https://shoptienzombie.net/assets/frontend/theme_rito/image/nam/expand-acc.svg)"></i>
+
+                              </a>
+                              <div class="acc-holder_badge">1 /
+                                10</div>
+                              <img
+                                src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f69fa5fa6.webp"
+                                alt="">
+                            </div>
+                            <div class="acc-holder_slides " style="display: none;">
+                              <a class="acc-holder_expand" data-fancybox="galleryAccount"
+                                href="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a00ce40.webp">
+                                <i class="__icon__profile --sm__profile --link__profile --link--acc"
+                                  style="--path : url(https://shoptienzombie.net/assets/frontend/theme_rito/image/nam/expand-acc.svg)"></i>
+
+                              </a>
+                              <div class="acc-holder_badge">2 /
+                                10</div>
+                              <img
+                                src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a00ce40.webp"
+                                alt="">
+                            </div>
+                            <div class="acc-holder_slides " style="display: none;">
+                              <a class="acc-holder_expand" data-fancybox="galleryAccount"
+                                href="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a05f500.webp">
+                                <i class="__icon__profile --sm__profile --link__profile --link--acc"
+                                  style="--path : url(https://shoptienzombie.net/assets/frontend/theme_rito/image/nam/expand-acc.svg)"></i>
+
+                              </a>
+                              <div class="acc-holder_badge">3 /
+                                10</div>
+                              <img
+                                src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a05f500.webp"
+                                alt="">
+                            </div>
+                            <div class="acc-holder_slides " style="display: none;">
+                              <a class="acc-holder_expand" data-fancybox="galleryAccount"
+                                href="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a0ac5a1.webp">
+                                <i class="__icon__profile --sm__profile --link__profile --link--acc"
+                                  style="--path : url(https://shoptienzombie.net/assets/frontend/theme_rito/image/nam/expand-acc.svg)"></i>
+
+                              </a>
+                              <div class="acc-holder_badge">4 /
+                                10</div>
+                              <img
+                                src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a0ac5a1.webp"
+                                alt="">
+                            </div>
+                            <div class="acc-holder_slides " style="display: none;">
+                              <a class="acc-holder_expand" data-fancybox="galleryAccount"
+                                href="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a12d8f2.webp">
+                                <i class="__icon__profile --sm__profile --link__profile --link--acc"
+                                  style="--path : url(https://shoptienzombie.net/assets/frontend/theme_rito/image/nam/expand-acc.svg)"></i>
+
+                              </a>
+                              <div class="acc-holder_badge">5 /
+                                10</div>
+                              <img
+                                src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a12d8f2.webp"
+                                alt="">
+                            </div>
+
+                            <div class="prevAccount">
+                              <a class="prev" onclick="plusSlides(-1)">
+                                <img src="https://shoptienzombie.net/assets/frontend/theme_3/image/swiper-prev.svg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <div class="nextAccount">
+                              <a class="next" onclick="plusSlides(1)">
+                                <img src="https://shoptienzombie.net/assets/frontend/theme_3/image/swiper-next.svg"
+                                  alt="">
+                              </a>
+                            </div>
+
+
+                          </div>
+
+                          <!-- thumnails in a row -->
+                          <div class="flex-grow-1 ml-fix-12">
+                            <div class="row acc-thumbnail  mx-0">
+                              <div class="acc-thumbnail_column col-md-3 c-px-6 c-mb-12  active">
+                                <div class="acc-thumbnail_badge" onclick="currentSlide(1)">
+                                  1
+                                </div>
+                                <img class="acc-thumbnail-image"
+                                  src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f69fa5fa6.webp"
+                                  onclick="currentSlide(1)" alt="Caption One">
+                              </div>
+                              <div class="acc-thumbnail_column col-md-3 c-px-6 c-mb-12 ">
+                                <div class="acc-thumbnail_badge" onclick="currentSlide(2)">
+                                  2
+                                </div>
+                                <img class="acc-thumbnail-image"
+                                  src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a00ce40.webp"
+                                  onclick="currentSlide(2)" alt="Caption One">
+                              </div>
+                              <div class="acc-thumbnail_column col-md-3 c-px-6 c-mb-12 ">
+                                <div class="acc-thumbnail_badge" onclick="currentSlide(3)">
+                                  3
+                                </div>
+                                <img class="acc-thumbnail-image"
+                                  src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a05f500.webp"
+                                  onclick="currentSlide(3)" alt="Caption One">
+                              </div>
+                              <div class="acc-thumbnail_column col-md-3 c-px-6 c-mb-12 ">
+                                <div class="acc-thumbnail_badge" onclick="currentSlide(4)">
+                                  4
+                                </div>
+                                <img class="acc-thumbnail-image"
+                                  src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a0ac5a1.webp"
+                                  onclick="currentSlide(4)" alt="Caption One">
+                              </div>
+                              <div class="acc-thumbnail_column col-md-3 c-px-6 c-mb-12 ">
+                                <div class="acc-thumbnail_badge" onclick="currentSlide(5)">
+                                  5
+                                </div>
+                                <img class="acc-thumbnail-image"
+                                  src="https://cdn3.upanh.info/upload/server-sw3/product-acc/1673469/6815f6a12d8f2.webp"
+                                  onclick="currentSlide(5)" alt="Caption One">
+                              </div>
+
+                            </div>
+                          </div>
+
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
 
               <div class="col-md-6 col-lg-5 col-xxl-4">
                 <div class="card active-user-card">
@@ -2544,34 +2878,7 @@
 
   </div>
 
-  <!-- modal -->
 
-  <div class="modal" tabindex="-1" id="welcomeCard" data-bs-backdrop="static">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content welcome-card">
-
-        <div class="modal-body p-0">
-          <div class="text-center position-relative welcome-card-content z-1 p-3">
-            <div class="text-end">
-              <i class="ti ti-x fs-5 text-dark f-w-600" data-bs-dismiss="modal"></i>
-            </div>
-            <h2 class="f-w-600"><span>Welcome !</span>👋 </h2>
-            <h6 class="f-s-15 text-dark f-w-500 mx-0 mx-sm-5"> Start Multipurpose, clean modern responsive bootstrap 5
-              admin template </h6>
-
-            <div>
-              <img src="../assets/images/modals/welcome-1.png" alt="img" class=" img-fluid">
-            </div>
-            <div class="mt-3 mb-4">
-              <button type="button" class="btn btn-primary text-white btn-lg" data-bs-dismiss="modal">Let's
-                Started <i class="ti ti-chevrons-right"></i> </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
 
 
   <!--customizer-->
@@ -2624,5 +2931,39 @@
 
 
 </body>
+
+data-toggle="modal" data-target="#accDetail"
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let slides = document.querySelectorAll(".acc-holder_slides");
+    let thumbs = document.querySelectorAll(".acc-thumbnail_column");
+
+    if (n > slides.length) slideIndex = 1;
+    if (n < 1) slideIndex = slides.length;
+
+    slides.forEach((slide, index) => {
+      slide.style.display = (index + 1 === slideIndex) ? "block" : "none";
+    });
+
+    thumbs.forEach((thumb, index) => {
+      thumb.classList.toggle("active", index + 1 === slideIndex);
+    });
+  }
+  Fancybox.bind("[data-fancybox='galleryAccount']", {
+
+  });
+
+</script>
 
 </html>

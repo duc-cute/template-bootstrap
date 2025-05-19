@@ -135,6 +135,111 @@
 
 /* HTML: <div class="loader"></div> */
 :root {
+    --bg_1: #141414;
+    --bg_1_reverse: #000;
+    --bg_2: #242424;
+    --bg_3: #141414;
+    --bg_4: hsla(0, 0%, 100%, .14);
+    --bg_5: #242424;
+    --bg_6: #141414;
+    --bg_7: #141414;
+    --black_gradient_1: linear-gradient(13.97deg, #141414 6.27%, #272727 104.76%);
+    --black_gradient_2: linear-gradient(180deg, #353535, rgba(47, 47, 47, 0));
+    --black_gradient_3: radial-gradient(circle, rgb(0 0 0 / 1%) 0%, rgba(72, 72, 72, .46) 50%, #000 100%);
+    --black_gradient_5: linear-gradient(180deg, #2f2f2f 38%, #1d1d1d);
+    --black_gradient_6: linear-gradient(13.97deg, #141414 6.27%, #272727 104.76%);
+    --border_gradient_dark: linear-gradient(64.5deg, #141414 0.46%, #272727 96.28%);
+    --bg_8: linear-gradient(85.17deg, #000 -0.5%, #2e2e2e 98.72%);
+    --bg_9: #141414;
+    --bg_10: #1d1d1d;
+    --bg_card: linear-gradient(180deg, #353535, rgba(47, 47, 47, 0)) border-box;
+    --bg_advantages: linear-gradient(180deg, #272727, #141414) border-box;
+    --bg_staking: hsla(0, 0%, 100%, .18);
+    --bg_11: #1d1d1d;
+    --bg_12: #1d1d1d;
+    --bg_13: linear-gradient(262.6deg, #1f1f1f 2.76%, #141414 97.54%);
+    --bg_14: linear-gradient(255.05deg, #282828 3.88%, #232323);
+    --bg_15: #000;
+    --bg_16: linear-gradient(235.35deg, rgba(47, 47, 47, .38) 3.89%, #1d1d1d 94.43%);
+    --bg_17: #373737;
+    --bg_18: #000;
+    --bg_19: #0f0f0f;
+    --bg_20: #141414;
+    --bg_21: #292929;
+    --bg_22: #1d1d1d;
+    --bg_23: #0f0f0f;
+    --bg_24: #141414;
+    --bg_25: #141414;
+    --bg_26: #000;
+    --bg_27: #292929;
+    --bg_28: #242424;
+    --bg_29: #1d1d1d;
+    --bg_30: #282828;
+    --bg_31: linear-gradient(180deg, #222, #141414);
+    --bg_32: #ffffff2e;
+    --bg_33: #000;
+    --bg_34: #292929;
+    --bg_35: #242424;
+    --bg_36: #1d1d1d;
+    --bg_37: #00000014;
+    --bg_38: #242424;
+    --light-pri :#fff;
+    --light-second :#000;
+    --text_1:#c5c5c5;
+    --border_1:#444;
+    --bg_btn_disabled:#ffffff5c;
+    --bg_buttonUp: #292929;
+    --warning-lighter-alpha: #ffa64d3d;
+    --danger-lighter-alpha: #ff3d4d3d;
+    --backgroundNegativeLightOverlay: #ff3d4d3d;
+    --neutral-alpha-92: #ffffffeb;
+    --borderPrimarySolid: #ffffff1a;
+    --borderCatalogWhiteLine: #2d2d2d;
+    --buttonPrimaryBackground: #fff;
+    --buttonPrimaryForeground: #000;
+    --buttonSecondaryBackground: #242424;
+    --buttonSecondaryForeground: #000;
+    --buttonTertiaryBackground: #000;
+    --buttonHeaderHover: #151515;
+    --buttonHeaderActive: #191919;
+    --bsPrimaryHoverBackground: #fff9;
+    --bsPrimaryHoverForeground: #fff;
+    --bsPrimaryPressedBackground: #ffffff4d;
+    --bsPrimaryPressedForeground: #fff;
+    --bsSecondaryHoverBackground: #ffffff29;
+    --bsSecondaryHoverForeground: #fff;
+    --bsSecondaryPressedBackground: #ffffff1a;
+    --bsSecondaryPressedForeground: #000;
+    --bsTertiaryPressedBackground: #ffffff14;
+    --bsTertiaryHoverBackground: #ffffff0a;
+    --backgroundAlpha_1: #ffffff24;
+    --backgroundAlpha_2: #ffffff29;
+    --backgroundAlpha_3: #ffffff2e;
+    --backgroundAlpha_4: #ffffff3d;
+    --backgroundAlpha_5: #ffffff52;
+    --backgroundAlpha_6: #fffc;
+    --backgroundAlpha_7: #ffffffe6;
+    --backgroundAlpha_8: #00000052;
+    --backgroundAlpha_9: rgba(0, 0, 0, .012);
+    --backgroundPayformHint: #ffffff24;
+    --contentPrimary: #fff;
+    --contentSecondary: #c5c5c5;
+    --contentTertiary: #888;
+    --contentOnColor: #000;
+    --contentDisabled: #2d2d2d;
+    --iconSecondary: #c5c5c5;
+    --sElevation_3: 0px 8px 16px #ffffff0f, 0px 0px 10px #fff3;
+    --borderAlpha_1: #ffffff4d;
+    --borderAlpha_Inverted_1: #0000001a;
+    --borderAlpha_2: #444;
+    --border_lang: #ffffff4d;
+    --payform: linear-gradient(255.05deg, #282828 3.88%, #232323);
+    --payformCheckout: linear-gradient(255.05deg, #282828 3.88%, #232323);
+    --Dark_bg1: #141414;
+    --scrollbar_track: #2d2d2d;
+
+        --light_success: #3ac270;
+        --textSecondary:   #747474;
   --font-color: #15264b;
   --font-title-color: #1c3264;
   --body-color: #f9f9f9;
@@ -26158,11 +26263,11 @@ input[type=range]::-webkit-slider-thumb {
   color: rgb(var(--primary), 0.75);
   font-weight: 600;
 }
-.login-form-container .form_container p {
+/* .login-form-container .form_container p {
   color: rgb(var(--dark), 1);
   font-weight: 500;
   font-size: calc(12px + 4 * (100vw - 300px) / 1620);
-}
+} */
 
 .user-container {
   display: flex;

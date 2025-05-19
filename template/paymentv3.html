@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Multipurpose, super flexible, powerful, clean modern responsive bootstrap 5 admin template">
+  <meta name="keywords"
+    content="admin template, ra-admin admin template, dashboard template, flat admin template, responsive admin template, web app">
+  <meta name="author" content="la-themes">
+  <link rel="icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
+
+  <title>Sign In Bg | ra-admin - Premium Admin Template</title>
+
+  <!--font-awesome-css-->
+  <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+
+  <!-- tabler icons-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/tabler-icons/tabler-icons.css">
+
+  <!-- Bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/bootstrap.min.css">
+
+  <!-- App css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+  <!-- Responsive css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+</head>
+
+<style>
+  .pay .pay-container .pay__content .content__info {
+    background: var(--payform);
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .Header_header__OKWO7 {
+    align-items: center;
+    padding: 32px 32px 0;
+    position: relative;
+  }
+
+  .Header_header__OKWO7 .Header_header__top__juJZi {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-between;
+  }
+
+  .Header_header__OKWO7 .Header_header__top__juJZi .Header_top__logo__jio87 {
+    align-items: center;
+    display: flex;
+    font-family: Biennale, Golos, sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    gap: 8px;
+    grid-area: logo;
+    letter-spacing: -.59px;
+    line-height: 36px;
+  }
+
+  .payment-details {
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px;
+  }
+
+  .payment-details__wrapper {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .payment-details__amount_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .payment-details__amount {
+    align-items: center;
+    display: flex;
+    font-size: 36px;
+    font-weight: 600;
+    gap: 8px;
+    line-height: 44px;
+    word-break: break-all;
+  }
+
+  .payment-details__amount {
+    align-items: center;
+    display: flex;
+    font-size: 36px;
+    font-weight: 600;
+    gap: 8px;
+    line-height: 44px;
+    word-break: break-all;
+  }
+
+  .copy-icon {
+    background: var(--backgroundCopyIcon);
+    border-radius: 40px;
+    box-shadow: var(--sElevation_3);
+    color: var(--contentPrimary);
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 44px;
+    position: relative;
+    transition: all .3sease;
+    width: 44px;
+  }
+
+  .payment-details__menu {
+    align-items: flex-end;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+
+  .payment-details__subheading {
+    column-gap: 6px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  .payment-details__fee {
+    align-items: center;
+    color: var(--contentSecondary);
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .HeaderMenu_container__Qp5CC {
+    column-gap: 16px;
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+  }
+
+  .HeaderMenu_container__Qp5CC .HeaderMenu_icon__btn__fIiYR.HeaderMenu_non_action__6tIdU {
+    cursor: default;
+  }
+
+  .HeaderMenu_container__Qp5CC .HeaderMenu_icon__btn__fIiYR {
+    align-items: center;
+    background: var(--light-second);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    transition: all .3sease;
+    width: 40px;
+  }
+
+  .pay .pay-container .content__actions {
+    background-color: var(--Dark_bg1);
+    border-radius: 0 0 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .checkout {
+    background: var(--payformCheckout);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px #0000000a, 0 0 6px #0000000a;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .checkout .checkout__info {
+    border-bottom: 1px solid var(--borderPrimarySolid);
+    display: flex;
+    padding: 16px;
+  }
+
+  .checkout .checkout__info .info__qr-wrapper {
+    margin-right: 16px;
+  }
+
+  .checkout .checkout__info .info__recipient {
+    padding: 4px 0 0;
+    width: 100%;
+  }
+
+  .checkout .checkout__info .info__recipient .recipient__title {
+    color: var(--textSecondary);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -.08px;
+    line-height: 20px;
+    margin-bottom: 2px;
+    text-align: start;
+  }
+
+  .checkout .checkout__info .info__recipient .recipient__address {
+    grid-gap: 4px;
+    display: grid;
+    gap: 4px;
+    grid-template-columns: minmax(100px, auto) 1fr;
+    margin-bottom: 8px;
+  }
+
+  .checkout .checkout__info .info__notification-alarm,
+  .checkout .checkout__info .info__notification-alarm .notification-alarm__email {
+    color: var(--textSecondary);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -.08px;
+    line-height: 20px;
+  }
+
+  .checkout .checkout__status {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .checkout .checkout__status .status__expire {
+    align-items: center;
+    border-right: 1px solid var(--borderPrimarySolid);
+    display: flex;
+  }
+
+  .checkout .checkout__status .status__expire>div {
+    background: #0000;
+  }
+
+  .expire,
+  .expire__icon {
+    align-items: center;
+    display: flex;
+  }
+
+  .expire {
+    background-color: var(--backgroundExpiration);
+    border-radius: 16px;
+    gap: 16px;
+    padding: 16px;
+    width: 100%;
+  }
+
+  .expire,
+  .expire__icon {
+    align-items: center;
+    display: flex;
+  }
+
+  .css-79elbk {
+    position: relative;
+  }
+
+  .expire__progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .expire__progress .expire__label {
+    color: var(--contentSecondary);
+  }
+
+  .expire__time {
+    color: var(--light_success);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    width: 72px;
+  }
+
+  .pay .pay-container .pay__content {
+    border-radius: 24px;
+    box-shadow: var(--sElevation_4);
+    box-sizing: border-box;
+    color: var(--light-pri);
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    max-width: 578px;
+    width: 100%;
+  }
+
+  .css-13o7eu2 {
+    display: block;
+  }
+
+  .css-3qsqzh {
+    display: inline-block;
+    color: var(--light_success);
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    transition: color 0.3s;
+  }
+
+  .css-1p4or2h {
+    display: inline-block;
+    color: var(--backgroundSuccessOverlay);
+    transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .css-3qsqzh .MuiCircularProgress-circle {
+    stroke-linecap: round;
+  }
+
+  .css-nbfpn7 {
+    stroke: currentcolor;
+    transition: stroke-dashoffset 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .checkout .checkout__status .status__confirms {
+    position: relative;
+  }
+
+  .confirm {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    padding: 16px;
+  }
+
+  .confirm__icon {
+    align-items: center;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: ckw;
+    color: var(--success);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-right: 16px;
+    transform: rotate(180deg);
+  }
+
+  @keyframes ckw {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(1turn);
+    }
+  }
+
+  .checkout .checkout__info .info__recipient .recipient__address .address__buttons {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    height: 24px;
+    justify-content: flex-end;
+  }
+
+  .checkout .checkout__info .info__recipient .recipient__address .address__copy_btn {
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--light-pri);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    padding: 0;
+    width: 24px;
+  }
+
+  .checkout .checkout__info .info__notification-alarm .notification-alarm__email {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 2px;
+    outline: none;
+    padding: 0;
+    text-align: start;
+    text-decoration: underline;
+  }
+
+  .checkout .checkout__info .info__notification-alarm,
+  .checkout .checkout__info .info__notification-alarm .notification-alarm__email {
+    color: var(--textSecondary);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -.08px;
+    line-height: 20px;
+  }
+
+  .HeaderMenu_container__Qp5CC .HeaderMenu_icon__btn__fIiYR {
+    align-items: center;
+    background: var(--light-second);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    transition: all .3s ease;
+    width: 40px;
+  }
+
+  .HeaderMenu_container__Qp5CC .HeaderMenu_icon__btn__fIiYR svg {
+    min-height: 24px;
+    min-width: 24px;
+  }
+
+  .HeaderMenu_container__Qp5CC svg {
+    color: var(--light-pri);
+  }
+
+  .HeaderMenu_container__Qp5CC svg {
+    color: var(--light-pri);
+  }
+
+  .AlternativePay_alternative_pay__6O8-y {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .AlternativePay_alternative_pay_divider__YW2Tr {
+    align-items: center;
+    display: flex;
+    gap: 32px;
+  }
+
+  .AlternativePay_alternative_pay_btns__q4rMl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .AlternativePay_alternative_pay_divider_line__WkFis {
+    border-top: 1px solid var(--borderPrimarySolid);
+    width: 100%;
+  }
+
+  .AlternativePay_alternative_pay_divider__YW2Tr p {
+    color: var(--contentSecondary);
+  }
+
+  .AlternativePay_alternative_pay_btns__q4rMl>* {
+    flex: 1 1;
+    max-width: 100%;
+    min-width: 249px;
+  }
+
+  .CryptomusPay_cryptomus_pay__ezzzt {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    row-gap: 8px;
+  }
+
+  .btn.primary {
+    background: var(--buttonPrimaryBackground);
+    color: var(--light-second);
+  }
+
+  .btn.large {
+    padding: 18px 24px;
+  }
+
+  .btn {
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 20px;
+    padding: 18px 16px;
+    transition: all .3s ease;
+    width: 100%;
+  }
+
+  .btn svg {
+    height: 20px;
+    margin-inline-end: 10px;
+    width: 21px;
+  }
+
+  .copy-icon {
+    background: var(--backgroundCopyIcon);
+    border-radius: 40px;
+    box-shadow: var(--sElevation_3);
+    color: var(--contentPrimary);
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 44px;
+    position: relative;
+    transition: all .3s ease;
+    width: 44px;
+  }
+
+  .copy-icon .icon-wrapper {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .login-form-container {
+    background: #000;
+    background-image: none !important;
+
+  }
+</style>
+
+<body>
+  <div class="app-wrapper d-block">
+    <div class="">
+      <!-- Body main section starts -->
+      <main class="w-100 p-0">
+        <!-- Login to your Account start -->
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-12 p-0 pay pay_ff">
+              <div class="login-form-container pay-container">
+                <div class="mb-4">
+                  <a class="logo d-inline-block" href="index.html">
+                    <img src="../assets/images/logo/1.png" width="250" alt="#">
+                  </a>
+                </div>
+                <div class="form_container pay__content">
+                  <div class="content__info">
+                    <div class="Header_header__OKWO7">
+                      <div class="Header_header__top__juJZi">
+                        <div class="Header_top__logo__jio87"><svg xmlns="http://www.w3.org/2000/svg" width="45"
+                            height="45" viewBox="0 0 91 104" fill="currentColor">
+                            <path
+                              d="M87.71 24.5805L48.2 1.77055C46.42 0.740547 44.2 0.740547 42.41 1.77055L2.9 24.5805C1.11 25.6105 0 27.5305 0 29.6005V75.2206C0 77.2806 1.11 79.2005 2.9 80.2405L42.41 103.051C43.29 103.561 44.29 103.821 45.31 103.821C46.33 103.821 47.33 103.551 48.21 103.051L87.72 80.2405C89.51 79.2105 90.62 77.2906 90.62 75.2206V29.6005C90.62 27.5405 89.51 25.6205 87.72 24.5805H87.71ZM46.2 49.5805C45.65 49.9005 44.96 49.9005 44.41 49.5805L6 27.4105L44.41 5.24055C44.95 4.93055 45.66 4.93055 46.2 5.24055L84.61 27.4105L46.2 49.5805V49.5805ZM42.41 53.0405C42.69 53.2005 42.99 53.3405 43.31 53.4505V98.9305L4.9 76.7705C4.35 76.4505 4 75.8606 4 75.2206V30.8705L42.41 53.0405V53.0405Z"
+                              fill="currentColor"></path>
+                          </svg><span>cryptomus</span></div>
+                      </div>
+                    </div>
+                    <div class="payment-details  ">
+                      <div class="payment-details__wrapper">
+                        <div class="payment-details__amount_wrapper"><span
+                            class="payment-details__amount">10</span><span class="payment-details__amount">TRX</span>
+                        </div>
+                        <div class="copy-icon"><svg width="17" height="16" viewBox="0 0 17 16" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg" class="icon-wrapper">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M8.82961 6.92431e-07L8.86815 4.05779e-06H11.8028L11.8413 6.92431e-07H11.8414H11.8414C12.3685 -1.47793e-05 12.8233 -2.81246e-05 13.1978 0.0305736C13.5931 0.0628745 13.9864 0.13419 14.3647 0.326985C14.9292 0.614605 15.3882 1.07355 15.6758 1.63803C15.8686 2.01641 15.9399 2.40963 15.9722 2.80498C16.0028 3.17955 16.0028 3.63432 16.0028 4.16148V4.2V8.30206V8.34058C16.0028 8.86774 16.0028 9.32251 15.9722 9.69709C15.9399 10.0924 15.8686 10.4857 15.6758 10.864C15.3882 11.4285 14.9292 11.8875 14.3647 12.1751C13.9864 12.3679 13.5931 12.4392 13.1978 12.4715C12.9447 12.4922 12.655 12.4989 12.331 12.501C12.3337 12.2946 12.3336 12.0809 12.3336 11.8648L12.3336 11.801V10.5009C12.6268 10.4988 12.8498 10.4933 13.0349 10.4781C13.3066 10.4559 13.4073 10.4183 13.4568 10.3931C13.6449 10.2972 13.7979 10.1442 13.8938 9.95605C13.919 9.9066 13.9566 9.80589 13.9788 9.53422C14.002 9.25088 14.0028 8.87861 14.0028 8.30206V4.2C14.0028 3.62345 14.002 3.25118 13.9788 2.96784C13.9566 2.69618 13.919 2.59546 13.8938 2.54601C13.7979 2.35785 13.6449 2.20487 13.4568 2.109C13.4073 2.0838 13.3066 2.04613 13.0349 2.02393C12.7516 2.00078 12.3793 2 11.8028 2H8.86815C8.2916 2 7.91932 2.00078 7.63599 2.02393C7.36432 2.04613 7.2636 2.0838 7.21416 2.109C7.04196 2.19674 6.89922 2.33231 6.80276 2.49891H4.73303C4.77603 2.20725 4.85219 1.91856 4.99513 1.63803C5.28275 1.07355 5.74169 0.614605 6.30618 0.326985C6.68456 0.13419 7.07778 0.0628745 7.47312 0.0305735C7.84767 -2.81258e-05 8.30239 -1.47793e-05 8.82949 6.92431e-07H8.82953H8.82961ZM4.1999 3.4989L4.16136 3.4989H4.16136C3.63421 3.49889 3.17945 3.49887 2.80488 3.52947C2.40953 3.56178 2.01631 3.63309 1.63793 3.82589C1.07345 4.11351 0.614504 4.57245 0.326884 5.13693C0.13409 5.51531 0.0627738 5.90853 0.0304728 6.30388C-0.000130135 6.67844 -0.000115429 7.13319 -9.83815e-05 7.66032V7.66036V7.69891V11.801V11.8395V11.8395C-0.000115429 12.3667 -0.000130136 12.8214 0.0304728 13.196C0.0627738 13.5913 0.13409 13.9846 0.326884 14.3629C0.614504 14.9274 1.07345 15.3864 1.63793 15.674C2.01631 15.8668 2.40953 15.9381 2.80487 15.9704C3.17945 16.001 3.63422 16.001 4.16138 16.001H4.1999H7.13452H7.17304C7.7002 16.001 8.15497 16.001 8.52955 15.9704C8.9249 15.9381 9.31811 15.8668 9.69649 15.674C10.261 15.3864 10.7199 14.9274 11.0075 14.3629C11.2003 13.9846 11.2717 13.5913 11.304 13.196C11.3346 12.8214 11.3345 12.3667 11.3345 11.8395V11.8395V11.801V7.6989V7.66038V7.66035C11.3345 7.13321 11.3346 6.67845 11.304 6.30388C11.2717 5.90853 11.2003 5.51531 11.0075 5.13693C10.7199 4.57245 10.261 4.11351 9.69649 3.82589C9.31811 3.63309 8.9249 3.56178 8.52955 3.52947C8.15498 3.49887 7.70022 3.49889 7.17307 3.4989H7.17307L7.13452 3.4989H4.1999ZM2.54591 5.6079C2.59536 5.58271 2.69608 5.54503 2.96774 5.52283C3.25108 5.49968 3.62335 5.4989 4.1999 5.4989H7.13452C7.71108 5.4989 8.08335 5.49968 8.36669 5.52283C8.63835 5.54503 8.73907 5.58271 8.78851 5.6079C8.97668 5.70377 9.12966 5.85675 9.22553 6.04491C9.25072 6.09436 9.2884 6.19508 9.31059 6.46674C9.33375 6.75008 9.33452 7.12235 9.33452 7.6989V11.801C9.33452 12.3775 9.33375 12.7498 9.31059 13.0331C9.2884 13.3048 9.25072 13.4055 9.22553 13.4549C9.12966 13.6431 8.97668 13.7961 8.78851 13.892C8.73907 13.9172 8.63835 13.9548 8.36669 13.977C8.08335 14.0002 7.71108 14.001 7.13452 14.001H4.1999C3.62335 14.001 3.25108 14.0002 2.96774 13.977C2.69608 13.9548 2.59536 13.9172 2.54591 13.892C2.35775 13.7961 2.20477 13.6431 2.1089 13.4549C2.0837 13.4055 2.04603 13.3048 2.02383 13.0331C2.00068 12.7498 1.9999 12.3775 1.9999 11.801V7.69891C1.9999 7.12235 2.00068 6.75008 2.02383 6.46674C2.04603 6.19508 2.0837 6.09436 2.1089 6.04491C2.20477 5.85675 2.35775 5.70377 2.54591 5.6079Z"
+                              fill="currentColor"></path>
+                          </svg></div>
+                      </div>
+                      <div class="payment-details__menu ">
+                        <div class="menu__info">
+                          <div class="payment-details__subheading"><span>通信網 · TRON (TRC-20)</span></div>
+                          <div class="payment-details__fee"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <g clip-path="url(#clip0_3533_30846)">
+                                <path
+                                  d="M10 18.3332C14.6024 18.3332 18.3334 14.6022 18.3334 9.99984C18.3334 5.39746 14.6024 1.6665 10 1.6665C5.39765 1.6665 1.66669 5.39746 1.66669 9.99984C1.66669 14.6022 5.39765 18.3332 10 18.3332Z"
+                                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path d="M10 13.3333V10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                                <path d="M10 6.6665H10.0067" stroke="currentColor" stroke-width="2"
+                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                              </g>
+                              <defs>
+                                <clipPath id="clip0_3533_30846">
+                                  <rect width="20" height="20" fill="white"></rect>
+                                </clipPath>
+                              </defs>
+                            </svg><span>You pay network fee</span></div>
+                        </div>
+                        <div class="HeaderMenu_container__Qp5CC"><button
+                            class="HeaderMenu_icon__btn__fIiYR HeaderMenu_non_action__6tIdU" data-debug="true"
+                            data-testid="crms-tooltop" trianglemobileposition="17" triangleposition="2" dir="ltr"><svg
+                              width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M21 11.25V19.5C21 20.3284 20.3284 21 19.5 21H5.25C4.42157 21 3.75 20.3284 3.75 19.5V11.25M12 4.875C12 3.42525 10.8247 2.25 9.375 2.25C7.92525 2.25 6.75 3.42525 6.75 4.875C6.75 6.32475 7.92525 7.5 9.375 7.5C10.1095 7.5 12 7.5 12 7.5M12 4.875C12 5.59024 12 7.5 12 7.5M12 4.875C12 3.42525 13.1753 2.25 14.625 2.25C16.0747 2.25 17.25 3.42525 17.25 4.875C17.25 6.32475 16.0747 7.5 14.625 7.5C13.8905 7.5 12 7.5 12 7.5M12 7.5V21M3.375 11.25H21.375C21.9963 11.25 22.5 10.7463 22.5 10.125V8.625C22.5 8.00368 21.9963 7.5 21.375 7.5H3.375C2.75368 7.5 2.25 8.00368 2.25 8.625V10.125C2.25 10.7463 2.75368 11.25 3.375 11.25Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                            </svg></button><button class="HeaderMenu_icon__btn__fIiYR" data-debug="true"
+                            data-testid="faq-tooltop" trianglemobileposition="0" triangleposition="0" dir="ltr"><svg
+                              width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M9.16504 8.6212C9.44483 8.01091 9.92016 7.51137 10.5158 7.20164C11.1115 6.8919 11.7934 6.78967 12.4537 6.91111C12.906 6.98051 13.3358 7.15501 13.7084 7.42059C14.0811 7.68616 14.3863 8.03542 14.5995 8.44032C14.753 8.76417 14.8363 9.11683 14.8438 9.47514C14.8514 9.83344 14.783 10.1893 14.6432 10.5193C14.5035 10.8493 14.2955 11.146 14.0329 11.3899C13.7703 11.6338 13.4591 11.8194 13.1197 11.9344C12.7734 12.0658 12.4739 12.2968 12.2588 12.5982C12.0437 12.8996 11.9227 13.258 11.9111 13.6281"
+                                stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round">
+                              </path>
+                              <path d="M11.8877 17.1387H11.8955" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path
+                                d="M12 22C17.5229 22 22 17.5229 22 12C22 6.47716 17.5229 2 12 2C6.47716 2 2 6.47716 2 12C2 17.5229 6.47716 22 12 22Z"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              </path>
+                            </svg></button>
+                          <div class="HeaderMenu_menu__BGHrB"><button class="HeaderMenu_icon__btn__fIiYR"><svg
+                                width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M7.82806 4.54352C7.77611 4.41811 7.78133 4.30439 7.88048 4.14829C7.99687 3.96506 8.23058 3.764 8.54543 3.62884C8.86107 3.49334 9.1564 3.46749 9.35393 3.51036C9.51181 3.54462 9.6081 3.61467 9.67567 3.7778C10.5329 5.84731 13.4645 5.84763 14.3218 3.77788C14.3738 3.65253 14.4578 3.57589 14.6382 3.53567C14.85 3.48845 15.1573 3.51158 15.4755 3.6387C15.7945 3.76613 16.0217 3.95675 16.1311 4.1268C16.2185 4.26276 16.237 4.38043 16.1695 4.54351C15.312 6.61374 17.3859 8.68628 19.4554 7.82907C19.6187 7.76144 19.7364 7.78002 19.8724 7.86745C20.0424 7.97681 20.233 8.2039 20.3604 8.52286C20.4874 8.84102 20.5105 9.14841 20.4632 9.36024C20.423 9.54068 20.3463 9.62486 20.2207 9.67687C18.1515 10.534 18.1498 13.466 20.2203 14.3236C20.3833 14.3911 20.4534 14.4874 20.4877 14.6454C20.5306 14.843 20.5047 15.1384 20.3693 15.454C20.2342 15.7689 20.0332 16.0027 19.8501 16.119C19.6941 16.2181 19.5805 16.2233 19.4552 16.1714C17.3853 15.3141 15.313 17.3876 16.1701 19.4568C16.2221 19.5822 16.2168 19.6959 16.1177 19.8519C16.0014 20.035 15.7677 20.236 15.4528 20.3711C15.1371 20.5065 14.8418 20.5324 14.6442 20.4895C14.4862 20.4551 14.3898 20.385 14.3222 20.2219C13.4648 18.1518 10.5326 18.1521 9.67525 20.222C9.62328 20.3475 9.53914 20.4242 9.35869 20.4644C9.14685 20.5117 8.83944 20.4886 8.52126 20.3615C8.20228 20.2341 7.97517 20.0436 7.86581 19.8736C7.77839 19.7377 7.75982 19.62 7.82742 19.4568C8.68455 17.3875 6.6122 15.3137 4.54215 16.1711C4.41685 16.223 4.30323 16.2178 4.14719 16.1187C3.96401 16.0023 3.76298 15.7686 3.62784 15.4537C3.49236 15.138 3.46651 14.8427 3.50939 14.6451C3.54366 14.4872 3.61372 14.3909 3.77675 14.3234C5.84702 13.4659 5.84534 10.5341 3.77631 9.67704C3.65075 9.62503 3.57406 9.54088 3.53382 9.36049C3.48657 9.1487 3.50968 8.84133 3.63678 8.52318C3.7642 8.20423 3.9548 7.97713 4.12487 7.86776C4.26084 7.78031 4.37862 7.76174 4.54189 7.82937C6.6116 8.68667 8.68563 6.61387 7.82806 4.54352ZM11.5234 3.01243C11.1807 2.18494 10.5122 1.71515 9.77806 1.55585C9.08362 1.40515 8.35982 1.53202 7.75648 1.79103C7.15234 2.05038 6.56723 2.48562 6.19225 3.07597C5.80004 3.69346 5.64136 4.49063 5.9803 5.30889C6.15573 5.73242 5.73143 6.15731 5.30726 5.98161C4.47977 5.63885 3.67484 5.77928 3.04304 6.1856C2.44533 6.57 2.0231 7.17145 1.7795 7.78121C1.53559 8.39178 1.42951 9.1133 1.5818 9.79595C1.74109 10.51 2.19265 11.1859 3.01094 11.5248C3.43504 11.7005 3.43423 12.3005 3.01139 12.4756C2.18391 12.8184 1.71417 13.4869 1.55488 14.221C1.40419 14.9154 1.53101 15.6391 1.78995 16.2425C2.04924 16.8466 2.48439 17.4318 3.07468 17.8068C3.69211 18.1991 4.48925 18.3578 5.30752 18.0189C5.73064 17.8436 6.15523 18.2675 5.97966 18.6914C5.6369 19.5189 5.77738 20.3238 6.18378 20.9556C6.56823 21.5532 7.16973 21.9754 7.77951 22.2189C8.39008 22.4627 9.11159 22.5687 9.79421 22.4164C10.5082 22.2571 11.1841 21.8056 11.523 20.9873C11.6986 20.5634 12.299 20.5635 12.4745 20.9873C12.8172 21.8147 13.4857 22.2845 14.2198 22.4439C14.9142 22.5947 15.638 22.468 16.2414 22.2091C16.8456 21.9498 17.4308 21.5147 17.8058 20.9244C18.1981 20.3069 18.3568 19.5097 18.0179 18.6915C17.8424 18.2678 18.2668 17.844 18.6898 18.0192C19.5081 18.3581 20.3052 18.1994 20.9227 17.8071C21.5129 17.432 21.948 16.8468 22.2073 16.2427C22.4662 15.6393 22.5929 14.9155 22.4422 14.2211C22.2828 13.4871 21.8131 12.8185 20.9856 12.4758C20.5626 12.3006 20.5618 11.7004 20.9861 11.5246C21.8043 11.1857 22.2559 10.5098 22.4152 9.79582C22.5676 9.11318 22.4616 8.39165 22.2177 7.78106C21.9742 7.17127 21.552 6.56979 20.9543 6.18535C20.3225 5.77898 19.5176 5.63855 18.6901 5.98131C18.266 6.15696 17.8419 5.73218 18.0172 5.30887C18.36 4.4814 18.2195 3.67652 17.8131 3.04481C17.4287 2.44719 16.8272 2.02501 16.2175 1.78143C15.607 1.53752 14.8855 1.43141 14.2029 1.5836C13.4889 1.7428 12.813 2.19423 12.4741 3.01251C12.2987 3.43585 11.6989 3.436 11.5234 3.01243ZM9.99992 12C9.99992 10.8954 10.8954 9.99998 11.9999 9.99998C13.1045 9.99998 13.9999 10.8954 13.9999 12C13.9999 13.1046 13.1045 14 11.9999 14C10.8954 14 9.99992 13.1046 9.99992 12ZM11.9999 7.99998C9.79078 7.99998 7.99992 9.79084 7.99992 12C7.99992 14.2091 9.79078 16 11.9999 16C14.2091 16 15.9999 14.2091 15.9999 12C15.9999 9.79084 14.2091 7.99998 11.9999 7.99998Z"
+                                  fill="currentColor"></path>
+                              </svg></button></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content__actions">
+                      <div class="checkout" style="height: auto;">
+                        <div class="checkout__info">
+                          <div class="info__qr-wrapper"><svg xmlns="http://www.w3.org/2000/svg" height="104"
+                              viewBox="0 0 29 29" width="104">
+                              <path
+                                d="       M 7 0 l 1 0 0 1 -1 0 Z  M 9 0 l 1 0 0 1 -1 0 Z  M 11 0 l 1 0 0 1 -1 0 Z     M 16 0 l 1 0 0 1 -1 0 Z  M 18 0 l 1 0 0 1 -1 0 Z   M 21 0 l 1 0 0 1 -1 0 Z         M 1 1 l 1 0 0 1 -1 0 Z M 2 1 l 1 0 0 1 -1 0 Z M 3 1 l 1 0 0 1 -1 0 Z M 4 1 l 1 0 0 1 -1 0 Z M 5 1 l 1 0 0 1 -1 0 Z  M 7 1 l 1 0 0 1 -1 0 Z M 8 1 l 1 0 0 1 -1 0 Z      M 14 1 l 1 0 0 1 -1 0 Z M 15 1 l 1 0 0 1 -1 0 Z   M 18 1 l 1 0 0 1 -1 0 Z M 19 1 l 1 0 0 1 -1 0 Z M 20 1 l 1 0 0 1 -1 0 Z M 21 1 l 1 0 0 1 -1 0 Z  M 23 1 l 1 0 0 1 -1 0 Z M 24 1 l 1 0 0 1 -1 0 Z M 25 1 l 1 0 0 1 -1 0 Z M 26 1 l 1 0 0 1 -1 0 Z M 27 1 l 1 0 0 1 -1 0 Z   M 1 2 l 1 0 0 1 -1 0 Z    M 5 2 l 1 0 0 1 -1 0 Z  M 7 2 l 1 0 0 1 -1 0 Z    M 11 2 l 1 0 0 1 -1 0 Z M 12 2 l 1 0 0 1 -1 0 Z M 13 2 l 1 0 0 1 -1 0 Z M 14 2 l 1 0 0 1 -1 0 Z M 15 2 l 1 0 0 1 -1 0 Z  M 17 2 l 1 0 0 1 -1 0 Z M 18 2 l 1 0 0 1 -1 0 Z M 19 2 l 1 0 0 1 -1 0 Z M 20 2 l 1 0 0 1 -1 0 Z M 21 2 l 1 0 0 1 -1 0 Z  M 23 2 l 1 0 0 1 -1 0 Z    M 27 2 l 1 0 0 1 -1 0 Z   M 1 3 l 1 0 0 1 -1 0 Z    M 5 3 l 1 0 0 1 -1 0 Z  M 7 3 l 1 0 0 1 -1 0 Z    M 11 3 l 1 0 0 1 -1 0 Z  M 13 3 l 1 0 0 1 -1 0 Z   M 16 3 l 1 0 0 1 -1 0 Z M 17 3 l 1 0 0 1 -1 0 Z M 18 3 l 1 0 0 1 -1 0 Z M 19 3 l 1 0 0 1 -1 0 Z  M 21 3 l 1 0 0 1 -1 0 Z  M 23 3 l 1 0 0 1 -1 0 Z    M 27 3 l 1 0 0 1 -1 0 Z   M 1 4 l 1 0 0 1 -1 0 Z    M 5 4 l 1 0 0 1 -1 0 Z  M 7 4 l 1 0 0 1 -1 0 Z  M 9 4 l 1 0 0 1 -1 0 Z M 10 4 l 1 0 0 1 -1 0 Z   M 13 4 l 1 0 0 1 -1 0 Z  M 15 4 l 1 0 0 1 -1 0 Z    M 19 4 l 1 0 0 1 -1 0 Z M 20 4 l 1 0 0 1 -1 0 Z M 21 4 l 1 0 0 1 -1 0 Z  M 23 4 l 1 0 0 1 -1 0 Z    M 27 4 l 1 0 0 1 -1 0 Z   M 1 5 l 1 0 0 1 -1 0 Z M 2 5 l 1 0 0 1 -1 0 Z M 3 5 l 1 0 0 1 -1 0 Z M 4 5 l 1 0 0 1 -1 0 Z M 5 5 l 1 0 0 1 -1 0 Z  M 7 5 l 1 0 0 1 -1 0 Z M 8 5 l 1 0 0 1 -1 0 Z M 9 5 l 1 0 0 1 -1 0 Z   M 12 5 l 1 0 0 1 -1 0 Z  M 14 5 l 1 0 0 1 -1 0 Z      M 20 5 l 1 0 0 1 -1 0 Z M 21 5 l 1 0 0 1 -1 0 Z  M 23 5 l 1 0 0 1 -1 0 Z M 24 5 l 1 0 0 1 -1 0 Z M 25 5 l 1 0 0 1 -1 0 Z M 26 5 l 1 0 0 1 -1 0 Z M 27 5 l 1 0 0 1 -1 0 Z         M 7 6 l 1 0 0 1 -1 0 Z  M 9 6 l 1 0 0 1 -1 0 Z  M 11 6 l 1 0 0 1 -1 0 Z  M 13 6 l 1 0 0 1 -1 0 Z  M 15 6 l 1 0 0 1 -1 0 Z  M 17 6 l 1 0 0 1 -1 0 Z  M 19 6 l 1 0 0 1 -1 0 Z  M 21 6 l 1 0 0 1 -1 0 Z        M 0 7 l 1 0 0 1 -1 0 Z M 1 7 l 1 0 0 1 -1 0 Z M 2 7 l 1 0 0 1 -1 0 Z M 3 7 l 1 0 0 1 -1 0 Z M 4 7 l 1 0 0 1 -1 0 Z M 5 7 l 1 0 0 1 -1 0 Z M 6 7 l 1 0 0 1 -1 0 Z M 7 7 l 1 0 0 1 -1 0 Z M 8 7 l 1 0 0 1 -1 0 Z M 9 7 l 1 0 0 1 -1 0 Z  M 11 7 l 1 0 0 1 -1 0 Z  M 13 7 l 1 0 0 1 -1 0 Z M 14 7 l 1 0 0 1 -1 0 Z    M 18 7 l 1 0 0 1 -1 0 Z M 19 7 l 1 0 0 1 -1 0 Z  M 21 7 l 1 0 0 1 -1 0 Z M 22 7 l 1 0 0 1 -1 0 Z M 23 7 l 1 0 0 1 -1 0 Z M 24 7 l 1 0 0 1 -1 0 Z M 25 7 l 1 0 0 1 -1 0 Z M 26 7 l 1 0 0 1 -1 0 Z M 27 7 l 1 0 0 1 -1 0 Z M 28 7 l 1 0 0 1 -1 0 Z     M 4 8 l 1 0 0 1 -1 0 Z M 5 8 l 1 0 0 1 -1 0 Z  M 7 8 l 1 0 0 1 -1 0 Z  M 9 8 l 1 0 0 1 -1 0 Z     M 14 8 l 1 0 0 1 -1 0 Z    M 18 8 l 1 0 0 1 -1 0 Z M 19 8 l 1 0 0 1 -1 0 Z M 20 8 l 1 0 0 1 -1 0 Z  M 22 8 l 1 0 0 1 -1 0 Z M 23 8 l 1 0 0 1 -1 0 Z    M 27 8 l 1 0 0 1 -1 0 Z  M 0 9 l 1 0 0 1 -1 0 Z  M 2 9 l 1 0 0 1 -1 0 Z M 3 9 l 1 0 0 1 -1 0 Z  M 5 9 l 1 0 0 1 -1 0 Z M 6 9 l 1 0 0 1 -1 0 Z M 7 9 l 1 0 0 1 -1 0 Z M 8 9 l 1 0 0 1 -1 0 Z M 9 9 l 1 0 0 1 -1 0 Z  M 11 9 l 1 0 0 1 -1 0 Z     M 16 9 l 1 0 0 1 -1 0 Z M 17 9 l 1 0 0 1 -1 0 Z M 18 9 l 1 0 0 1 -1 0 Z M 19 9 l 1 0 0 1 -1 0 Z  M 21 9 l 1 0 0 1 -1 0 Z    M 25 9 l 1 0 0 1 -1 0 Z  M 27 9 l 1 0 0 1 -1 0 Z  M 0 10 l 1 0 0 1 -1 0 Z M 1 10 l 1 0 0 1 -1 0 Z   M 4 10 l 1 0 0 1 -1 0 Z M 5 10 l 1 0 0 1 -1 0 Z  M 7 10 l 1 0 0 1 -1 0 Z       M 14 10 l 1 0 0 1 -1 0 Z M 15 10 l 1 0 0 1 -1 0 Z M 16 10 l 1 0 0 1 -1 0 Z M 17 10 l 1 0 0 1 -1 0 Z  M 19 10 l 1 0 0 1 -1 0 Z   M 22 10 l 1 0 0 1 -1 0 Z M 23 10 l 1 0 0 1 -1 0 Z M 24 10 l 1 0 0 1 -1 0 Z M 25 10 l 1 0 0 1 -1 0 Z   M 28 10 l 1 0 0 1 -1 0 Z  M 1 11 l 1 0 0 1 -1 0 Z   M 4 11 l 1 0 0 1 -1 0 Z  M 6 11 l 1 0 0 1 -1 0 Z M 7 11 l 1 0 0 1 -1 0 Z    M 11 11 l 1 0 0 1 -1 0 Z M 12 11 l 1 0 0 1 -1 0 Z M 13 11 l 1 0 0 1 -1 0 Z M 14 11 l 1 0 0 1 -1 0 Z M 15 11 l 1 0 0 1 -1 0 Z  M 17 11 l 1 0 0 1 -1 0 Z M 18 11 l 1 0 0 1 -1 0 Z      M 24 11 l 1 0 0 1 -1 0 Z M 25 11 l 1 0 0 1 -1 0 Z M 26 11 l 1 0 0 1 -1 0 Z  M 28 11 l 1 0 0 1 -1 0 Z M 0 12 l 1 0 0 1 -1 0 Z       M 7 12 l 1 0 0 1 -1 0 Z M 8 12 l 1 0 0 1 -1 0 Z   M 11 12 l 1 0 0 1 -1 0 Z  M 13 12 l 1 0 0 1 -1 0 Z  M 15 12 l 1 0 0 1 -1 0 Z   M 18 12 l 1 0 0 1 -1 0 Z M 19 12 l 1 0 0 1 -1 0 Z  M 21 12 l 1 0 0 1 -1 0 Z M 22 12 l 1 0 0 1 -1 0 Z M 23 12 l 1 0 0 1 -1 0 Z M 24 12 l 1 0 0 1 -1 0 Z M 25 12 l 1 0 0 1 -1 0 Z  M 27 12 l 1 0 0 1 -1 0 Z M 28 12 l 1 0 0 1 -1 0 Z  M 1 13 l 1 0 0 1 -1 0 Z M 2 13 l 1 0 0 1 -1 0 Z M 3 13 l 1 0 0 1 -1 0 Z M 4 13 l 1 0 0 1 -1 0 Z M 5 13 l 1 0 0 1 -1 0 Z M 6 13 l 1 0 0 1 -1 0 Z    M 10 13 l 1 0 0 1 -1 0 Z   M 13 13 l 1 0 0 1 -1 0 Z   M 16 13 l 1 0 0 1 -1 0 Z M 17 13 l 1 0 0 1 -1 0 Z  M 19 13 l 1 0 0 1 -1 0 Z M 20 13 l 1 0 0 1 -1 0 Z M 21 13 l 1 0 0 1 -1 0 Z  M 23 13 l 1 0 0 1 -1 0 Z M 24 13 l 1 0 0 1 -1 0 Z M 25 13 l 1 0 0 1 -1 0 Z M 26 13 l 1 0 0 1 -1 0 Z   M 0 14 l 1 0 0 1 -1 0 Z M 1 14 l 1 0 0 1 -1 0 Z M 2 14 l 1 0 0 1 -1 0 Z M 3 14 l 1 0 0 1 -1 0 Z M 4 14 l 1 0 0 1 -1 0 Z M 5 14 l 1 0 0 1 -1 0 Z   M 8 14 l 1 0 0 1 -1 0 Z  M 10 14 l 1 0 0 1 -1 0 Z  M 12 14 l 1 0 0 1 -1 0 Z  M 14 14 l 1 0 0 1 -1 0 Z M 15 14 l 1 0 0 1 -1 0 Z M 16 14 l 1 0 0 1 -1 0 Z  M 18 14 l 1 0 0 1 -1 0 Z   M 21 14 l 1 0 0 1 -1 0 Z M 22 14 l 1 0 0 1 -1 0 Z  M 24 14 l 1 0 0 1 -1 0 Z  M 26 14 l 1 0 0 1 -1 0 Z   M 0 15 l 1 0 0 1 -1 0 Z      M 6 15 l 1 0 0 1 -1 0 Z  M 8 15 l 1 0 0 1 -1 0 Z M 9 15 l 1 0 0 1 -1 0 Z M 10 15 l 1 0 0 1 -1 0 Z  M 12 15 l 1 0 0 1 -1 0 Z M 13 15 l 1 0 0 1 -1 0 Z  M 15 15 l 1 0 0 1 -1 0 Z M 16 15 l 1 0 0 1 -1 0 Z M 17 15 l 1 0 0 1 -1 0 Z  M 19 15 l 1 0 0 1 -1 0 Z M 20 15 l 1 0 0 1 -1 0 Z M 21 15 l 1 0 0 1 -1 0 Z  M 23 15 l 1 0 0 1 -1 0 Z M 24 15 l 1 0 0 1 -1 0 Z  M 26 15 l 1 0 0 1 -1 0 Z   M 0 16 l 1 0 0 1 -1 0 Z M 1 16 l 1 0 0 1 -1 0 Z      M 7 16 l 1 0 0 1 -1 0 Z M 8 16 l 1 0 0 1 -1 0 Z M 9 16 l 1 0 0 1 -1 0 Z M 10 16 l 1 0 0 1 -1 0 Z M 11 16 l 1 0 0 1 -1 0 Z  M 13 16 l 1 0 0 1 -1 0 Z   M 16 16 l 1 0 0 1 -1 0 Z M 17 16 l 1 0 0 1 -1 0 Z M 18 16 l 1 0 0 1 -1 0 Z  M 20 16 l 1 0 0 1 -1 0 Z  M 22 16 l 1 0 0 1 -1 0 Z    M 26 16 l 1 0 0 1 -1 0 Z M 27 16 l 1 0 0 1 -1 0 Z  M 0 17 l 1 0 0 1 -1 0 Z   M 3 17 l 1 0 0 1 -1 0 Z  M 5 17 l 1 0 0 1 -1 0 Z M 6 17 l 1 0 0 1 -1 0 Z M 7 17 l 1 0 0 1 -1 0 Z   M 10 17 l 1 0 0 1 -1 0 Z M 11 17 l 1 0 0 1 -1 0 Z M 12 17 l 1 0 0 1 -1 0 Z M 13 17 l 1 0 0 1 -1 0 Z  M 15 17 l 1 0 0 1 -1 0 Z M 16 17 l 1 0 0 1 -1 0 Z      M 22 17 l 1 0 0 1 -1 0 Z  M 24 17 l 1 0 0 1 -1 0 Z M 25 17 l 1 0 0 1 -1 0 Z M 26 17 l 1 0 0 1 -1 0 Z M 27 17 l 1 0 0 1 -1 0 Z   M 1 18 l 1 0 0 1 -1 0 Z M 2 18 l 1 0 0 1 -1 0 Z  M 4 18 l 1 0 0 1 -1 0 Z M 5 18 l 1 0 0 1 -1 0 Z  M 7 18 l 1 0 0 1 -1 0 Z    M 11 18 l 1 0 0 1 -1 0 Z M 12 18 l 1 0 0 1 -1 0 Z     M 17 18 l 1 0 0 1 -1 0 Z  M 19 18 l 1 0 0 1 -1 0 Z M 20 18 l 1 0 0 1 -1 0 Z  M 22 18 l 1 0 0 1 -1 0 Z  M 24 18 l 1 0 0 1 -1 0 Z M 25 18 l 1 0 0 1 -1 0 Z M 26 18 l 1 0 0 1 -1 0 Z M 27 18 l 1 0 0 1 -1 0 Z M 28 18 l 1 0 0 1 -1 0 Z M 0 19 l 1 0 0 1 -1 0 Z M 1 19 l 1 0 0 1 -1 0 Z    M 5 19 l 1 0 0 1 -1 0 Z M 6 19 l 1 0 0 1 -1 0 Z  M 8 19 l 1 0 0 1 -1 0 Z M 9 19 l 1 0 0 1 -1 0 Z   M 12 19 l 1 0 0 1 -1 0 Z   M 15 19 l 1 0 0 1 -1 0 Z   M 18 19 l 1 0 0 1 -1 0 Z         M 27 19 l 1 0 0 1 -1 0 Z M 28 19 l 1 0 0 1 -1 0 Z M 0 20 l 1 0 0 1 -1 0 Z  M 2 20 l 1 0 0 1 -1 0 Z M 3 20 l 1 0 0 1 -1 0 Z  M 5 20 l 1 0 0 1 -1 0 Z  M 7 20 l 1 0 0 1 -1 0 Z   M 10 20 l 1 0 0 1 -1 0 Z M 11 20 l 1 0 0 1 -1 0 Z M 12 20 l 1 0 0 1 -1 0 Z   M 15 20 l 1 0 0 1 -1 0 Z  M 17 20 l 1 0 0 1 -1 0 Z        M 25 20 l 1 0 0 1 -1 0 Z M 26 20 l 1 0 0 1 -1 0 Z   M 0 21 l 1 0 0 1 -1 0 Z M 1 21 l 1 0 0 1 -1 0 Z M 2 21 l 1 0 0 1 -1 0 Z M 3 21 l 1 0 0 1 -1 0 Z M 4 21 l 1 0 0 1 -1 0 Z M 5 21 l 1 0 0 1 -1 0 Z M 6 21 l 1 0 0 1 -1 0 Z M 7 21 l 1 0 0 1 -1 0 Z    M 11 21 l 1 0 0 1 -1 0 Z M 12 21 l 1 0 0 1 -1 0 Z M 13 21 l 1 0 0 1 -1 0 Z M 14 21 l 1 0 0 1 -1 0 Z M 15 21 l 1 0 0 1 -1 0 Z  M 17 21 l 1 0 0 1 -1 0 Z    M 21 21 l 1 0 0 1 -1 0 Z M 22 21 l 1 0 0 1 -1 0 Z M 23 21 l 1 0 0 1 -1 0 Z  M 25 21 l 1 0 0 1 -1 0 Z M 26 21 l 1 0 0 1 -1 0 Z M 27 21 l 1 0 0 1 -1 0 Z M 28 21 l 1 0 0 1 -1 0 Z        M 7 22 l 1 0 0 1 -1 0 Z M 8 22 l 1 0 0 1 -1 0 Z   M 11 22 l 1 0 0 1 -1 0 Z M 12 22 l 1 0 0 1 -1 0 Z M 13 22 l 1 0 0 1 -1 0 Z  M 15 22 l 1 0 0 1 -1 0 Z   M 18 22 l 1 0 0 1 -1 0 Z   M 21 22 l 1 0 0 1 -1 0 Z  M 23 22 l 1 0 0 1 -1 0 Z  M 25 22 l 1 0 0 1 -1 0 Z   M 28 22 l 1 0 0 1 -1 0 Z  M 1 23 l 1 0 0 1 -1 0 Z M 2 23 l 1 0 0 1 -1 0 Z M 3 23 l 1 0 0 1 -1 0 Z M 4 23 l 1 0 0 1 -1 0 Z M 5 23 l 1 0 0 1 -1 0 Z  M 7 23 l 1 0 0 1 -1 0 Z M 8 23 l 1 0 0 1 -1 0 Z M 9 23 l 1 0 0 1 -1 0 Z M 10 23 l 1 0 0 1 -1 0 Z      M 16 23 l 1 0 0 1 -1 0 Z M 17 23 l 1 0 0 1 -1 0 Z    M 21 23 l 1 0 0 1 -1 0 Z M 22 23 l 1 0 0 1 -1 0 Z M 23 23 l 1 0 0 1 -1 0 Z  M 25 23 l 1 0 0 1 -1 0 Z M 26 23 l 1 0 0 1 -1 0 Z M 27 23 l 1 0 0 1 -1 0 Z M 28 23 l 1 0 0 1 -1 0 Z  M 1 24 l 1 0 0 1 -1 0 Z    M 5 24 l 1 0 0 1 -1 0 Z  M 7 24 l 1 0 0 1 -1 0 Z M 8 24 l 1 0 0 1 -1 0 Z M 9 24 l 1 0 0 1 -1 0 Z   M 12 24 l 1 0 0 1 -1 0 Z M 13 24 l 1 0 0 1 -1 0 Z M 14 24 l 1 0 0 1 -1 0 Z M 15 24 l 1 0 0 1 -1 0 Z M 16 24 l 1 0 0 1 -1 0 Z  M 18 24 l 1 0 0 1 -1 0 Z M 19 24 l 1 0 0 1 -1 0 Z      M 25 24 l 1 0 0 1 -1 0 Z M 26 24 l 1 0 0 1 -1 0 Z  M 28 24 l 1 0 0 1 -1 0 Z  M 1 25 l 1 0 0 1 -1 0 Z    M 5 25 l 1 0 0 1 -1 0 Z  M 7 25 l 1 0 0 1 -1 0 Z     M 12 25 l 1 0 0 1 -1 0 Z  M 14 25 l 1 0 0 1 -1 0 Z      M 20 25 l 1 0 0 1 -1 0 Z  M 22 25 l 1 0 0 1 -1 0 Z  M 24 25 l 1 0 0 1 -1 0 Z   M 27 25 l 1 0 0 1 -1 0 Z   M 1 26 l 1 0 0 1 -1 0 Z    M 5 26 l 1 0 0 1 -1 0 Z  M 7 26 l 1 0 0 1 -1 0 Z  M 9 26 l 1 0 0 1 -1 0 Z  M 11 26 l 1 0 0 1 -1 0 Z  M 13 26 l 1 0 0 1 -1 0 Z  M 15 26 l 1 0 0 1 -1 0 Z M 16 26 l 1 0 0 1 -1 0 Z M 17 26 l 1 0 0 1 -1 0 Z M 18 26 l 1 0 0 1 -1 0 Z      M 24 26 l 1 0 0 1 -1 0 Z   M 27 26 l 1 0 0 1 -1 0 Z   M 1 27 l 1 0 0 1 -1 0 Z M 2 27 l 1 0 0 1 -1 0 Z M 3 27 l 1 0 0 1 -1 0 Z M 4 27 l 1 0 0 1 -1 0 Z M 5 27 l 1 0 0 1 -1 0 Z  M 7 27 l 1 0 0 1 -1 0 Z    M 11 27 l 1 0 0 1 -1 0 Z   M 14 27 l 1 0 0 1 -1 0 Z M 15 27 l 1 0 0 1 -1 0 Z  M 17 27 l 1 0 0 1 -1 0 Z  M 19 27 l 1 0 0 1 -1 0 Z M 20 27 l 1 0 0 1 -1 0 Z   M 23 27 l 1 0 0 1 -1 0 Z M 24 27 l 1 0 0 1 -1 0 Z  M 26 27 l 1 0 0 1 -1 0 Z  M 28 27 l 1 0 0 1 -1 0 Z        M 7 28 l 1 0 0 1 -1 0 Z   M 10 28 l 1 0 0 1 -1 0 Z  M 12 28 l 1 0 0 1 -1 0 Z M 13 28 l 1 0 0 1 -1 0 Z M 14 28 l 1 0 0 1 -1 0 Z M 15 28 l 1 0 0 1 -1 0 Z M 16 28 l 1 0 0 1 -1 0 Z     M 21 28 l 1 0 0 1 -1 0 Z   M 24 28 l 1 0 0 1 -1 0 Z M 25 28 l 1 0 0 1 -1 0 Z M 26 28 l 1 0 0 1 -1 0 Z  M 28 28 l 1 0 0 1 -1 0 Z"
+                                fill="var(--light-second)"></path>
+                              <path
+                                d="M 0 0 l 1 0 0 1 -1 0 Z M 1 0 l 1 0 0 1 -1 0 Z M 2 0 l 1 0 0 1 -1 0 Z M 3 0 l 1 0 0 1 -1 0 Z M 4 0 l 1 0 0 1 -1 0 Z M 5 0 l 1 0 0 1 -1 0 Z M 6 0 l 1 0 0 1 -1 0 Z  M 8 0 l 1 0 0 1 -1 0 Z  M 10 0 l 1 0 0 1 -1 0 Z  M 12 0 l 1 0 0 1 -1 0 Z M 13 0 l 1 0 0 1 -1 0 Z M 14 0 l 1 0 0 1 -1 0 Z M 15 0 l 1 0 0 1 -1 0 Z  M 17 0 l 1 0 0 1 -1 0 Z  M 19 0 l 1 0 0 1 -1 0 Z M 20 0 l 1 0 0 1 -1 0 Z  M 22 0 l 1 0 0 1 -1 0 Z M 23 0 l 1 0 0 1 -1 0 Z M 24 0 l 1 0 0 1 -1 0 Z M 25 0 l 1 0 0 1 -1 0 Z M 26 0 l 1 0 0 1 -1 0 Z M 27 0 l 1 0 0 1 -1 0 Z M 28 0 l 1 0 0 1 -1 0 Z M 0 1 l 1 0 0 1 -1 0 Z      M 6 1 l 1 0 0 1 -1 0 Z   M 9 1 l 1 0 0 1 -1 0 Z M 10 1 l 1 0 0 1 -1 0 Z M 11 1 l 1 0 0 1 -1 0 Z M 12 1 l 1 0 0 1 -1 0 Z M 13 1 l 1 0 0 1 -1 0 Z   M 16 1 l 1 0 0 1 -1 0 Z M 17 1 l 1 0 0 1 -1 0 Z     M 22 1 l 1 0 0 1 -1 0 Z      M 28 1 l 1 0 0 1 -1 0 Z M 0 2 l 1 0 0 1 -1 0 Z  M 2 2 l 1 0 0 1 -1 0 Z M 3 2 l 1 0 0 1 -1 0 Z M 4 2 l 1 0 0 1 -1 0 Z  M 6 2 l 1 0 0 1 -1 0 Z  M 8 2 l 1 0 0 1 -1 0 Z M 9 2 l 1 0 0 1 -1 0 Z M 10 2 l 1 0 0 1 -1 0 Z      M 16 2 l 1 0 0 1 -1 0 Z      M 22 2 l 1 0 0 1 -1 0 Z  M 24 2 l 1 0 0 1 -1 0 Z M 25 2 l 1 0 0 1 -1 0 Z M 26 2 l 1 0 0 1 -1 0 Z  M 28 2 l 1 0 0 1 -1 0 Z M 0 3 l 1 0 0 1 -1 0 Z  M 2 3 l 1 0 0 1 -1 0 Z M 3 3 l 1 0 0 1 -1 0 Z M 4 3 l 1 0 0 1 -1 0 Z  M 6 3 l 1 0 0 1 -1 0 Z  M 8 3 l 1 0 0 1 -1 0 Z M 9 3 l 1 0 0 1 -1 0 Z M 10 3 l 1 0 0 1 -1 0 Z  M 12 3 l 1 0 0 1 -1 0 Z  M 14 3 l 1 0 0 1 -1 0 Z M 15 3 l 1 0 0 1 -1 0 Z     M 20 3 l 1 0 0 1 -1 0 Z  M 22 3 l 1 0 0 1 -1 0 Z  M 24 3 l 1 0 0 1 -1 0 Z M 25 3 l 1 0 0 1 -1 0 Z M 26 3 l 1 0 0 1 -1 0 Z  M 28 3 l 1 0 0 1 -1 0 Z M 0 4 l 1 0 0 1 -1 0 Z  M 2 4 l 1 0 0 1 -1 0 Z M 3 4 l 1 0 0 1 -1 0 Z M 4 4 l 1 0 0 1 -1 0 Z  M 6 4 l 1 0 0 1 -1 0 Z  M 8 4 l 1 0 0 1 -1 0 Z   M 11 4 l 1 0 0 1 -1 0 Z M 12 4 l 1 0 0 1 -1 0 Z  M 14 4 l 1 0 0 1 -1 0 Z  M 16 4 l 1 0 0 1 -1 0 Z M 17 4 l 1 0 0 1 -1 0 Z M 18 4 l 1 0 0 1 -1 0 Z    M 22 4 l 1 0 0 1 -1 0 Z  M 24 4 l 1 0 0 1 -1 0 Z M 25 4 l 1 0 0 1 -1 0 Z M 26 4 l 1 0 0 1 -1 0 Z  M 28 4 l 1 0 0 1 -1 0 Z M 0 5 l 1 0 0 1 -1 0 Z      M 6 5 l 1 0 0 1 -1 0 Z    M 10 5 l 1 0 0 1 -1 0 Z M 11 5 l 1 0 0 1 -1 0 Z  M 13 5 l 1 0 0 1 -1 0 Z  M 15 5 l 1 0 0 1 -1 0 Z M 16 5 l 1 0 0 1 -1 0 Z M 17 5 l 1 0 0 1 -1 0 Z M 18 5 l 1 0 0 1 -1 0 Z M 19 5 l 1 0 0 1 -1 0 Z   M 22 5 l 1 0 0 1 -1 0 Z      M 28 5 l 1 0 0 1 -1 0 Z M 0 6 l 1 0 0 1 -1 0 Z M 1 6 l 1 0 0 1 -1 0 Z M 2 6 l 1 0 0 1 -1 0 Z M 3 6 l 1 0 0 1 -1 0 Z M 4 6 l 1 0 0 1 -1 0 Z M 5 6 l 1 0 0 1 -1 0 Z M 6 6 l 1 0 0 1 -1 0 Z  M 8 6 l 1 0 0 1 -1 0 Z  M 10 6 l 1 0 0 1 -1 0 Z  M 12 6 l 1 0 0 1 -1 0 Z  M 14 6 l 1 0 0 1 -1 0 Z  M 16 6 l 1 0 0 1 -1 0 Z  M 18 6 l 1 0 0 1 -1 0 Z  M 20 6 l 1 0 0 1 -1 0 Z  M 22 6 l 1 0 0 1 -1 0 Z M 23 6 l 1 0 0 1 -1 0 Z M 24 6 l 1 0 0 1 -1 0 Z M 25 6 l 1 0 0 1 -1 0 Z M 26 6 l 1 0 0 1 -1 0 Z M 27 6 l 1 0 0 1 -1 0 Z M 28 6 l 1 0 0 1 -1 0 Z           M 10 7 l 1 0 0 1 -1 0 Z  M 12 7 l 1 0 0 1 -1 0 Z   M 15 7 l 1 0 0 1 -1 0 Z M 16 7 l 1 0 0 1 -1 0 Z M 17 7 l 1 0 0 1 -1 0 Z   M 20 7 l 1 0 0 1 -1 0 Z         M 0 8 l 1 0 0 1 -1 0 Z M 1 8 l 1 0 0 1 -1 0 Z M 2 8 l 1 0 0 1 -1 0 Z M 3 8 l 1 0 0 1 -1 0 Z   M 6 8 l 1 0 0 1 -1 0 Z  M 8 8 l 1 0 0 1 -1 0 Z  M 10 8 l 1 0 0 1 -1 0 Z M 11 8 l 1 0 0 1 -1 0 Z M 12 8 l 1 0 0 1 -1 0 Z M 13 8 l 1 0 0 1 -1 0 Z  M 15 8 l 1 0 0 1 -1 0 Z M 16 8 l 1 0 0 1 -1 0 Z M 17 8 l 1 0 0 1 -1 0 Z    M 21 8 l 1 0 0 1 -1 0 Z   M 24 8 l 1 0 0 1 -1 0 Z M 25 8 l 1 0 0 1 -1 0 Z M 26 8 l 1 0 0 1 -1 0 Z  M 28 8 l 1 0 0 1 -1 0 Z  M 1 9 l 1 0 0 1 -1 0 Z   M 4 9 l 1 0 0 1 -1 0 Z      M 10 9 l 1 0 0 1 -1 0 Z  M 12 9 l 1 0 0 1 -1 0 Z M 13 9 l 1 0 0 1 -1 0 Z M 14 9 l 1 0 0 1 -1 0 Z M 15 9 l 1 0 0 1 -1 0 Z     M 20 9 l 1 0 0 1 -1 0 Z  M 22 9 l 1 0 0 1 -1 0 Z M 23 9 l 1 0 0 1 -1 0 Z M 24 9 l 1 0 0 1 -1 0 Z  M 26 9 l 1 0 0 1 -1 0 Z  M 28 9 l 1 0 0 1 -1 0 Z   M 2 10 l 1 0 0 1 -1 0 Z M 3 10 l 1 0 0 1 -1 0 Z   M 6 10 l 1 0 0 1 -1 0 Z  M 8 10 l 1 0 0 1 -1 0 Z M 9 10 l 1 0 0 1 -1 0 Z M 10 10 l 1 0 0 1 -1 0 Z M 11 10 l 1 0 0 1 -1 0 Z M 12 10 l 1 0 0 1 -1 0 Z M 13 10 l 1 0 0 1 -1 0 Z     M 18 10 l 1 0 0 1 -1 0 Z  M 20 10 l 1 0 0 1 -1 0 Z M 21 10 l 1 0 0 1 -1 0 Z     M 26 10 l 1 0 0 1 -1 0 Z M 27 10 l 1 0 0 1 -1 0 Z  M 0 11 l 1 0 0 1 -1 0 Z  M 2 11 l 1 0 0 1 -1 0 Z M 3 11 l 1 0 0 1 -1 0 Z  M 5 11 l 1 0 0 1 -1 0 Z   M 8 11 l 1 0 0 1 -1 0 Z M 9 11 l 1 0 0 1 -1 0 Z M 10 11 l 1 0 0 1 -1 0 Z      M 16 11 l 1 0 0 1 -1 0 Z   M 19 11 l 1 0 0 1 -1 0 Z M 20 11 l 1 0 0 1 -1 0 Z M 21 11 l 1 0 0 1 -1 0 Z M 22 11 l 1 0 0 1 -1 0 Z M 23 11 l 1 0 0 1 -1 0 Z    M 27 11 l 1 0 0 1 -1 0 Z   M 1 12 l 1 0 0 1 -1 0 Z M 2 12 l 1 0 0 1 -1 0 Z M 3 12 l 1 0 0 1 -1 0 Z M 4 12 l 1 0 0 1 -1 0 Z M 5 12 l 1 0 0 1 -1 0 Z M 6 12 l 1 0 0 1 -1 0 Z   M 9 12 l 1 0 0 1 -1 0 Z M 10 12 l 1 0 0 1 -1 0 Z  M 12 12 l 1 0 0 1 -1 0 Z  M 14 12 l 1 0 0 1 -1 0 Z  M 16 12 l 1 0 0 1 -1 0 Z M 17 12 l 1 0 0 1 -1 0 Z   M 20 12 l 1 0 0 1 -1 0 Z      M 26 12 l 1 0 0 1 -1 0 Z   M 0 13 l 1 0 0 1 -1 0 Z       M 7 13 l 1 0 0 1 -1 0 Z M 8 13 l 1 0 0 1 -1 0 Z M 9 13 l 1 0 0 1 -1 0 Z  M 11 13 l 1 0 0 1 -1 0 Z M 12 13 l 1 0 0 1 -1 0 Z  M 14 13 l 1 0 0 1 -1 0 Z M 15 13 l 1 0 0 1 -1 0 Z   M 18 13 l 1 0 0 1 -1 0 Z    M 22 13 l 1 0 0 1 -1 0 Z     M 27 13 l 1 0 0 1 -1 0 Z M 28 13 l 1 0 0 1 -1 0 Z       M 6 14 l 1 0 0 1 -1 0 Z M 7 14 l 1 0 0 1 -1 0 Z  M 9 14 l 1 0 0 1 -1 0 Z  M 11 14 l 1 0 0 1 -1 0 Z  M 13 14 l 1 0 0 1 -1 0 Z    M 17 14 l 1 0 0 1 -1 0 Z  M 19 14 l 1 0 0 1 -1 0 Z M 20 14 l 1 0 0 1 -1 0 Z   M 23 14 l 1 0 0 1 -1 0 Z  M 25 14 l 1 0 0 1 -1 0 Z  M 27 14 l 1 0 0 1 -1 0 Z M 28 14 l 1 0 0 1 -1 0 Z  M 1 15 l 1 0 0 1 -1 0 Z M 2 15 l 1 0 0 1 -1 0 Z M 3 15 l 1 0 0 1 -1 0 Z M 4 15 l 1 0 0 1 -1 0 Z M 5 15 l 1 0 0 1 -1 0 Z  M 7 15 l 1 0 0 1 -1 0 Z    M 11 15 l 1 0 0 1 -1 0 Z   M 14 15 l 1 0 0 1 -1 0 Z    M 18 15 l 1 0 0 1 -1 0 Z    M 22 15 l 1 0 0 1 -1 0 Z   M 25 15 l 1 0 0 1 -1 0 Z  M 27 15 l 1 0 0 1 -1 0 Z M 28 15 l 1 0 0 1 -1 0 Z   M 2 16 l 1 0 0 1 -1 0 Z M 3 16 l 1 0 0 1 -1 0 Z M 4 16 l 1 0 0 1 -1 0 Z M 5 16 l 1 0 0 1 -1 0 Z M 6 16 l 1 0 0 1 -1 0 Z      M 12 16 l 1 0 0 1 -1 0 Z  M 14 16 l 1 0 0 1 -1 0 Z M 15 16 l 1 0 0 1 -1 0 Z    M 19 16 l 1 0 0 1 -1 0 Z  M 21 16 l 1 0 0 1 -1 0 Z  M 23 16 l 1 0 0 1 -1 0 Z M 24 16 l 1 0 0 1 -1 0 Z M 25 16 l 1 0 0 1 -1 0 Z   M 28 16 l 1 0 0 1 -1 0 Z  M 1 17 l 1 0 0 1 -1 0 Z M 2 17 l 1 0 0 1 -1 0 Z  M 4 17 l 1 0 0 1 -1 0 Z    M 8 17 l 1 0 0 1 -1 0 Z M 9 17 l 1 0 0 1 -1 0 Z     M 14 17 l 1 0 0 1 -1 0 Z   M 17 17 l 1 0 0 1 -1 0 Z M 18 17 l 1 0 0 1 -1 0 Z M 19 17 l 1 0 0 1 -1 0 Z M 20 17 l 1 0 0 1 -1 0 Z M 21 17 l 1 0 0 1 -1 0 Z  M 23 17 l 1 0 0 1 -1 0 Z     M 28 17 l 1 0 0 1 -1 0 Z M 0 18 l 1 0 0 1 -1 0 Z   M 3 18 l 1 0 0 1 -1 0 Z   M 6 18 l 1 0 0 1 -1 0 Z  M 8 18 l 1 0 0 1 -1 0 Z M 9 18 l 1 0 0 1 -1 0 Z M 10 18 l 1 0 0 1 -1 0 Z   M 13 18 l 1 0 0 1 -1 0 Z M 14 18 l 1 0 0 1 -1 0 Z M 15 18 l 1 0 0 1 -1 0 Z M 16 18 l 1 0 0 1 -1 0 Z  M 18 18 l 1 0 0 1 -1 0 Z   M 21 18 l 1 0 0 1 -1 0 Z  M 23 18 l 1 0 0 1 -1 0 Z        M 2 19 l 1 0 0 1 -1 0 Z M 3 19 l 1 0 0 1 -1 0 Z M 4 19 l 1 0 0 1 -1 0 Z   M 7 19 l 1 0 0 1 -1 0 Z   M 10 19 l 1 0 0 1 -1 0 Z M 11 19 l 1 0 0 1 -1 0 Z  M 13 19 l 1 0 0 1 -1 0 Z M 14 19 l 1 0 0 1 -1 0 Z  M 16 19 l 1 0 0 1 -1 0 Z M 17 19 l 1 0 0 1 -1 0 Z  M 19 19 l 1 0 0 1 -1 0 Z M 20 19 l 1 0 0 1 -1 0 Z M 21 19 l 1 0 0 1 -1 0 Z M 22 19 l 1 0 0 1 -1 0 Z M 23 19 l 1 0 0 1 -1 0 Z M 24 19 l 1 0 0 1 -1 0 Z M 25 19 l 1 0 0 1 -1 0 Z M 26 19 l 1 0 0 1 -1 0 Z    M 1 20 l 1 0 0 1 -1 0 Z   M 4 20 l 1 0 0 1 -1 0 Z  M 6 20 l 1 0 0 1 -1 0 Z  M 8 20 l 1 0 0 1 -1 0 Z M 9 20 l 1 0 0 1 -1 0 Z    M 13 20 l 1 0 0 1 -1 0 Z M 14 20 l 1 0 0 1 -1 0 Z  M 16 20 l 1 0 0 1 -1 0 Z  M 18 20 l 1 0 0 1 -1 0 Z M 19 20 l 1 0 0 1 -1 0 Z M 20 20 l 1 0 0 1 -1 0 Z M 21 20 l 1 0 0 1 -1 0 Z M 22 20 l 1 0 0 1 -1 0 Z M 23 20 l 1 0 0 1 -1 0 Z M 24 20 l 1 0 0 1 -1 0 Z   M 27 20 l 1 0 0 1 -1 0 Z M 28 20 l 1 0 0 1 -1 0 Z         M 8 21 l 1 0 0 1 -1 0 Z M 9 21 l 1 0 0 1 -1 0 Z M 10 21 l 1 0 0 1 -1 0 Z      M 16 21 l 1 0 0 1 -1 0 Z  M 18 21 l 1 0 0 1 -1 0 Z M 19 21 l 1 0 0 1 -1 0 Z M 20 21 l 1 0 0 1 -1 0 Z    M 24 21 l 1 0 0 1 -1 0 Z     M 0 22 l 1 0 0 1 -1 0 Z M 1 22 l 1 0 0 1 -1 0 Z M 2 22 l 1 0 0 1 -1 0 Z M 3 22 l 1 0 0 1 -1 0 Z M 4 22 l 1 0 0 1 -1 0 Z M 5 22 l 1 0 0 1 -1 0 Z M 6 22 l 1 0 0 1 -1 0 Z   M 9 22 l 1 0 0 1 -1 0 Z M 10 22 l 1 0 0 1 -1 0 Z    M 14 22 l 1 0 0 1 -1 0 Z  M 16 22 l 1 0 0 1 -1 0 Z M 17 22 l 1 0 0 1 -1 0 Z  M 19 22 l 1 0 0 1 -1 0 Z M 20 22 l 1 0 0 1 -1 0 Z  M 22 22 l 1 0 0 1 -1 0 Z  M 24 22 l 1 0 0 1 -1 0 Z  M 26 22 l 1 0 0 1 -1 0 Z M 27 22 l 1 0 0 1 -1 0 Z  M 0 23 l 1 0 0 1 -1 0 Z      M 6 23 l 1 0 0 1 -1 0 Z     M 11 23 l 1 0 0 1 -1 0 Z M 12 23 l 1 0 0 1 -1 0 Z M 13 23 l 1 0 0 1 -1 0 Z M 14 23 l 1 0 0 1 -1 0 Z M 15 23 l 1 0 0 1 -1 0 Z   M 18 23 l 1 0 0 1 -1 0 Z M 19 23 l 1 0 0 1 -1 0 Z M 20 23 l 1 0 0 1 -1 0 Z    M 24 23 l 1 0 0 1 -1 0 Z     M 0 24 l 1 0 0 1 -1 0 Z  M 2 24 l 1 0 0 1 -1 0 Z M 3 24 l 1 0 0 1 -1 0 Z M 4 24 l 1 0 0 1 -1 0 Z  M 6 24 l 1 0 0 1 -1 0 Z    M 10 24 l 1 0 0 1 -1 0 Z M 11 24 l 1 0 0 1 -1 0 Z      M 17 24 l 1 0 0 1 -1 0 Z   M 20 24 l 1 0 0 1 -1 0 Z M 21 24 l 1 0 0 1 -1 0 Z M 22 24 l 1 0 0 1 -1 0 Z M 23 24 l 1 0 0 1 -1 0 Z M 24 24 l 1 0 0 1 -1 0 Z   M 27 24 l 1 0 0 1 -1 0 Z  M 0 25 l 1 0 0 1 -1 0 Z  M 2 25 l 1 0 0 1 -1 0 Z M 3 25 l 1 0 0 1 -1 0 Z M 4 25 l 1 0 0 1 -1 0 Z  M 6 25 l 1 0 0 1 -1 0 Z  M 8 25 l 1 0 0 1 -1 0 Z M 9 25 l 1 0 0 1 -1 0 Z M 10 25 l 1 0 0 1 -1 0 Z M 11 25 l 1 0 0 1 -1 0 Z  M 13 25 l 1 0 0 1 -1 0 Z  M 15 25 l 1 0 0 1 -1 0 Z M 16 25 l 1 0 0 1 -1 0 Z M 17 25 l 1 0 0 1 -1 0 Z M 18 25 l 1 0 0 1 -1 0 Z M 19 25 l 1 0 0 1 -1 0 Z  M 21 25 l 1 0 0 1 -1 0 Z  M 23 25 l 1 0 0 1 -1 0 Z  M 25 25 l 1 0 0 1 -1 0 Z M 26 25 l 1 0 0 1 -1 0 Z  M 28 25 l 1 0 0 1 -1 0 Z M 0 26 l 1 0 0 1 -1 0 Z  M 2 26 l 1 0 0 1 -1 0 Z M 3 26 l 1 0 0 1 -1 0 Z M 4 26 l 1 0 0 1 -1 0 Z  M 6 26 l 1 0 0 1 -1 0 Z  M 8 26 l 1 0 0 1 -1 0 Z  M 10 26 l 1 0 0 1 -1 0 Z  M 12 26 l 1 0 0 1 -1 0 Z  M 14 26 l 1 0 0 1 -1 0 Z     M 19 26 l 1 0 0 1 -1 0 Z M 20 26 l 1 0 0 1 -1 0 Z M 21 26 l 1 0 0 1 -1 0 Z M 22 26 l 1 0 0 1 -1 0 Z M 23 26 l 1 0 0 1 -1 0 Z  M 25 26 l 1 0 0 1 -1 0 Z M 26 26 l 1 0 0 1 -1 0 Z  M 28 26 l 1 0 0 1 -1 0 Z M 0 27 l 1 0 0 1 -1 0 Z      M 6 27 l 1 0 0 1 -1 0 Z  M 8 27 l 1 0 0 1 -1 0 Z M 9 27 l 1 0 0 1 -1 0 Z M 10 27 l 1 0 0 1 -1 0 Z  M 12 27 l 1 0 0 1 -1 0 Z M 13 27 l 1 0 0 1 -1 0 Z   M 16 27 l 1 0 0 1 -1 0 Z  M 18 27 l 1 0 0 1 -1 0 Z   M 21 27 l 1 0 0 1 -1 0 Z M 22 27 l 1 0 0 1 -1 0 Z   M 25 27 l 1 0 0 1 -1 0 Z  M 27 27 l 1 0 0 1 -1 0 Z  M 0 28 l 1 0 0 1 -1 0 Z M 1 28 l 1 0 0 1 -1 0 Z M 2 28 l 1 0 0 1 -1 0 Z M 3 28 l 1 0 0 1 -1 0 Z M 4 28 l 1 0 0 1 -1 0 Z M 5 28 l 1 0 0 1 -1 0 Z M 6 28 l 1 0 0 1 -1 0 Z  M 8 28 l 1 0 0 1 -1 0 Z M 9 28 l 1 0 0 1 -1 0 Z  M 11 28 l 1 0 0 1 -1 0 Z      M 17 28 l 1 0 0 1 -1 0 Z M 18 28 l 1 0 0 1 -1 0 Z M 19 28 l 1 0 0 1 -1 0 Z M 20 28 l 1 0 0 1 -1 0 Z  M 22 28 l 1 0 0 1 -1 0 Z M 23 28 l 1 0 0 1 -1 0 Z    M 27 28 l 1 0 0 1 -1 0 Z "
+                                fill="var(--primary)"></path>
+                            </svg></div>
+                          <div class="info__recipient">
+                            <div>
+                              <p class="recipient__title">Recipient's wallet address</p>
+                              <div class="recipient__address"><span
+                                  class="address__text">TJwxhtPFbKieuksZK2YTHSxV6z8ApGoeK8</span>
+                                <div class="address__buttons"><button class="address__copy_btn"><svg width="17"
+                                      height="16" viewBox="0 0 17 16" fill="currentColor"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                      <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M8.82961 6.92431e-07L8.86815 4.05779e-06H11.8028L11.8413 6.92431e-07H11.8414H11.8414C12.3685 -1.47793e-05 12.8233 -2.81246e-05 13.1978 0.0305736C13.5931 0.0628745 13.9864 0.13419 14.3647 0.326985C14.9292 0.614605 15.3882 1.07355 15.6758 1.63803C15.8686 2.01641 15.9399 2.40963 15.9722 2.80498C16.0028 3.17955 16.0028 3.63432 16.0028 4.16148V4.2V8.30206V8.34058C16.0028 8.86774 16.0028 9.32251 15.9722 9.69709C15.9399 10.0924 15.8686 10.4857 15.6758 10.864C15.3882 11.4285 14.9292 11.8875 14.3647 12.1751C13.9864 12.3679 13.5931 12.4392 13.1978 12.4715C12.9447 12.4922 12.655 12.4989 12.331 12.501C12.3337 12.2946 12.3336 12.0809 12.3336 11.8648L12.3336 11.801V10.5009C12.6268 10.4988 12.8498 10.4933 13.0349 10.4781C13.3066 10.4559 13.4073 10.4183 13.4568 10.3931C13.6449 10.2972 13.7979 10.1442 13.8938 9.95605C13.919 9.9066 13.9566 9.80589 13.9788 9.53422C14.002 9.25088 14.0028 8.87861 14.0028 8.30206V4.2C14.0028 3.62345 14.002 3.25118 13.9788 2.96784C13.9566 2.69618 13.919 2.59546 13.8938 2.54601C13.7979 2.35785 13.6449 2.20487 13.4568 2.109C13.4073 2.0838 13.3066 2.04613 13.0349 2.02393C12.7516 2.00078 12.3793 2 11.8028 2H8.86815C8.2916 2 7.91932 2.00078 7.63599 2.02393C7.36432 2.04613 7.2636 2.0838 7.21416 2.109C7.04196 2.19674 6.89922 2.33231 6.80276 2.49891H4.73303C4.77603 2.20725 4.85219 1.91856 4.99513 1.63803C5.28275 1.07355 5.74169 0.614605 6.30618 0.326985C6.68456 0.13419 7.07778 0.0628745 7.47312 0.0305735C7.84767 -2.81258e-05 8.30239 -1.47793e-05 8.82949 6.92431e-07H8.82953H8.82961ZM4.1999 3.4989L4.16136 3.4989H4.16136C3.63421 3.49889 3.17945 3.49887 2.80488 3.52947C2.40953 3.56178 2.01631 3.63309 1.63793 3.82589C1.07345 4.11351 0.614504 4.57245 0.326884 5.13693C0.13409 5.51531 0.0627738 5.90853 0.0304728 6.30388C-0.000130135 6.67844 -0.000115429 7.13319 -9.83815e-05 7.66032V7.66036V7.69891V11.801V11.8395V11.8395C-0.000115429 12.3667 -0.000130136 12.8214 0.0304728 13.196C0.0627738 13.5913 0.13409 13.9846 0.326884 14.3629C0.614504 14.9274 1.07345 15.3864 1.63793 15.674C2.01631 15.8668 2.40953 15.9381 2.80487 15.9704C3.17945 16.001 3.63422 16.001 4.16138 16.001H4.1999H7.13452H7.17304C7.7002 16.001 8.15497 16.001 8.52955 15.9704C8.9249 15.9381 9.31811 15.8668 9.69649 15.674C10.261 15.3864 10.7199 14.9274 11.0075 14.3629C11.2003 13.9846 11.2717 13.5913 11.304 13.196C11.3346 12.8214 11.3345 12.3667 11.3345 11.8395V11.8395V11.801V7.6989V7.66038V7.66035C11.3345 7.13321 11.3346 6.67845 11.304 6.30388C11.2717 5.90853 11.2003 5.51531 11.0075 5.13693C10.7199 4.57245 10.261 4.11351 9.69649 3.82589C9.31811 3.63309 8.9249 3.56178 8.52955 3.52947C8.15498 3.49887 7.70022 3.49889 7.17307 3.4989H7.17307L7.13452 3.4989H4.1999ZM2.54591 5.6079C2.59536 5.58271 2.69608 5.54503 2.96774 5.52283C3.25108 5.49968 3.62335 5.4989 4.1999 5.4989H7.13452C7.71108 5.4989 8.08335 5.49968 8.36669 5.52283C8.63835 5.54503 8.73907 5.58271 8.78851 5.6079C8.97668 5.70377 9.12966 5.85675 9.22553 6.04491C9.25072 6.09436 9.2884 6.19508 9.31059 6.46674C9.33375 6.75008 9.33452 7.12235 9.33452 7.6989V11.801C9.33452 12.3775 9.33375 12.7498 9.31059 13.0331C9.2884 13.3048 9.25072 13.4055 9.22553 13.4549C9.12966 13.6431 8.97668 13.7961 8.78851 13.892C8.73907 13.9172 8.63835 13.9548 8.36669 13.977C8.08335 14.0002 7.71108 14.001 7.13452 14.001H4.1999C3.62335 14.001 3.25108 14.0002 2.96774 13.977C2.69608 13.9548 2.59536 13.9172 2.54591 13.892C2.35775 13.7961 2.20477 13.6431 2.1089 13.4549C2.0837 13.4055 2.04603 13.3048 2.02383 13.0331C2.00068 12.7498 1.9999 12.3775 1.9999 11.801V7.69891C1.9999 7.12235 2.00068 6.75008 2.02383 6.46674C2.04603 6.19508 2.0837 6.09436 2.1089 6.04491C2.20477 5.85675 2.35775 5.70377 2.54591 5.6079Z"
+                                        fill="currentColor"></path>
+                                    </svg></button></div>
+                              </div>
+                            </div>
+                            <p class="info__notification-alarm">When your payment status will change, we’ll send to you
+                              notification <button class="notification-alarm__email">Leave your email</button></p>
+                          </div>
+                        </div>
+                        <div class="checkout__status">
+                          <div class="status__expire">
+                            <div class="expire">
+                              <div class="expire__icon">
+                                <div class="MuiBox-root css-79elbk"><span
+                                    class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-1p4or2h"
+                                    role="progressbar" aria-valuenow="100"
+                                    style="width: 40px; height: 40px; transform: rotate(-90deg);"><svg
+                                      class="MuiCircularProgress-svg css-13o7eu2" viewBox="22 22 44 44">
+                                      <circle
+                                        class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-nbfpn7"
+                                        cx="44" cy="44" r="20" fill="none" stroke-width="4"
+                                        style="stroke-dasharray: 125.664; stroke-dashoffset: 0px;"></circle>
+                                    </svg></span><span
+                                    class="MuiCircularProgress-root MuiCircularProgress-determinate MuiCircularProgress-colorPrimary css-3qsqzh"
+                                    role="progressbar" aria-valuenow="3"
+                                    style="width: 40px; height: 40px; transform: rotate(-90deg);"><svg
+                                      class="MuiCircularProgress-svg css-13o7eu2" viewBox="22 22 44 44">
+                                      <circle
+                                        class="MuiCircularProgress-circle MuiCircularProgress-circleDeterminate css-nbfpn7"
+                                        cx="44" cy="44" r="20" fill="none" stroke-width="4"
+                                        style="stroke-dasharray: 125.664; stroke-dashoffset: 121.831px;"></circle>
+                                    </svg></span></div>
+                              </div>
+                              <div class="expire__progress"><span class="expire__label">Expiration time</span><span
+                                  class="expire__time" style="color: var(--light_success);">00:58:10</span></div>
+                            </div>
+                          </div>
+                          <div class="status__confirms">
+                            <div class="confirm">
+                              <div class="confirm__icon"><svg width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M22.3152 1.64544C22.4189 0.823526 23.1709 0.235591 23.9827 0.400559C26.2534 0.861978 28.4269 1.71457 30.4057 2.92014C31.1132 3.35116 31.2649 4.2936 30.782 4.96678C30.2992 5.63997 29.365 5.78795 28.6519 5.36633C27.0865 4.44082 25.3827 3.77242 23.6055 3.38674C22.7959 3.21104 22.2115 2.46735 22.3152 1.64544Z"
+                                    fill="#3AC270"></path>
+                                  <path
+                                    d="M32.4757 6.33955C33.0343 5.72784 33.9877 5.68115 34.5559 6.28408C36.145 7.97046 37.429 9.92035 38.3505 12.0464C38.6799 12.8065 38.2604 13.6639 37.4777 13.9355C36.6951 14.207 35.8465 13.7892 35.5071 13.0336C34.7619 11.3748 33.7552 9.84613 32.5257 8.50624C31.9656 7.89585 31.917 6.95127 32.4757 6.33955Z"
+                                    fill="#3AC270"></path>
+                                  <path
+                                    d="M38.1403 16.3697C38.9526 16.2071 39.7489 16.7337 39.8501 17.5559C40.1333 19.8556 40.0146 22.1873 39.4995 24.4464C39.3153 25.2541 38.4697 25.6971 37.6781 25.4529C36.8865 25.2087 36.4497 24.3698 36.6231 23.5598C37.0039 21.7816 37.0969 19.9536 36.8986 18.146C36.8083 17.3225 37.328 16.5323 38.1403 16.3697Z"
+                                    fill="#3AC270"></path>
+                                  <path
+                                    d="M36.6895 27.9819C37.4368 28.3394 37.7578 29.2384 37.3454 29.9568C35.8184 32.6169 33.6963 34.8964 31.1375 36.6119C28.1625 38.6065 24.7064 39.7656 21.1304 39.968C17.5543 40.1705 13.9895 39.4088 10.8084 37.7627C7.6273 36.1166 4.94663 33.6464 3.04645 30.6102C1.14627 27.574 0.0963298 24.0833 0.0063166 20.5026C-0.0836966 16.922 0.789523 13.3828 2.53474 10.255C4.27996 7.12717 6.83314 4.52541 9.92752 2.72154C12.5889 1.17007 15.5667 0.257801 18.6267 0.0471992C19.4531 -0.00968222 20.1214 0.671954 20.1162 1.50036C20.111 2.32878 19.434 2.98924 18.6083 3.05705C16.0862 3.26421 13.6355 4.03251 11.4384 5.31331C8.80817 6.8466 6.63797 9.0581 5.15453 11.7168C3.67109 14.3754 2.92886 17.3837 3.00537 20.4272C3.08188 23.4708 3.97433 26.4379 5.58948 29.0187C7.20463 31.5995 9.48321 33.6991 12.1872 35.0983C14.8911 36.4975 17.9212 37.1449 20.9608 36.9728C24.0005 36.8008 26.9381 35.8155 29.4669 34.1201C31.5792 32.7039 33.3415 30.8355 34.6303 28.6577C35.0522 27.9447 35.9421 27.6245 36.6895 27.9819Z"
+                                    fill="#3AC270"></path>
+                                </svg></div>
+                              <div class="confirm__text"><span class="text__title">Confirmations</span>
+                                <p>0 from 19</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="AlternativePay_alternative_pay__6O8-y">
+                        <div class="AlternativePay_alternative_pay_divider__YW2Tr">
+                          <div class="AlternativePay_alternative_pay_divider_line__WkFis"></div>
+                          <p>OR</p>
+                          <div class="AlternativePay_alternative_pay_divider_line__WkFis"></div>
+                        </div>
+                        <div class="AlternativePay_alternative_pay_btns__q4rMl">
+                          <div style="min-width: 100%;">
+                            <div class="CryptomusPay_cryptomus_pay__ezzzt">
+                              <div data-debug="true" data-testid="login_tooltip" trianglemobileposition="0"
+                                triangleposition="0" class=""><button disabled="" class="btn undefined
+      primary
+      large"><svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 91 104" fill="currentColor">
+                                    <path
+                                      d="M87.71 24.5805L48.2 1.77055C46.42 0.740547 44.2 0.740547 42.41 1.77055L2.9 24.5805C1.11 25.6105 0 27.5305 0 29.6005V75.2206C0 77.2806 1.11 79.2005 2.9 80.2405L42.41 103.051C43.29 103.561 44.29 103.821 45.31 103.821C46.33 103.821 47.33 103.551 48.21 103.051L87.72 80.2405C89.51 79.2105 90.62 77.2906 90.62 75.2206V29.6005C90.62 27.5405 89.51 25.6205 87.72 24.5805H87.71ZM46.2 49.5805C45.65 49.9005 44.96 49.9005 44.41 49.5805L6 27.4105L44.41 5.24055C44.95 4.93055 45.66 4.93055 46.2 5.24055L84.61 27.4105L46.2 49.5805V49.5805ZM42.41 53.0405C42.69 53.2005 42.99 53.3405 43.31 53.4505V98.9305L4.9 76.7705C4.35 76.4505 4 75.8606 4 75.2206V30.8705L42.41 53.0405V53.0405Z"
+                                      fill="currentColor"></path>
+                                  </svg>Pay with Cryptomus</button></div>
+                            </div>
+                          </div><button disabled="" class="btn undefined
+      primary
+      large"><svg width="39" height="24" viewBox="0 0 39 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M7.98424 4.68935C14.3438 -1.56312 24.6562 -1.56312 31.0158 4.68935L31.7815 5.44155C31.857 5.51503 31.917 5.60299 31.958 5.70022C31.999 5.79745 32.0201 5.90196 32.0201 6.00755C32.0201 6.11314 31.999 6.21765 31.958 6.31488C31.917 6.4121 31.857 6.50007 31.7815 6.57355L29.1631 9.14753C29.0859 9.2227 28.9825 9.26474 28.875 9.26474C28.7675 9.26474 28.6642 9.2227 28.587 9.14753L27.5337 8.1118C23.0974 3.75095 15.9037 3.75095 11.4663 8.1118L10.3383 9.22053C10.261 9.2957 10.1577 9.33773 10.0502 9.33773C9.94267 9.33773 9.83935 9.2957 9.76213 9.22053L7.14374 6.64655C7.06826 6.57307 7.00824 6.4851 6.96725 6.38787C6.92626 6.29064 6.90514 6.18613 6.90514 6.08055C6.90514 5.97496 6.92626 5.87045 6.96725 5.77322C7.00824 5.67599 7.06826 5.58803 7.14374 5.51455L7.98424 4.68935ZM36.4316 10.0119L38.7614 12.3034C38.8369 12.3769 38.8969 12.4648 38.9379 12.5621C38.9789 12.6593 39 12.7638 39 12.8694C39 12.975 38.9789 13.0795 38.9379 13.1767C38.8969 13.2739 38.8369 13.3619 38.7614 13.4354L28.2541 23.7652C28.0998 23.9158 27.8931 24 27.678 24C27.4629 24 27.2562 23.9158 27.1019 23.7652L19.6448 16.4336C19.6063 16.3957 19.5545 16.3745 19.5005 16.3745C19.4466 16.3745 19.3948 16.3957 19.3562 16.4336L11.8992 23.7652C11.7449 23.9158 11.5382 24 11.3231 24C11.1079 24 10.9012 23.9158 10.7469 23.7652L0.238605 13.4354C0.163117 13.3619 0.103097 13.2739 0.0621089 13.1767C0.0211207 13.0795 0 12.975 0 12.8694C0 12.7638 0.0211207 12.6593 0.0621089 12.5621C0.103097 12.4648 0.163117 12.3769 0.238605 12.3034L2.56946 10.0119C2.72372 9.86161 2.93017 9.77757 3.14506 9.77757C3.35995 9.77757 3.5664 9.86161 3.72067 10.0119L11.1777 17.3434C11.2163 17.3813 11.2681 17.4025 11.322 17.4025C11.3759 17.4025 11.4277 17.3813 11.4663 17.3434L18.9233 10.0119C19.0777 9.86129 19.2843 9.77706 19.4995 9.77706C19.7146 9.77706 19.9213 9.86129 20.0756 10.0119L27.5337 17.3434C27.5723 17.3813 27.6241 17.4025 27.678 17.4025C27.7319 17.4025 27.7837 17.3813 27.8223 17.3434L35.2793 10.0119C35.4336 9.86129 35.6403 9.77706 35.8555 9.77706C36.0706 9.77706 36.2773 9.86129 36.4316 10.0119Z"
+                                fill="currentColor"></path>
+                            </svg>WalletConnect</button>
+                          <div data-debug="true" data-testid="my-tooltip" trianglemobileposition="0"
+                            triangleposition="0" class=""><button disabled="" class="btn undefined
+      primary
+      large"><svg width="23" height="18" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M1.75 6H11.5H21.25M4.75 12.5H7.75M4 16.5H19C20.2426 16.5 21.25 15.4926 21.25 14.25V3.75C21.25 2.50736 20.2426 1.5 19 1.5H4C2.75736 1.5 1.75 2.50736 1.75 3.75V14.25C1.75 15.4926 2.75736 16.5 4 16.5Z"
+                                  stroke="var(--light-second)" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"></path>
+                              </svg>Pay by card</button></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Login to your Account end -->
+      </main>
+      <!-- Body main section ends -->
+    </div>
+  </div>
+  <!-- latest jquery-->
+  <script src="../assets/js/jquery-3.6.3.min.js"></script>
+
+  <!-- Bootstrap js-->
+  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function toggleDetails() {
+      const detailsContent = document.getElementById("detailsContent");
+      const toggleIcon = document.getElementById("toggleIcon");
+
+      if (detailsContent.classList.contains("show")) {
+        detailsContent.classList.remove("show");
+        toggleIcon.classList.remove("fa-chevron-down");
+        toggleIcon.classList.add("fa-chevron-up");
+      } else {
+        detailsContent.classList.add("show");
+        toggleIcon.classList.remove("fa-chevron-up");
+        toggleIcon.classList.add("fa-chevron-down");
+      }
+    }
+  </script>
+
+</body>
+
+</html>

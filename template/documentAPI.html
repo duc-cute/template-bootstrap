@@ -193,10 +193,22 @@
         display: flex;
         margin-top: 20px;
         border: 1px solid #ccc;
-        border-bottom: none;
-        border-top-right-radius: 8px;
-        border-top-left-radius: 8px;
+        /* border-bottom: none; */
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
         color: #6b7996;
+        background: var(--white) !important;
+        color: var(--dark) !important;
+    }
+
+    .p-0 {
+        padding: 0 !important;
+    }
+
+    .tabs {
+        display: flex;
+        width: 100%;
+        /* border: 1px solid #ccc; */
     }
 
     .tab {
@@ -204,6 +216,7 @@
         cursor: pointer;
         font-size: 16px;
         font-weight: 600;
+        color: var(--bs-dark-border-subtle);
 
 
     }
@@ -214,14 +227,17 @@
 
     .tab.active {
         border-bottom: 2px solid #4284fb;
+        color: var(--black);
+
+
     }
 
     .tab-content {
         display: none;
-        padding: 20px;
-        border: 1px solid #ccc;
+        padding: 0 16px 16px 16px;
         border-radius: 0 0 5px 5px;
         background-color: #fff;
+        width: 100%;
     }
 
     .tab-content.active {
@@ -236,6 +252,7 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
+        padding-bottom: 20px;
     }
 
     .api-capcha-heading {
@@ -295,7 +312,7 @@
     .api-url-custom {
         padding: 6px 8px !important;
         gap: 8px !important;
-        color: rgb(33, 33, 33) !important;
+        color: var(--dark);
         border-radius: 4px;
         background-color: rgb(249, 249, 249) !important;
         border: none !important;
@@ -2039,530 +2056,738 @@
                                         <h5>Breadcrumbs</h5>
                                     </div>
                                     <div class="app-breadcrumb bg-light-secondary" style="padding-top: 12px;">
-                                        <ul class="api-list api-list-custom" id="api-item-list">
-                                            <li id="item1" class="api-item-wrapper card">
-                                                <div class="api-item api-item-custom">
-                                                    <h3 class="api-heading">1. API tạo hóa đơn thanh toán</h3>
-                                                    <div class="api-request">
-                                                        <h3 class="api-ingredient-heading">API URL:</h3>
-                                                        <div class="api-method-wrapper api-method-wrapper-custom">
-                                                            <div class="method-custom">
-                                                                <span class="api-method">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        class="mb-px inline-flex mr-2" width="18"
-                                                                        height="18" viewBox="0 0 24 24"
-                                                                        role="presentation">
-                                                                        <g fill="currentColor">
-                                                                            <path
-                                                                                d="M1.513 1.96a1.374 1.374 0 0 1 1.499-.21l19.335 9.215a1.147 1.147 0 0 1 0 2.07L3.012 22.25a1.374 1.374 0 0 1-1.947-1.46L2.49 12 1.065 3.21a1.375 1.375 0 0 1 .448-1.25Zm2.375 10.79-1.304 8.042L21.031 12 2.584 3.208l1.304 8.042h7.362a.75.75 0 0 1 0 1.5Z">
-                                                                            </path>
-                                                                        </g>
-                                                                    </svg> POST
-                                                                </span>
-                                                                <span class="api-name">API tạo hóa đơn thanh toán</span>
-                                                                <button
-                                                                    onclick="copyToClipboard(`https://app.fpayment.net/api/AddInvoice`)"
-                                                                    class="api-url-btn">
-                                                                    <i class="fa-solid fa-copy me-2"></i>Copy
-                                                                </button>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <ul class="api-list api-list-custom" id="api-item-list">
+                                                    <li id="item1" class="api-item-wrapper card">
+                                                        <div class="api-item api-item-custom">
+                                                            <h3 class="api-heading">1. API tạo hóa đơn thanh toán</h3>
+                                                            <div class="api-request">
+                                                                <h3 class="api-ingredient-heading">Request</h3>
+
+                                                                <div
+                                                                    class="api-method-wrapper api-method-wrapper-custom">
+                                                                    <div class="method-custom">
+                                                                        <span class="api-method">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                class="mb-px inline-flex mr-2"
+                                                                                width="18" height="18"
+                                                                                viewBox="0 0 24 24" role="presentation">
+                                                                                <g fill="currentColor">
+                                                                                    <path
+                                                                                        d="M1.513 1.96a1.374 1.374 0 0 1 1.499-.21l19.335 9.215a1.147 1.147 0 0 1 0 2.07L3.012 22.25a1.374 1.374 0 0 1-1.947-1.46L2.49 12 1.065 3.21a1.375 1.375 0 0 1 .448-1.25Zm2.375 10.79-1.304 8.042L21.031 12 2.584 3.208l1.304 8.042h7.362a.75.75 0 0 1 0 1.5Z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg> POST
+                                                                        </span>
+                                                                        <span
+                                                                            class="api-url api-url-custom">https://win32.vn/api/v1/Taskcaptcha</span>
+                                                                    </div>
+                                                                </div>
+
                                                             </div>
 
-                                                            <!-- <span class="api-url api-url-custom">https://win32.vn/api/v1/Taskcaptcha</span> -->
-                                                        </div>
+                                                            <div class="api-request">
+                                                                <h3 class="api-ingredient-heading">Body</h3>
+                                                                <div class="api-method-wrapper api-method-wrapper-custom api-box"
+                                                                    style="width: 100%;">
+                                                                    <div class="example-code example-content"
+                                                                        style="width: 100%;">
+                                                                        <pre>
+                                                                            <code class="language-javascript">
+                                                                            "transactions": [
+                                                                            {
+                                                                                "transactionID": "5071 - 45401",
+                                                                                "amount": "30000000",
+                                                                                "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "13/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5017 - 05663",
+                                                                                "amount": "50000000",
+                                                                                "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "IN"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 25474",
+                                                                                "amount": "10000",
+                                                                                "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 24480",
+                                                                                "amount": "10000",
+                                                                                "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            
+                                                                            ]
+                                                                            </code>
+                                                                        </pre>
+                                                                        <div class="example-view"><button
+                                                                                class="example-view-btn openModalBtn">View
+                                                                                More</button></div>
 
-                                                    </div>
+                                                                    </div>
+                                                                </div>
 
-                                                    <div class="api-query">
-                                                        <h3
-                                                            class="api-ingredient-heading api-ingredient-heading-custom">
-                                                            Request Parameters
-                                                            <span class="api-tag warning">required</span>
-                                                            <span class="api-tag success">optional</span>
-                                                        </h3>
-                                                        <ul class="api-query-list">
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">merchant_id</span>
-                                                                ID cửa hàng (Không được để lộ ra ngoài).
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">name</span>
-                                                                Nhập tên hóa đơn
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag success">description</span>
-                                                                Nhập mô tả hóa đơn.
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">merchant_id</span>
-                                                                ID cửa hàng (Không được để lộ ra ngoài).
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">name</span>
-                                                                Nhập tên hóa đơn
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag success">description</span>
-                                                                Nhập mô tả hóa đơn.
-                                                            </li>
-                                                        </ul>
-
-
-                                                    </div>
-                                                </div>
-                                                <div class="api-box">
-                                                    <div class="example-request">
-                                                        <div class="example-header-wrapper">
-                                                            <h3 class="example-header">Example Request</h3>
-                                                            <span class="example-request-name">
-                                                                API tạo hóa đơn thanh toán
-                                                            </span>
-                                                        </div>
-                                                        <div class="example-code example-code-request example-content">
-                                                            <pre class="pre-custom">
-                                                      <code class="language-javascript">
-                                                        curl --location 'https://api.web2m.com/historyapibidvv3/PasswordBIDV/AccountNumber/TokenBIDV' \
-                                                        --data ''
-                                                      </code>
-                                                   </pre>
-                                                            <div class="example-view"><button
-                                                                    class="example-view-btn openModalBtn">View
-                                                                    More</button></div>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="example-repsonse">
-                                                        <h3 class="example-header">Example Response</h3>
-                                                        <div class="example-desc">
-                                                            <span class="example-body">
-                                                                Body
-                                                            </span>
-                                                            <div class="example-status">200 OK</div>
-
-                                                        </div>
-
-                                                        <div class="example-code example-content">
-                                                            <pre>
-                                                    <code class="language-javascript">
-                                                      "transactions": [
-                                                      {
-                                                        "transactionID": "5071 - 45401",
-                                                        "amount": "30000000",
-                                                        "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 37605",
-                                                        "amount": "85513",
-                                                        "description": "MBVCB.2010891717.087360.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 37216",
-                                                        "amount": "20000000",
-                                                        "description": "MBVCB.2010890473.086893.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5017 - 08930",
-                                                        "amount": "50000000",
-                                                        "description": "902718.130522.000743.CHUYEN-130522-00:07:42 902718",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "IN"
-                                                      },
-                                                      {
-                                                        "transactionID": "5017 - 05663",
-                                                        "amount": "50000000",
-                                                        "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "IN"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 25474",
-                                                        "amount": "10000",
-                                                        "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 24480",
-                                                        "amount": "10000",
-                                                        "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                     
-                                                    ]
-                                                    </code>
-                                                   </pre>
-                                                            <div class="example-view"><button
-                                                                    class="example-view-btn openModalBtn">View
-                                                                    More</button></div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </li>
-                                            <li id="item1" class="api-item-wrapper card">
-                                                <div class="api-item api-item-custom">
-                                                    <h3 class="api-heading">1. API tạo hóa đơn thanh toán</h3>
-                                                    <div class="api-request">
-                                                        <h3 class="api-ingredient-heading">API URL:</h3>
-                                                        <div class="api-method-wrapper api-method-wrapper-custom">
-                                                            <div class="method-custom">
-                                                                <span class="api-method">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        class="mb-px inline-flex mr-2" width="18"
-                                                                        height="18" viewBox="0 0 24 24"
-                                                                        role="presentation">
-                                                                        <g fill="currentColor">
-                                                                            <path
-                                                                                d="M1.513 1.96a1.374 1.374 0 0 1 1.499-.21l19.335 9.215a1.147 1.147 0 0 1 0 2.07L3.012 22.25a1.374 1.374 0 0 1-1.947-1.46L2.49 12 1.065 3.21a1.375 1.375 0 0 1 .448-1.25Zm2.375 10.79-1.304 8.042L21.031 12 2.584 3.208l1.304 8.042h7.362a.75.75 0 0 1 0 1.5Z">
-                                                                            </path>
-                                                                        </g>
-                                                                    </svg> POST
-                                                                </span>
-                                                                <span class="api-name">API tạo hóa đơn thanh toán</span>
-                                                                <button
-                                                                    onclick="copyToClipboard(`https://app.fpayment.net/api/AddInvoice`)"
-                                                                    class="api-url-btn">
-                                                                    <i class="fa-solid fa-copy me-2"></i>Copy
-                                                                </button>
                                                             </div>
 
-                                                            <!-- <span class="api-url api-url-custom">https://win32.vn/api/v1/Taskcaptcha</span> -->
-                                                        </div>
-
-                                                    </div>
-
-                                                    <div class="api-query">
-                                                        <h3
-                                                            class="api-ingredient-heading api-ingredient-heading-custom">
-                                                            Request Parameters
-                                                            <span class="api-tag warning">required</span>
-                                                            <span class="api-tag success">optional</span>
-                                                        </h3>
-                                                        <ul class="api-query-list">
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">merchant_id</span>
-                                                                ID cửa hàng (Không được để lộ ra ngoài).
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">name</span>
-                                                                Nhập tên hóa đơn
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag success">description</span>
-                                                                Nhập mô tả hóa đơn.
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">merchant_id</span>
-                                                                ID cửa hàng (Không được để lộ ra ngoài).
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">name</span>
-                                                                Nhập tên hóa đơn
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag success">description</span>
-                                                                Nhập mô tả hóa đơn.
-                                                            </li>
-                                                        </ul>
 
 
-                                                    </div>
-                                                </div>
-                                                <div class="api-box">
-                                                    <div class="example-request">
-                                                        <div class="example-header-wrapper">
-                                                            <h3 class="example-header">Example Request</h3>
-                                                            <span class="example-request-name">
-                                                                API tạo hóa đơn thanh toán
-                                                            </span>
-                                                        </div>
-                                                        <div class="example-code example-code-request example-content">
-                                                            <pre class="pre-custom">
-                                                      <code class="language-javascript">
-                                                        curl --location 'https://api.web2m.com/historyapibidvv3/PasswordBIDV/AccountNumber/TokenBIDV' \
-                                                        --data ''
-                                                      </code>
-                                                   </pre>
-                                                            <div class="example-view"><button
-                                                                    class="example-view-btn openModalBtn">View
-                                                                    More</button></div>
-                                                        </div>
+                                                            <div class="api-query">
+                                                                <h3
+                                                                    class="api-ingredient-heading api-ingredient-heading-custom">
+                                                                    Request Parameters
+                                                                    <span class="api-tag warning">required</span>
+                                                                    <span class="api-tag success">optional</span>
+                                                                </h3>
+                                                                <ul class="api-query-list">
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">merchant_id</span>
+                                                                        ID cửa hàng (Không được để lộ ra ngoài).
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">name</span>
+                                                                        Nhập tên hóa đơn
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag success">description</span>
+                                                                        Nhập mô tả hóa đơn.
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">merchant_id</span>
+                                                                        ID cửa hàng (Không được để lộ ra ngoài).
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">name</span>
+                                                                        Nhập tên hóa đơn
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag success">description</span>
+                                                                        Nhập mô tả hóa đơn.
+                                                                    </li>
+                                                                </ul>
 
-                                                    </div>
-                                                    <div class="example-repsonse">
-                                                        <h3 class="example-header">Example Response</h3>
-                                                        <div class="example-desc">
-                                                            <span class="example-body">
-                                                                Body
-                                                            </span>
-                                                            <div class="example-status">200 OK</div>
 
-                                                        </div>
-
-                                                        <div class="example-code example-content">
-                                                            <pre>
-                                                    <code class="language-javascript">
-                                                      "transactions": [
-                                                      {
-                                                        "transactionID": "5071 - 45401",
-                                                        "amount": "30000000",
-                                                        "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 37605",
-                                                        "amount": "85513",
-                                                        "description": "MBVCB.2010891717.087360.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 37216",
-                                                        "amount": "20000000",
-                                                        "description": "MBVCB.2010890473.086893.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5017 - 08930",
-                                                        "amount": "50000000",
-                                                        "description": "902718.130522.000743.CHUYEN-130522-00:07:42 902718",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "IN"
-                                                      },
-                                                      {
-                                                        "transactionID": "5017 - 05663",
-                                                        "amount": "50000000",
-                                                        "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "IN"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 25474",
-                                                        "amount": "10000",
-                                                        "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 24480",
-                                                        "amount": "10000",
-                                                        "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                     
-                                                    ]
-                                                    </code>
-                                                   </pre>
-                                                            <div class="example-view"><button
-                                                                    class="example-view-btn openModalBtn">View
-                                                                    More</button></div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </li>
-                                            <li id="item1" class="api-item-wrapper card">
-                                                <div class="api-item api-item-custom">
-                                                    <h3 class="api-heading">1. API tạo hóa đơn thanh toán</h3>
-                                                    <div class="api-request">
-                                                        <h3 class="api-ingredient-heading">API URL:</h3>
-                                                        <div class="api-method-wrapper api-method-wrapper-custom">
-                                                            <div class="method-custom">
-                                                                <span class="api-method">
-                                                                    <svg xmlns="http://www.w3.org/2000/svg"
-                                                                        class="mb-px inline-flex mr-2" width="18"
-                                                                        height="18" viewBox="0 0 24 24"
-                                                                        role="presentation">
-                                                                        <g fill="currentColor">
-                                                                            <path
-                                                                                d="M1.513 1.96a1.374 1.374 0 0 1 1.499-.21l19.335 9.215a1.147 1.147 0 0 1 0 2.07L3.012 22.25a1.374 1.374 0 0 1-1.947-1.46L2.49 12 1.065 3.21a1.375 1.375 0 0 1 .448-1.25Zm2.375 10.79-1.304 8.042L21.031 12 2.584 3.208l1.304 8.042h7.362a.75.75 0 0 1 0 1.5Z">
-                                                                            </path>
-                                                                        </g>
-                                                                    </svg> POST
-                                                                </span>
-                                                                <span class="api-name">API tạo hóa đơn thanh toán</span>
-                                                                <button
-                                                                    onclick="copyToClipboard(`https://app.fpayment.net/api/AddInvoice`)"
-                                                                    class="api-url-btn">
-                                                                    <i class="fa-solid fa-copy me-2"></i>Copy
-                                                                </button>
                                                             </div>
 
-                                                            <!-- <span class="api-url api-url-custom">https://win32.vn/api/v1/Taskcaptcha</span> -->
+                                                            <div class="api-request">
+                                                                <h3 class="api-ingredient-heading">Response</h3>
+                                                                <div class="api-method-wrapper api-method-wrapper-custom api-box"
+                                                                    style="width: 100%;">
+                                                                    <div class="example-code example-content"
+                                                                        style="width: 100%;">
+                                                                        <pre>
+                                                                            <code class="language-javascript">
+                                                                            "transactions": [
+                                                                            {
+                                                                                "transactionID": "5071 - 45401",
+                                                                                "amount": "30000000",
+                                                                                "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "13/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 37605",
+                                                                                "amount": "85513",
+                                                                                "description": "MBVCB.2010891717.087360.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "13/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                           
+                                                                            
+                                                                            ]
+                                                                            </code>
+                                                                        </pre>
+                                                                        <div class="example-view"><button
+                                                                                class="example-view-btn openModalBtn">View
+                                                                                More</button></div>
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="api-request">
+                                                                <h3 class="api-ingredient-heading">Example</h3>
+                                                                <div class="tabs-container api-method-wrapper api-method-wrapper-custom api-box p-0"
+                                                                    style="width: 100%;">
+
+                                                                    <div class="tabs">
+                                                                        <div class="tab active"
+                                                                            onclick="openTab('tab1')">PHP -
+                                                                            cURL
+                                                                        </div>
+                                                                        <div class="tab" onclick="openTab('tab2')">PHP -
+                                                                            Guzzle
+                                                                        </div>
+                                                                        <div class="tab" onclick="openTab('tab3')">
+                                                                            Python -
+                                                                            Requests
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div id="tab1Content" class="tab-content active">
+                                                                        <div class="example-code example-content"
+                                                                            style="width: 100%;">
+                                                                            <pre>
+                                                                            <code class="language-javascript">
+                                                                            "transactions": [
+                                                                            {
+                                                                                "transactionID": "5071 - 45401",
+                                                                                "amount": "30000000",
+                                                                                "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "13/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5017 - 05663",
+                                                                                "amount": "50000000",
+                                                                                "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "IN"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 25474",
+                                                                                "amount": "10000",
+                                                                                "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 24480",
+                                                                                "amount": "10000",
+                                                                                "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            
+                                                                            ]
+                                                                            </code>
+                                                                        </pre>
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div id="tab2Content" class="tab-content">
+                                                                        <div class="example-code example-content"
+                                                                            style="width: 100%;">
+                                                                            <pre>
+                                                                            <code class="language-javascript">
+                                                                            "transactions": [
+                                                                            {
+                                                                                "transactionID": "5071 - 45401",
+                                                                                "amount": "30000000",
+                                                                                "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "13/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5017 - 05663",
+                                                                                "amount": "50000000",
+                                                                                "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "IN"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 25474",
+                                                                                "amount": "10000",
+                                                                                "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 24480",
+                                                                                "amount": "10000",
+                                                                                "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            
+                                                                            ]
+                                                                            </code>
+                                                                        </pre>
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div id="tab3Content" class="tab-content">
+                                                                        <div class="example-code example-content"
+                                                                            style="width: 100%;">
+                                                                            <pre>
+                                                                            <code class="language-javascript">
+                                                                            "transactions": [
+                                                                            {
+                                                                                "transactionID": "5071 - 45401",
+                                                                                "amount": "30000000",
+                                                                                "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "13/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5017 - 05663",
+                                                                                "amount": "50000000",
+                                                                                "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "IN"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 25474",
+                                                                                "amount": "10000",
+                                                                                "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            {
+                                                                                "transactionID": "5071 - 24480",
+                                                                                "amount": "10000",
+                                                                                "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                                "transactionDate": "12/05/2022",
+                                                                                "type": "OUT"
+                                                                            },
+                                                                            
+                                                                            ]
+                                                                            </code>
+                                                                        </pre>
+
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+
                                                         </div>
 
-                                                    </div>
 
-                                                    <div class="api-query">
-                                                        <h3
-                                                            class="api-ingredient-heading api-ingredient-heading-custom">
-                                                            Request Parameters
-                                                            <span class="api-tag warning">required</span>
-                                                            <span class="api-tag success">optional</span>
-                                                        </h3>
-                                                        <ul class="api-query-list">
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">merchant_id</span>
-                                                                ID cửa hàng (Không được để lộ ra ngoài).
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">name</span>
-                                                                Nhập tên hóa đơn
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag success">description</span>
-                                                                Nhập mô tả hóa đơn.
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">merchant_id</span>
-                                                                ID cửa hàng (Không được để lộ ra ngoài).
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag warning">name</span>
-                                                                Nhập tên hóa đơn
-                                                            </li>
-                                                            <li class="api-query-description">
-                                                                <span class="api-tag">string</span>
-                                                                <span class="api-tag success">description</span>
-                                                                Nhập mô tả hóa đơn.
-                                                            </li>
-                                                        </ul>
+                                                    </li>
+                                                    <li id="item1" class="api-item-wrapper card">
+                                                        <div class="api-item api-item-custom">
+                                                            <h3 class="api-heading">1. API tạo hóa đơn thanh toán</h3>
+                                                            <div class="api-request">
+                                                                <h3 class="api-ingredient-heading">API URL:</h3>
+                                                                <div
+                                                                    class="api-method-wrapper api-method-wrapper-custom">
+                                                                    <div class="method-custom">
+                                                                        <span class="api-method">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                class="mb-px inline-flex mr-2"
+                                                                                width="18" height="18"
+                                                                                viewBox="0 0 24 24" role="presentation">
+                                                                                <g fill="currentColor">
+                                                                                    <path
+                                                                                        d="M1.513 1.96a1.374 1.374 0 0 1 1.499-.21l19.335 9.215a1.147 1.147 0 0 1 0 2.07L3.012 22.25a1.374 1.374 0 0 1-1.947-1.46L2.49 12 1.065 3.21a1.375 1.375 0 0 1 .448-1.25Zm2.375 10.79-1.304 8.042L21.031 12 2.584 3.208l1.304 8.042h7.362a.75.75 0 0 1 0 1.5Z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg> POST
+                                                                        </span>
+                                                                        <span class="api-name">API tạo hóa đơn thanh
+                                                                            toán</span>
+                                                                        <button
+                                                                            onclick="copyToClipboard(`https://app.fpayment.net/api/AddInvoice`)"
+                                                                            class="api-url-btn">
+                                                                            <i class="fa-solid fa-copy me-2"></i>Copy
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <!-- <span class="api-url api-url-custom">https://win32.vn/api/v1/Taskcaptcha</span> -->
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="api-query">
+                                                                <h3
+                                                                    class="api-ingredient-heading api-ingredient-heading-custom">
+                                                                    Request Parameters
+                                                                    <span class="api-tag warning">required</span>
+                                                                    <span class="api-tag success">optional</span>
+                                                                </h3>
+                                                                <ul class="api-query-list">
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">merchant_id</span>
+                                                                        ID cửa hàng (Không được để lộ ra ngoài).
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">name</span>
+                                                                        Nhập tên hóa đơn
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag success">description</span>
+                                                                        Nhập mô tả hóa đơn.
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">merchant_id</span>
+                                                                        ID cửa hàng (Không được để lộ ra ngoài).
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">name</span>
+                                                                        Nhập tên hóa đơn
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag success">description</span>
+                                                                        Nhập mô tả hóa đơn.
+                                                                    </li>
+                                                                </ul>
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="api-box">
+                                                            <div class="example-request">
+                                                                <div class="example-header-wrapper">
+                                                                    <h3 class="example-header">Example Request</h3>
+                                                                    <span class="example-request-name">
+                                                                        API tạo hóa đơn thanh toán
+                                                                    </span>
+                                                                </div>
+                                                                <div
+                                                                    class="example-code example-code-request example-content">
+                                                                    <pre class="pre-custom">
+                                                              <code class="language-javascript">
+                                                                curl --location 'https://api.web2m.com/historyapibidvv3/PasswordBIDV/AccountNumber/TokenBIDV' \
+                                                                --data ''
+                                                              </code>
+                                                           </pre>
+                                                                    <div class="example-view"><button
+                                                                            class="example-view-btn openModalBtn">View
+                                                                            More</button></div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="example-repsonse">
+                                                                <h3 class="example-header">Example Response</h3>
+                                                                <div class="example-desc">
+                                                                    <span class="example-body">
+                                                                        Body
+                                                                    </span>
+                                                                    <div class="example-status">200 OK</div>
+
+                                                                </div>
+
+                                                                <div class="example-code example-content">
+                                                                    <pre>
+                                                            <code class="language-javascript">
+                                                              "transactions": [
+                                                              {
+                                                                "transactionID": "5071 - 45401",
+                                                                "amount": "30000000",
+                                                                "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "13/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                              {
+                                                                "transactionID": "5071 - 37605",
+                                                                "amount": "85513",
+                                                                "description": "MBVCB.2010891717.087360.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "13/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                              {
+                                                                "transactionID": "5071 - 37216",
+                                                                "amount": "20000000",
+                                                                "description": "MBVCB.2010890473.086893.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "13/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                              {
+                                                                "transactionID": "5017 - 08930",
+                                                                "amount": "50000000",
+                                                                "description": "902718.130522.000743.CHUYEN-130522-00:07:42 902718",
+                                                                "transactionDate": "13/05/2022",
+                                                                "type": "IN"
+                                                              },
+                                                              {
+                                                                "transactionID": "5017 - 05663",
+                                                                "amount": "50000000",
+                                                                "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
+                                                                "transactionDate": "12/05/2022",
+                                                                "type": "IN"
+                                                              },
+                                                              {
+                                                                "transactionID": "5071 - 25474",
+                                                                "amount": "10000",
+                                                                "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "12/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                              {
+                                                                "transactionID": "5071 - 24480",
+                                                                "amount": "10000",
+                                                                "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "12/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                             
+                                                            ]
+                                                            </code>
+                                                           </pre>
+                                                                    <div class="example-view"><button
+                                                                            class="example-view-btn openModalBtn">View
+                                                                            More</button></div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </li>
+                                                    <li id="item1" class="api-item-wrapper card">
+                                                        <div class="api-item api-item-custom">
+                                                            <h3 class="api-heading">1. API tạo hóa đơn thanh toán</h3>
+                                                            <div class="api-request">
+                                                                <h3 class="api-ingredient-heading">API URL:</h3>
+                                                                <div
+                                                                    class="api-method-wrapper api-method-wrapper-custom">
+                                                                    <div class="method-custom">
+                                                                        <span class="api-method">
+                                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                                class="mb-px inline-flex mr-2"
+                                                                                width="18" height="18"
+                                                                                viewBox="0 0 24 24" role="presentation">
+                                                                                <g fill="currentColor">
+                                                                                    <path
+                                                                                        d="M1.513 1.96a1.374 1.374 0 0 1 1.499-.21l19.335 9.215a1.147 1.147 0 0 1 0 2.07L3.012 22.25a1.374 1.374 0 0 1-1.947-1.46L2.49 12 1.065 3.21a1.375 1.375 0 0 1 .448-1.25Zm2.375 10.79-1.304 8.042L21.031 12 2.584 3.208l1.304 8.042h7.362a.75.75 0 0 1 0 1.5Z">
+                                                                                    </path>
+                                                                                </g>
+                                                                            </svg> POST
+                                                                        </span>
+                                                                        <span class="api-name">API tạo hóa đơn thanh
+                                                                            toán</span>
+                                                                        <button
+                                                                            onclick="copyToClipboard(`https://app.fpayment.net/api/AddInvoice`)"
+                                                                            class="api-url-btn">
+                                                                            <i class="fa-solid fa-copy me-2"></i>Copy
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <!-- <span class="api-url api-url-custom">https://win32.vn/api/v1/Taskcaptcha</span> -->
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="api-query">
+                                                                <h3
+                                                                    class="api-ingredient-heading api-ingredient-heading-custom">
+                                                                    Request Parameters
+                                                                    <span class="api-tag warning">required</span>
+                                                                    <span class="api-tag success">optional</span>
+                                                                </h3>
+                                                                <ul class="api-query-list">
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">merchant_id</span>
+                                                                        ID cửa hàng (Không được để lộ ra ngoài).
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">name</span>
+                                                                        Nhập tên hóa đơn
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag success">description</span>
+                                                                        Nhập mô tả hóa đơn.
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">merchant_id</span>
+                                                                        ID cửa hàng (Không được để lộ ra ngoài).
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag warning">name</span>
+                                                                        Nhập tên hóa đơn
+                                                                    </li>
+                                                                    <li class="api-query-description">
+                                                                        <span class="api-tag">string</span>
+                                                                        <span class="api-tag success">description</span>
+                                                                        Nhập mô tả hóa đơn.
+                                                                    </li>
+                                                                </ul>
+
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="api-box">
+                                                            <div class="example-request">
+                                                                <div class="example-header-wrapper">
+                                                                    <h3 class="example-header">Example Request</h3>
+                                                                    <span class="example-request-name">
+                                                                        API tạo hóa đơn thanh toán
+                                                                    </span>
+                                                                </div>
+                                                                <div
+                                                                    class="example-code example-code-request example-content">
+                                                                    <pre class="pre-custom">
+                                                              <code class="language-javascript">
+                                                                curl --location 'https://api.web2m.com/historyapibidvv3/PasswordBIDV/AccountNumber/TokenBIDV' \
+                                                                --data ''
+                                                              </code>
+                                                           </pre>
+                                                                    <div class="example-view"><button
+                                                                            class="example-view-btn openModalBtn">View
+                                                                            More</button></div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="example-repsonse">
+                                                                <h3 class="example-header">Example Response</h3>
+                                                                <div class="example-desc">
+                                                                    <span class="example-body">
+                                                                        Body
+                                                                    </span>
+                                                                    <div class="example-status">200 OK</div>
+
+                                                                </div>
+
+                                                                <div class="example-code example-content">
+                                                                    <pre>
+                                                            <code class="language-javascript">
+                                                              "transactions": [
+                                                              {
+                                                                "transactionID": "5071 - 45401",
+                                                                "amount": "30000000",
+                                                                "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "13/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                              {
+                                                                "transactionID": "5071 - 37605",
+                                                                "amount": "85513",
+                                                                "description": "MBVCB.2010891717.087360.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "13/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                              {
+                                                                "transactionID": "5071 - 37216",
+                                                                "amount": "20000000",
+                                                                "description": "MBVCB.2010890473.086893.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "13/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                              {
+                                                                "transactionID": "5017 - 08930",
+                                                                "amount": "50000000",
+                                                                "description": "902718.130522.000743.CHUYEN-130522-00:07:42 902718",
+                                                                "transactionDate": "13/05/2022",
+                                                                "type": "IN"
+                                                              },
+                                                              {
+                                                                "transactionID": "5017 - 05663",
+                                                                "amount": "50000000",
+                                                                "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
+                                                                "transactionDate": "12/05/2022",
+                                                                "type": "IN"
+                                                              },
+                                                              {
+                                                                "transactionID": "5071 - 25474",
+                                                                "amount": "10000",
+                                                                "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "12/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                              {
+                                                                "transactionID": "5071 - 24480",
+                                                                "amount": "10000",
+                                                                "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
+                                                                "transactionDate": "12/05/2022",
+                                                                "type": "OUT"
+                                                              },
+                                                             
+                                                            ]
+                                                            </code>
+                                                           </pre>
+                                                                    <div class="example-view"><button
+                                                                            class="example-view-btn openModalBtn">View
+                                                                            More</button></div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-3">
+                                                <div class="api-capcha-wrapper card" type="1">
+
+                                                    <div class="api-capcha-heading">
+                                                        Loại capcha
+                                                    </div>
+                                                    <div class="api-capcha-list ">
+                                                        <div class="api-capcha-item ">
+                                                            <p class="api-capcha-des">
+                                                                <strong>typecaptcha</strong>: <span>mbbank </span>
+                                                                và các loại captcha tương tự
+                                                            </p>
+                                                            <img class="api-capcha-img"
+                                                                src="https://3647953812-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLFTIDHrHmlPbFm6o2awT%2Fuploads%2FJtzMGfKuEJDVxKUDphNY%2Fimage.png?alt=media&amp;token=312a3d0d-bf7e-4a41-8761-f2c495ef1d17"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="api-capcha-item ">
+                                                            <p class="api-capcha-des">
+                                                                <strong>typecaptcha</strong>: <span>mbbank2 </span>
+                                                                và các loại captcha tương tự
+                                                            </p>
+                                                            <img class="api-capcha-img"
+                                                                src="/frontend/images/dasdse1123.png" alt="">
+                                                        </div>
+                                                        <div class="api-capcha-item">
+                                                            <p class="api-capcha-des">
+                                                                <strong>typecaptcha</strong>: <span>bidv</span>
+                                                                và các loại captcha tương tự
+                                                            </p>
+                                                            <img class="api-capcha-img"
+                                                                src="/frontend/images/7da3887d-d5f4-c30b-68e2-ee915bedfd03.jpg"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="api-capcha-item">
+                                                            <p class="api-capcha-des">
+                                                                <strong>typecaptcha</strong>: <span>vcb </span>
+                                                                và các loại captcha tương tự
+                                                            </p>
+                                                            <img class="api-capcha-img"
+                                                                src="https://3647953812-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLFTIDHrHmlPbFm6o2awT%2Fuploads%2FPsIXqRbqSFAusRAiR09N%2Fimage.png?alt=media&amp;token=d3c7d8cb-102a-441c-b921-87eac68d4db1"
+                                                                alt="">
+                                                        </div>
+                                                        <div class="api-capcha-item ">
+                                                            <p class="api-capcha-des">
+                                                                <strong>typecaptcha</strong>: <span>ocr</span>
+                                                                Các captcha dạng Image to text không thuộc các loại
+                                                                trên, tự động nhận diện
+                                                            </p>
+                                                            <img class="api-capcha-img"
+                                                                src="https://3647953812-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FLFTIDHrHmlPbFm6o2awT%2Fuploads%2Ffa1aH85R9GCcfBVs2tzc%2Fimage.png?alt=media&amp;token=ebf1e4c8-9111-49d5-95be-a9619f3caf4b"
+                                                                alt="">
+                                                        </div>
+
 
 
                                                     </div>
                                                 </div>
-                                                <div class="api-box">
-                                                    <div class="example-request">
-                                                        <div class="example-header-wrapper">
-                                                            <h3 class="example-header">Example Request</h3>
-                                                            <span class="example-request-name">
-                                                                API tạo hóa đơn thanh toán
-                                                            </span>
-                                                        </div>
-                                                        <div class="example-code example-code-request example-content">
-                                                            <pre class="pre-custom">
-                                                      <code class="language-javascript">
-                                                        curl --location 'https://api.web2m.com/historyapibidvv3/PasswordBIDV/AccountNumber/TokenBIDV' \
-                                                        --data ''
-                                                      </code>
-                                                   </pre>
-                                                            <div class="example-view"><button
-                                                                    class="example-view-btn openModalBtn">View
-                                                                    More</button></div>
-                                                        </div>
 
-                                                    </div>
-                                                    <div class="example-repsonse">
-                                                        <h3 class="example-header">Example Response</h3>
-                                                        <div class="example-desc">
-                                                            <span class="example-body">
-                                                                Body
-                                                            </span>
-                                                            <div class="example-status">200 OK</div>
-
-                                                        </div>
-
-                                                        <div class="example-code example-content">
-                                                            <pre>
-                                                    <code class="language-javascript">
-                                                      "transactions": [
-                                                      {
-                                                        "transactionID": "5071 - 45401",
-                                                        "amount": "30000000",
-                                                        "description": "MBVCB.2010916375.095891.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 37605",
-                                                        "amount": "85513",
-                                                        "description": "MBVCB.2010891717.087360.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 37216",
-                                                        "amount": "20000000",
-                                                        "description": "MBVCB.2010890473.086893.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5017 - 08930",
-                                                        "amount": "50000000",
-                                                        "description": "902718.130522.000743.CHUYEN-130522-00:07:42 902718",
-                                                        "transactionDate": "13/05/2022",
-                                                        "type": "IN"
-                                                      },
-                                                      {
-                                                        "transactionID": "5017 - 05663",
-                                                        "amount": "50000000",
-                                                        "description": "681157.120522.141359.CHUYEN TIEN-120522-14:13:59 681157",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "IN"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 25474",
-                                                        "amount": "10000",
-                                                        "description": "MBVCB.2008908346.090075.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                      {
-                                                        "transactionID": "5071 - 24480",
-                                                        "amount": "10000",
-                                                        "description": "MBVCB.2008906119.088874.TRAN THI DIEM CHINH chuyen tien.CT tu 0911000065357 TRAN THI DIEM CHINH toi 737478888 NGUYEN TRONG VY (ACB) A Chau",
-                                                        "transactionDate": "12/05/2022",
-                                                        "type": "OUT"
-                                                      },
-                                                     
-                                                    ]
-                                                    </code>
-                                                   </pre>
-                                                            <div class="example-view"><button
-                                                                    class="example-view-btn openModalBtn">View
-                                                                    More</button></div>
-
-                                                        </div>
-
-                                                    </div>
-
-                                                </div>
-
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -2646,19 +2871,28 @@
             );
         }
         function openTab(tabId) {
-            // Hide all tab contents
+            // Ẩn tất cả nội dung tab
             var tabContents = document.getElementsByClassName('tab-content');
             for (var i = 0; i < tabContents.length; i++) {
                 tabContents[i].classList.remove('active');
             }
 
+            // Xóa trạng thái active của tất cả tab
             var tabList = document.getElementsByClassName('tab');
             for (var i = 0; i < tabList.length; i++) {
                 tabList[i].classList.remove('active');
             }
-            // Show the selected tab content
-            document.getElementById(tabId).classList.add('active');
-            document.getElementById(`${tabId}Content`).classList.add('active');
+
+            // Hiển thị nội dung tab được chọn
+            document.getElementById(tabId + 'Content').classList.add('active');
+
+            // Đánh dấu tab hiện tại là active
+            var tabs = document.getElementsByClassName('tab');
+            for (var i = 0; i < tabs.length; i++) {
+                if (tabs[i].getAttribute("onclick") === `openTab('${tabId}')`) {
+                    tabs[i].classList.add('active');
+                }
+            }
         }
         let closeModalBtn = document.getElementById('closeModalBtn');
         let listItem = document.getElementById('api-item-list');

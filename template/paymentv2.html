@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Multipurpose, super flexible, powerful, clean modern responsive bootstrap 5 admin template">
+  <meta name="keywords"
+    content="admin template, ra-admin admin template, dashboard template, flat admin template, responsive admin template, web app">
+  <meta name="author" content="la-themes">
+  <link rel="icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../assets/images/logo/favicon.png" type="image/x-icon">
+
+  <title>Sign In Bg | ra-admin - Premium Admin Template</title>
+
+  <!--font-awesome-css-->
+  <link rel="stylesheet" href="../assets/vendor/fontawesome/css/all.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+
+  <!-- tabler icons-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/tabler-icons/tabler-icons.css">
+
+  <!-- Bootstrap css-->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/bootstrap.min.css">
+
+  <!-- App css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+  <!-- Responsive css-->
+  <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+
+</head>
+
+<style>
+  .form-select {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .py-2 {
+    padding: 8px 0;
+  }
+
+  .app-divider-v {
+    padding-bottom: 12px;
+    padding-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .deposit-header h3 {
+    font-size: 18px;
+
+  }
+
+  .w-40 {
+    width: 10rem !important;
+  }
+
+  .h-40 {
+    height: 10rem !important;
+  }
+
+  .text-red-500 {
+    color: #ef4444;
+  }
+
+  .text-green-600 {
+    color: #16a34a;
+  }
+
+
+  .font-extrabold {
+    font-weight: 700;
+  }
+
+  .py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .bg-gray-200 {
+    background-color: #e5e7eb;
+  }
+
+  .rounded-md {
+    border-radius: 0.375rem;
+  }
+
+  .opacity-6 {
+    opacity: 0.6;
+  }
+
+  .payent-link {
+    background-color: #f3f4f6;
+    padding: 6px;
+    border-radius: 4px;
+  }
+
+  .mr-1 {
+    margin-right: 4px;
+  }
+
+  .payment-desc:hover {
+    background-color: #fef08a;
+
+  }
+
+  .duration-300 {
+    transition-duration: 300ms;
+  }
+
+  .duration-500 {
+    transition-duration: 500ms;
+  }
+
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  .text-gray-700 {}
+
+  .bg-yellow-50 {
+    background-color: #fefce8;
+  }
+
+  .border-yellow-500 {
+    border-color: #eab308;
+  }
+
+  .border-dashed {
+    border-style: dashed;
+  }
+
+  .border-2 {
+    border-width: 2px;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
+
+
+  .details-content {
+    overflow: hidden;
+    color: #1f2937;
+    background-color: #f9fafb;
+    border-radius: 0 0 0.5rem 0.5rem;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .details-content.show {
+    max-height: 24rem;
+    opacity: 1;
+    /* padding-top: 1rem;
+    padding-bottom: 1rem; */
+  }
+
+  .details-content .content {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+
+
+
+  .details-content p {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+    display: flex;
+    align-items: center;
+  }
+
+  .details-content i {
+    margin-right: 0.5rem;
+  }
+
+  .transaction-icon {
+    color: #4f46e5;
+    /* text-indigo-600 */
+  }
+
+  .transaction-text {
+    font-weight: 500;
+    /* font-medium */
+  }
+
+  .transaction-value {
+    font-weight: bold;
+    color: #4f46e5;
+    /* text-indigo-600 */
+  }
+
+  .name-icon {
+    color: #dc2626;
+    /* text-red-600 */
+  }
+
+  .name-value {
+    font-weight: bold;
+    color: #dc2626;
+    /* text-red-600 */
+  }
+
+  .description-icon {
+    color: #2563eb;
+    /* text-blue-600 */
+  }
+
+  .description-value {
+    font-weight: bold;
+    color: #2563eb;
+  }
+
+  .container-payment {
+    margin-top: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .toggle-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #374151;
+    font-weight: 500;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #f3f4f6;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .toggle-button:hover {
+    background-color: #e5e7eb;
+  }
+
+  .toggle-button:focus {
+    outline: none;
+  }
+
+  .toggle-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .app-form {
+    padding: 30px 24px;
+  }
+
+  .warning-box {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ef4444;
+    background-color: #fef3c7;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+  }
+
+  /* .login-form-container .form_container {
+    width: 500px;
+  } */
+
+  .invoices-block_block__wrapper__XWQHE .invoices-block_invoice__body__O9NUI {
+    box-shadow: 0 4px 29px rgba(0, 0, 0, .09), 0 0 12px rgba(37, 33, 41, .04);
+    border-radius: 24px;
+  }
+
+  .invoices-block_invoice__body__O9NUI {
+
+    background-color: var(--bg_6);
+  }
+
+  .invoice-footer_payForm__footer__KWpVV {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg_6);
+    padding: 32px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
+  .invoice-header_header__wrapper__ubswW {
+    background: var(--bg_14);
+    border-radius: 24px 24px 0 0;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wallet-header_wallet_header__rOZNm {
+    display: grid;
+    grid-template-columns: 195px max-content;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .balance-item_wallet__balance__wrapper__UdXw_ {
+    display: flex;
+    flex-direction: column;
+    color: var(--light-pri);
+    margin-top: 32px;
+  }
+
+  .invoice-header_header-custom {
+    background-color: var(--bg_6);
+
+  }
+
+  .invoice-header_header__wrapper__ubswW .invoice-header_wallet__timer_wrapper__5scD8 {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg_6);
+    padding: 16px;
+    border-radius: 16px;
+    margin-top: 32px;
+  }
+
+  .wallet-header_wallet_header__rOZNm .wallet-header_logo_mobile__Gayus {
+    display: none;
+  }
+
+  .wallet-header_wallet_header__rOZNm .wallet-header_right__block__HUiE_ {
+    display: flex;
+    align-items: center;
+  }
+
+  .wallet-header_wallet_header__rOZNm .wallet-header_right__block__HUiE_ .wallet-header_coin__plus__dE2t2 {
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    height: 40px;
+    padding: 0 7px 0 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    background: var(--bg_6);
+    border-radius: 78px;
+    color: var(--light-pri);
+  }
+
+  .wallet-header_wallet_header__rOZNm .wallet-header_logo__7iGBh path {
+    fill: var(--light-pri);
+  }
+
+  .wallet-header_wallet_header__rOZNm .wallet-header_right__block__HUiE_ .wallet-header_globe__btn__rB2B1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: var(--bg_6);
+    margin-left: 16px;
+  }
+
+  .wallet-header_wallet_header__rOZNm .wallet-header_right__block__HUiE_ .wallet-header_coin__plus__dE2t2 .wallet-header_cube__btn__Mvkp6 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: var(--bg_15);
+    border-radius: 100%;
+  }
+
+  .balance-item_wallet__balance__wrapper__UdXw_ .balance-item_wallet__top__Rl4Ny {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .balance-item_wallet__balance__wrapper__UdXw_ .balance-item_wallet__props__6mDxg {
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -.12px;
+  }
+
+  .balance-item_wallet__balance__wrapper__UdXw_ .balance-item_wallet__top__Rl4Ny .balance-item_wallet__balance__MZPO7 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .invoice-header_header__wrapper__ubswW .invoice-header_wallet__timer_wrapper__5scD8 .invoice-header_wallet__timer__text_wrapper__VEz9g {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+  }
+
+  .invoice-header_header__wrapper__ubswW .invoice-header_wallet__timer_wrapper__5scD8 .invoice-header_wallet__timer__text_wrapper__VEz9g .invoice-header_wallet__timer__text__KkfA4 {
+    color: var(--text_1);
+    margin: 0;
+    font-weight: 400;
+    letter-spacing: -.08px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .invoice-header_header__wrapper__ubswW .invoice-header_wallet__timer_wrapper__5scD8 .invoice-header_wallet__timer__text_wrapper__VEz9g .invoice-header_wallet__timer__PieWr {
+    color: #3ac270;
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_selects__wrapper__pyni6 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .invoice-pay-button_invoice__btn__ImaDd {
+    cursor: pointer;
+    font-family: Golos, sans-serif;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    background: var(--light-pri);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button_primary__TtywJ {
+    background: var(--light-pri);
+    color: var(--light-second);
+    border: 1px solid transparent;
+  }
+
+  .button_full_width__0OhG2 {
+    width: 100%;
+  }
+
+  .button_l__psvGw {
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
+
+  .button_button__aZ_6A {
+    transition: all .3sease;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -.12px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .invoice-pay-button_invoice__btn__ImaDd p {
+    color: var(--light-second) !important;
+    margin: 0;
+    height: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -.12px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__text_wrapper__0oXno {
+    display: grid;
+    grid-template-columns: minmax(100px, 215px) max-content minmax(100px, 215px);
+    grid-column-gap: 10px;
+    column-gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__line___iWzw {
+    background-color: var(--bg_condition_line);
+    height: 1px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__text_wrapper__0oXno p {
+    margin: 0;
+    color: var(--light-pri);
+    font-weight: 400;
+    letter-spacing: -.08px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__line___iWzw {
+    background-color: var(--bg_condition_line);
+    height: 1px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__buttons_wrapper__xmuGJ {
+    width: 100%;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__button_disabled__CfMV7 {
+    background: var(--bg_btn_disabled);
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__button__C9u3q {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+    background: var(--light-pri);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__button__C9u3q p {
+    color: var(--light-second) !important;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -.12px;
+  }
+
+  .invoice-select_select__wUZTa p {
+    margin: 0;
+    color: var(--light-pri);
+  }
+
+  .login-form-container .form_container p {
+    color: var(--text_1);
+
+  }
+
+  .login-form-container {
+    background: #141414;
+    background-image: none !important;
+  }
+
+  .invoice-select_select__wUZTa {
+    outline: 1px solid var(--border_1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px 18px 16px;
+  }
+
+  .invoice-select_select__wUZTa p {
+    margin: 0;
+    color: var(--light-pri) !important;
+  }
+
+  .invoice-select_select__wUZTa svg path {
+    fill: var(--light-pri);
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__button__C9u3q {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    width: 100%;
+    background: var(--light-pri);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__button__C9u3q p {
+    color: var(--light-second);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -.12px;
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__button__C9u3q svg path {
+    fill: var(--light-second);
+  }
+
+  .invoice-footer_payForm__footer__KWpVV .invoice-footer_condition__button_disabled__CfMV7 {
+    background: #ffffff5c;
+  }
+
+  .wallet-header_wallet_header__rOZNm .wallet-header_right__block__HUiE_ .wallet-header_globe__btn__rB2B1 svg path {
+    stroke: var(--light-pri);
+  }
+
+  .balance-item_wallet__balance__wrapper__UdXw_ .balance-item_wallet__top__Rl4Ny .balance-item_copy__btn__NftBt {
+    width: 44px;
+    height: 44px;
+    background-color: var(--light-pri);
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+  }
+</style>
+
+<body>
+  <div class="app-wrapper d-block">
+    <div class="">
+      <!-- Body main section starts -->
+      <main class="w-100 p-0">
+        <!-- Login to your Account start -->
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-12 p-0">
+              <div class="login-form-container">
+                <div class="mb-4">
+                  <a class="logo d-inline-block" href="index.html">
+                    <img src="../assets/images/logo/1.png" width="250" alt="#">
+                  </a>
+                </div>
+                <div class="form_container">
+
+                  <div class="invoices-block_invoice__body__O9NUI">
+                    <div class="invoice-header_header-custom">
+                      <div class="invoice-header_header__wrapper__ubswW">
+                        <div class="wallet-header_wallet_header__rOZNm">
+                          <div class="wallet-header_logo_mobile__Gayus"><svg xmlns="http://www.w3.org/2000/svg"
+                              width="36" height="40" fill="none" class="wallet-header_logo__7iGBh">
+                              <path fill="#000"
+                                d="M34.235 9.454 19.039.681a2.24 2.24 0 0 0-2.228 0L1.615 9.454A2.23 2.23 0 0 0 .5 11.384v17.547c0 .792.427 1.53 1.115 1.93l15.196 8.774a2.2 2.2 0 0 0 1.116.296 2.26 2.26 0 0 0 1.115-.296l15.197-8.773a2.23 2.23 0 0 0 1.115-1.931V11.385a2.24 2.24 0 0 0-1.115-1.931zm-15.966 9.615a.69.69 0 0 1-.688 0L2.808 10.542 17.58 2.016c.207-.12.48-.12.688 0l14.773 8.526zM16.812 20.4q.161.094.346.158V38.05L2.385 29.527a.69.69 0 0 1-.347-.596V11.873z">
+                              </path>
+                            </svg></div>
+                          <div class="wallet-header_logo_desktop__GtoxK"><svg xmlns="http://www.w3.org/2000/svg"
+                              fill="none" viewBox="0 0 234 48" class="wallet-header_logo__7iGBh" style="height: 40px;">
+                              <path fill="currentColor"
+                                d="M69.472 36.676c4.785 0 7.792-3.004 8.613-5.735l-3.896-1.57c-.581 2.048-2.29 3.448-4.614 3.448-2.905 0-5.16-2.185-5.16-5.53s2.255-5.53 5.126-5.53c2.324 0 3.964 1.4 4.545 3.482l3.896-1.536c-.82-2.799-3.828-5.803-8.51-5.803-5.433 0-9.398 4.096-9.398 9.421s4.033 9.353 9.398 9.353m15.283-16.384v-2.014h-4.1v17.988h4.34v-10.24c0-2.423 1.982-4.096 5.126-4.096v-4.062c-2.256 0-4.135.99-5.365 2.424Zm20.287-2.014-5.093 14.507-4.647-14.507h-4.478l6.357 17.988h1.367l-2.46 6.11h4.272l2.323-6.11 6.87-17.988zm16.732-.41c-2.563 0-4.647 1.024-6.049 2.765v-2.355h-4.032v24.098h4.34v-8.021c1.367 1.467 3.281 2.32 5.639 2.32 5.16 0 8.92-4.027 8.92-9.386 0-5.393-3.657-9.42-8.818-9.42Zm-.683 14.985c-3.11 0-5.229-2.287-5.229-5.564s2.119-5.564 5.229-5.564c2.973 0 5.16 2.355 5.16 5.564 0 3.174-2.187 5.564-5.16 5.564m20.226 3.413h2.837v-3.789h-1.982c-1.948 0-3.008-1.126-3.008-3.208v-7.27h4.853v-3.721h-4.716v-4.676h-4.238v2.833c0 1.228-.581 1.843-1.777 1.843h-1.64v3.72h3.144v7.749c0 3.96 2.221 6.52 6.527 6.52Zm13.632.41c5.605 0 9.604-4.028 9.604-9.387 0-5.393-3.999-9.42-9.604-9.42-5.639 0-9.603 4.027-9.603 9.42 0 5.359 3.964 9.387 9.603 9.387m.034-3.857c-3.144 0-5.297-2.321-5.297-5.53 0-3.243 2.153-5.53 5.297-5.53 3.11 0 5.195 2.287 5.195 5.496 0 3.243-2.119 5.564-5.195 5.564m34.004-14.951c-3.041 0-5.092 1.263-6.083 2.936-1.025-1.878-2.837-2.936-5.707-2.936-2.427 0-4.306 1.024-5.434 2.39v-1.98h-4.101v17.954h4.34V25.343c.034-1.706 1.401-3.584 3.862-3.618 2.426 0 3.759 1.81 3.759 4.165v10.342h4.34V25.343c.035-1.672 1.367-3.584 3.862-3.618 2.427 0 3.725 1.843 3.725 4.165v10.342h4.341V25.105c0-4.062-2.427-7.237-6.904-7.237m22.846.41v10.888c0 1.98-1.572 3.619-3.999 3.653-2.426 0-3.964-1.605-3.964-3.926V18.278h-4.34v11.161c0 4.165 2.46 7.237 7.04 7.237 2.324 0 4.272-.99 5.536-2.39v1.98h4.067V18.278zm14.717 18.398c4.511 0 7.45-2.117 7.45-5.7 0-6.588-9.877-4.711-9.877-7.988 0-1.092.855-1.775 2.461-1.775 1.504 0 2.563.649 3.042 2.014l3.793-1.468c-.752-2.457-3.281-3.89-6.767-3.89-4.237 0-6.972 2.047-6.972 5.324 0 6.178 9.877 4.54 9.877 8.09 0 1.263-1.093 1.98-2.836 1.98-2.188 0-3.589-.99-4.101-2.663l-3.794 1.468c.991 3.038 3.828 4.608 7.724 4.608M43.535 11.345 25.277.817a2.69 2.69 0 0 0-2.675 0L4.344 11.345a2.68 2.68 0 0 0-1.34 2.317v21.055c0 .951.513 1.837 1.34 2.317l18.258 10.528a2.67 2.67 0 0 0 1.34.356c.471 0 .933-.125 1.34-.356L43.54 37.034a2.68 2.68 0 0 0 1.34-2.316V13.662c0-.95-.513-1.837-1.34-2.317zM24.353 22.884a.83.83 0 0 1-.827 0L5.776 12.65l17.75-10.23a.85.85 0 0 1 .827 0l17.75 10.232zm-1.751 1.596q.194.112.416.19v20.99L5.268 35.433a.83.83 0 0 1-.416-.715v-20.47z">
+                              </path>
+                            </svg></div>
+                          <div class="wallet-header_right__block__HUiE_">
+                            <div class="wallet-header_coin__plus__dE2t2">
+                              <div class="wallet-header_cube__btn__Mvkp6"><svg xmlns="http://www.w3.org/2000/svg"
+                                  width="22" height="24" fill="none">
+                                  <path fill="currentColor"
+                                    d="M20.785 5.578 11.667.314a1.34 1.34 0 0 0-1.336 0L1.213 5.578c-.413.238-.67.68-.67 1.158v10.528c0 .476.257.919.67 1.159l9.118 5.264a1.356 1.356 0 0 0 1.338 0l9.118-5.264c.413-.238.67-.681.67-1.159V6.736c0-.475-.257-.918-.67-1.158zm-9.58 5.77a.41.41 0 0 1-.413 0L1.93 6.23l8.863-5.116a.42.42 0 0 1 .414 0l8.863 5.116zm-.874.798q.097.056.208.094v10.496l-8.864-5.114a.42.42 0 0 1-.208-.358V7.03z">
+                                  </path>
+                                </svg></div>
+                              <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">+ </font>
+                              </font>
+                              <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">0.001</font>
+                              </font><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none">
+                                <path fill="#A3A3A3" fill-rule="evenodd"
+                                  d="M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0M6.072 4.322a.656.656 0 0 1-.928-.928 2.625 2.625 0 1 1 2.512 4.398v.302a.656.656 0 1 1-1.312 0v-.438c0-.63.498-1.025.946-1.126a1.312 1.312 0 1 0-1.218-2.208M7 11.375a.875.875 0 1 0 0-1.75.875.875 0 0 0 0 1.75"
+                                  clip-rule="evenodd"></path>
+                              </svg>
+                            </div>
+                            <div class="wallet-header_globe__btn__rB2B1"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="24" height="24" fill="none" viewBox="0 0 20 20">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="1.5"
+                                  d="M10.001 18.333a8.333 8.333 0 1 0 0-16.666 8.333 8.333 0 0 0 0 16.666M1.668 10h16.667">
+                                </path>
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                  stroke-width="1.5"
+                                  d="M10.001 1.667A12.75 12.75 0 0 1 13.335 10 12.75 12.75 0 0 1 10 18.333 12.75 12.75 0 0 1 6.668 10a12.75 12.75 0 0 1 3.333-8.333">
+                                </path>
+                              </svg></div>
+                          </div>
+                        </div>
+                        <div class="balance-item_wallet__balance__wrapper__UdXw_">
+                          <div class="balance-item_wallet__top__Rl4Ny">
+                            <div class="balance-item_wallet__balance__MZPO7">
+                              <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">10.00 TRX</font>
+                              </font>
+                            </div><button aria-label="copy button" class="balance-item_copy__btn__NftBt"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                                <path fill="currentColor" fill-rule="evenodd"
+                                  d="M12.83 4h3.011c.528 0 .982 0 1.357.03.395.033.788.104 1.167.297a3 3 0 0 1 1.31 1.311c.194.378.265.772.297 1.167.03.375.03.83.03 1.356v4.18c0 .527 0 .982-.03 1.356-.032.395-.103.789-.296 1.167a3 3 0 0 1-1.311 1.311c-.379.193-.772.264-1.167.296-.253.021-.543.028-.867.03q.004-.31.003-.636V14.5c.293-.002.516-.008.7-.023.273-.022.373-.06.423-.085a1 1 0 0 0 .437-.437c.025-.05.063-.15.085-.422.023-.283.024-.655.024-1.232V8.2c0-.577-.001-.949-.024-1.232-.022-.272-.06-.373-.085-.422a1 1 0 0 0-.437-.437c-.05-.025-.15-.063-.422-.085C16.752 6 16.379 6 15.803 6h-2.935c-.576 0-.949 0-1.232.024-.272.022-.372.06-.422.085a1 1 0 0 0-.411.39h-2.07c.043-.292.12-.58.262-.861a3 3 0 0 1 1.311-1.311c.379-.193.772-.264 1.167-.296C11.848 4 12.303 4 12.83 4M8.2 7.499H8.16c-.527 0-.982 0-1.356.03-.395.033-.789.104-1.167.297a3 3 0 0 0-1.311 1.31c-.193.38-.264.773-.297 1.168-.03.374-.03.83-.03 1.356v4.179c0 .528 0 .982.03 1.357.033.395.104.789.297 1.167a3 3 0 0 0 1.31 1.311c.38.193.773.264 1.168.296.374.031.83.031 1.356.031h3.012c.527 0 .982 0 1.357-.03.395-.033.788-.104 1.167-.297a3 3 0 0 0 1.31-1.311c.193-.378.265-.772.297-1.167.03-.375.03-.83.03-1.357V11.66c0-.527 0-.982-.03-1.356-.032-.395-.104-.789-.296-1.167a3 3 0 0 0-1.311-1.311c-.379-.193-.772-.264-1.167-.297-.375-.03-.83-.03-1.357-.03H8.2M6.546 9.608c.05-.025.15-.063.422-.085.283-.023.655-.024 1.232-.024h2.935c.576 0 .948 0 1.232.024.271.022.372.06.422.085a1 1 0 0 1 .437.437c.025.05.062.15.085.422.023.283.024.655.024 1.232V15.8c0 .577-.001.949-.024 1.232-.023.272-.06.372-.085.422a1 1 0 0 1-.437.437c-.05.025-.15.063-.422.085-.284.023-.656.024-1.233.024H8.2c-.577 0-.949 0-1.232-.024-.272-.022-.373-.06-.422-.085a1 1 0 0 1-.437-.437c-.025-.05-.063-.15-.085-.422C6 16.75 6 16.378 6 15.801v-4.102c0-.577 0-.949.024-1.232.022-.272.06-.373.085-.422a1 1 0 0 1 .437-.437"
+                                  clip-rule="evenodd"></path>
+                              </svg></button>
+                          </div>
+                          <p class="balance-item_wallet__props__6mDxg">
+                            <font style="vertical-align: inherit;">
+                              <font style="vertical-align: inherit;">TRON (TRC-20)</font>
+                            </font>
+                          </p>
+                        </div>
+                        <div class="invoice-header_wallet__timer_wrapper__5scD8"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="40" height="40" fill="none">
+                            <path fill="#3AC270" fill-opacity="0.16"
+                              d="M20 38.5c0 .828-.673 1.506-1.499 1.444a20 20 0 1 1 20.93-15.206c-.197.805-1.049 1.235-1.837.979-.787-.256-1.212-1.102-1.026-1.909a17 17 0 1 0-18.066 13.126c.825.073 1.498.738 1.498 1.566">
+                            </path>
+                            <path fill="#3AC270"
+                              d="M20 1.5c0-.828.672-1.506 1.499-1.444A20 20 0 1 1 .855 25.784c-.24-.793.276-1.596 1.085-1.775.808-.18 1.603.333 1.853 1.123A17 17 0 1 0 21.498 3.066C20.673 2.993 20 2.328 20 1.5">
+                            </path>
+                          </svg>
+                          <div class="invoice-header_wallet__timer__text_wrapper__VEz9g">
+                            <p class="invoice-header_wallet__timer__text__KkfA4">
+                              <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">date of expiry</font>
+                              </font>
+                            </p>
+                            <p class="invoice-header_wallet__timer__PieWr">
+                              <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">02:34:54</font>
+                              </font>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="invoice-footer_payForm__footer__KWpVV">
+                      <div class="invoice-footer_selects__wrapper__pyni6">
+                        <div class="invoice-select_select__wUZTa">
+                          <p>
+                            <font style="vertical-align: inherit;">
+                              <font style="vertical-align: inherit;">TRON (TRC-20)</font>
+                            </font>
+                          </p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none">
+                            <path fill="currentColor" fill-rule="evenodd"
+                              d="M5.232 9.36a1 1 0 0 1 1.408-.128L12 13.698l5.36-4.466a1 1 0 0 1 1.28 1.536l-6 5a1 1 0 0 1-1.28 0l-6-5a1 1 0 0 1-.128-1.408"
+                              clip-rule="evenodd"></path>
+                          </svg>
+                        </div>
+                      </div><button
+                        class="button_button__aZ_6A button_l__psvGw invoice-pay-button_invoice__btn__ImaDd button_primary__TtywJ button_full_width__0OhG2">
+                        <p><svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" fill="none">
+                            <path fill="#000"
+                              d="M20.785 5.578 11.667.314a1.34 1.34 0 0 0-1.336 0L1.213 5.578c-.413.238-.67.68-.67 1.158v10.528c0 .476.257.919.67 1.159l9.118 5.264a1.356 1.356 0 0 0 1.338 0l9.118-5.264c.413-.238.67-.681.67-1.159V6.736c0-.475-.257-.918-.67-1.158zm-9.58 5.77a.41.41 0 0 1-.413 0L1.93 6.23l8.863-5.116a.42.42 0 0 1 .414 0l8.863 5.116zm-.874.798q.097.056.208.094v10.496l-8.864-5.114a.42.42 0 0 1-.208-.358V7.03z">
+                            </path>
+                          </svg>
+                          <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Pay with Cryptocurrency</font>
+                          </font>
+                        </p>
+                      </button>
+                      <div class="invoice-footer_condition__text_wrapper__0oXno">
+                        <div class="invoice-footer_condition__line___iWzw"></div>
+                        <p>
+                          <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">or</font>
+                          </font>
+                        </p>
+                        <div class="invoice-footer_condition__line___iWzw"></div>
+                      </div>
+                      <div class="invoice-footer_condition__buttons_wrapper__xmuGJ"><button
+                          class="invoice-footer_condition__button__C9u3q invoice-footer_condition__button_disabled__CfMV7"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="40" height="24" fill="none">
+                            <path fill="#fff"
+                              d="M8.484 4.69c6.36-6.253 16.672-6.253 23.032 0l.766.752a.79.79 0 0 1 0 1.132l-2.619 2.574a.413.413 0 0 1-.576 0l-1.053-1.036c-4.437-4.361-11.63-4.361-16.068 0L10.838 9.22a.413.413 0 0 1-.576 0L7.644 6.647a.79.79 0 0 1 0-1.132zm28.448 5.322 2.33 2.291a.79.79 0 0 1 0 1.132l-10.508 10.33a.825.825 0 0 1-1.152 0l-7.457-7.331a.206.206 0 0 0-.289 0L12.4 23.765a.825.825 0 0 1-1.152 0L.739 13.435a.79.79 0 0 1 0-1.132l2.33-2.291a.825.825 0 0 1 1.152 0l7.457 7.331a.206.206 0 0 0 .288 0l7.457-7.331a.825.825 0 0 1 1.153 0l7.458 7.331a.206.206 0 0 0 .288 0l7.457-7.331a.825.825 0 0 1 1.153 0">
+                            </path>
+                          </svg>
+                          <p>
+                            <font style="vertical-align: inherit;">
+                              <font style="vertical-align: inherit;">Wallet Connect</font>
+                            </font>
+                          </p>
+                        </button></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Login to your Account end -->
+      </main>
+      <!-- Body main section ends -->
+    </div>
+  </div>
+  <!-- latest jquery-->
+  <script src="../assets/js/jquery-3.6.3.min.js"></script>
+
+  <!-- Bootstrap js-->
+  <script src="../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function toggleDetails() {
+      const detailsContent = document.getElementById("detailsContent");
+      const toggleIcon = document.getElementById("toggleIcon");
+
+      if (detailsContent.classList.contains("show")) {
+        detailsContent.classList.remove("show");
+        toggleIcon.classList.remove("fa-chevron-down");
+        toggleIcon.classList.add("fa-chevron-up");
+      } else {
+        detailsContent.classList.add("show");
+        toggleIcon.classList.remove("fa-chevron-up");
+        toggleIcon.classList.add("fa-chevron-down");
+      }
+    }
+  </script>
+
+</body>
+
+</html>
